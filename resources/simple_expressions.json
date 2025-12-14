@@ -1,0 +1,6722 @@
+[
+  {
+    "expr": "i1 = 7",
+    "true_list": [
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 7
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 7
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 7
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 7
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 7
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 6
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 5
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 8
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 9
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": -3
+        }
+      }
+    ]
+  },
+  {
+    "expr": "-3 = i2",
+    "true_list": [
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -3
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -3
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -3
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -3
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -3
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -4
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -5
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -2
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -1
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -13
+        }
+      }
+    ]
+  },
+  {
+    "expr": "i3 = i4",
+    "true_list": [
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 5
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 5
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 10
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 10
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 0
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 0
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": -5
+        },
+        "i4": {
+          "type": "Integer",
+          "value": -5
+        }
+      },
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 100
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 100
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 5
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 10
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 10
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 5
+        }
+      },
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 1
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 0
+        }
+      },
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 5
+        },
+        "i3": {
+          "type": "Integer",
+          "value": -5
+        }
+      },
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 200
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 100
+        }
+      }
+    ]
+  },
+  {
+    "expr": "f1 = 22.4",
+    "true_list": [
+      {
+        "f1": {
+          "type": "Float",
+          "value": 22.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 22.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 22.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 22.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 22.4
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "f1": {
+          "type": "Float",
+          "value": 21.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 20.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 23.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 24.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 12.399999999999999
+        }
+      }
+    ]
+  },
+  {
+    "expr": "50.1 = f2",
+    "true_list": [
+      {
+        "f2": {
+          "type": "Float",
+          "value": 50.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 50.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 50.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 50.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 50.1
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "f2": {
+          "type": "Float",
+          "value": 49.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 48.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 51.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 52.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 40.1
+        }
+      }
+    ]
+  },
+  {
+    "expr": "f3 = f4",
+    "true_list": [
+      {
+        "f3": {
+          "type": "Float",
+          "value": 5.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 5.0
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": 10.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 10.0
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": 0.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 0.0
+        }
+      },
+      {
+        "f4": {
+          "type": "Float",
+          "value": -5.5
+        },
+        "f3": {
+          "type": "Float",
+          "value": -5.5
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": 100.1
+        },
+        "f4": {
+          "type": "Float",
+          "value": 100.1
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "f3": {
+          "type": "Float",
+          "value": 5.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 10.0
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": 10.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 5.0
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": 0.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 1.0
+        }
+      },
+      {
+        "f4": {
+          "type": "Float",
+          "value": 5.5
+        },
+        "f3": {
+          "type": "Float",
+          "value": -5.5
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": 100.1
+        },
+        "f4": {
+          "type": "Float",
+          "value": 200.2
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s1 = 'banana'",
+    "true_list": [
+      {
+        "s1": {
+          "type": "String",
+          "value": "banana"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "banana"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "banana"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "banana"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "banana"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s1": {
+          "type": "String",
+          "value": "different1"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "different2"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "other1"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "other2"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "other3"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "'united' = s2",
+    "true_list": [
+      {
+        "s2": {
+          "type": "String",
+          "value": "united"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "united"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "united"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "united"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "united"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s2": {
+          "type": "String",
+          "value": "different1"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "different2"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "other1"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "other2"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "other3"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s3 = s4",
+    "true_list": [
+      {
+        "s3": {
+          "type": "String",
+          "value": "apple"
+        },
+        "s4": {
+          "type": "String",
+          "value": "apple"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "banana"
+        },
+        "s4": {
+          "type": "String",
+          "value": "banana"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "cat"
+        },
+        "s4": {
+          "type": "String",
+          "value": "cat"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "dog"
+        },
+        "s4": {
+          "type": "String",
+          "value": "dog"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "egg"
+        },
+        "s4": {
+          "type": "String",
+          "value": "egg"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s3": {
+          "type": "String",
+          "value": "apple"
+        },
+        "s4": {
+          "type": "String",
+          "value": "banana"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "dog"
+        },
+        "s3": {
+          "type": "String",
+          "value": "cat"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "egg"
+        },
+        "s4": {
+          "type": "String",
+          "value": "fox"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "grape"
+        },
+        "s4": {
+          "type": "String",
+          "value": "honey"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "juice"
+        },
+        "s3": {
+          "type": "String",
+          "value": "ice"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "i1 <> 7",
+    "true_list": [
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 6
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 5
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 8
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 9
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": -3
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 7
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 7
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 7
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 7
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 7
+        }
+      }
+    ]
+  },
+  {
+    "expr": "-3 <> i2",
+    "true_list": [
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -4
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -5
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -2
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -1
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -13
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -3
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -3
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -3
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -3
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -3
+        }
+      }
+    ]
+  },
+  {
+    "expr": "i3 <> i4",
+    "true_list": [
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 5
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 10
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 10
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 5
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 0
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 1
+        }
+      },
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 5
+        },
+        "i3": {
+          "type": "Integer",
+          "value": -5
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 100
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 200
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 5
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 5
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 10
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 10
+        }
+      },
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 0
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 0
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": -5
+        },
+        "i4": {
+          "type": "Integer",
+          "value": -5
+        }
+      },
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 100
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 100
+        }
+      }
+    ]
+  },
+  {
+    "expr": "f1 <> 22.4",
+    "true_list": [
+      {
+        "f1": {
+          "type": "Float",
+          "value": 21.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 20.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 23.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 24.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 12.399999999999999
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "f1": {
+          "type": "Float",
+          "value": 22.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 22.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 22.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 22.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 22.4
+        }
+      }
+    ]
+  },
+  {
+    "expr": "50.1 <> f2",
+    "true_list": [
+      {
+        "f2": {
+          "type": "Float",
+          "value": 49.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 48.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 51.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 52.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 40.1
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "f2": {
+          "type": "Float",
+          "value": 50.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 50.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 50.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 50.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 50.1
+        }
+      }
+    ]
+  },
+  {
+    "expr": "f3 <> f4",
+    "true_list": [
+      {
+        "f4": {
+          "type": "Float",
+          "value": 10.0
+        },
+        "f3": {
+          "type": "Float",
+          "value": 5.0
+        }
+      },
+      {
+        "f4": {
+          "type": "Float",
+          "value": 5.0
+        },
+        "f3": {
+          "type": "Float",
+          "value": 10.0
+        }
+      },
+      {
+        "f4": {
+          "type": "Float",
+          "value": 1.0
+        },
+        "f3": {
+          "type": "Float",
+          "value": 0.0
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": -5.5
+        },
+        "f4": {
+          "type": "Float",
+          "value": 5.5
+        }
+      },
+      {
+        "f4": {
+          "type": "Float",
+          "value": 200.2
+        },
+        "f3": {
+          "type": "Float",
+          "value": 100.1
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "f4": {
+          "type": "Float",
+          "value": 5.0
+        },
+        "f3": {
+          "type": "Float",
+          "value": 5.0
+        }
+      },
+      {
+        "f4": {
+          "type": "Float",
+          "value": 10.0
+        },
+        "f3": {
+          "type": "Float",
+          "value": 10.0
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": 0.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 0.0
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": -5.5
+        },
+        "f4": {
+          "type": "Float",
+          "value": -5.5
+        }
+      },
+      {
+        "f4": {
+          "type": "Float",
+          "value": 100.1
+        },
+        "f3": {
+          "type": "Float",
+          "value": 100.1
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s1 <> 'banana'",
+    "true_list": [
+      {
+        "s1": {
+          "type": "String",
+          "value": "different1"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "different2"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "other1"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "other2"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "other3"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s1": {
+          "type": "String",
+          "value": "banana"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "banana"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "banana"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "banana"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "banana"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "'united' <> s2",
+    "true_list": [
+      {
+        "s2": {
+          "type": "String",
+          "value": "different1"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "different2"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "other1"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "other2"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "other3"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s2": {
+          "type": "String",
+          "value": "united"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "united"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "united"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "united"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "united"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s3 <> s4",
+    "true_list": [
+      {
+        "s3": {
+          "type": "String",
+          "value": "apple"
+        },
+        "s4": {
+          "type": "String",
+          "value": "banana"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "dog"
+        },
+        "s3": {
+          "type": "String",
+          "value": "cat"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "egg"
+        },
+        "s4": {
+          "type": "String",
+          "value": "fox"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "grape"
+        },
+        "s4": {
+          "type": "String",
+          "value": "honey"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "ice"
+        },
+        "s4": {
+          "type": "String",
+          "value": "juice"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s4": {
+          "type": "String",
+          "value": "apple"
+        },
+        "s3": {
+          "type": "String",
+          "value": "apple"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "banana"
+        },
+        "s4": {
+          "type": "String",
+          "value": "banana"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "cat"
+        },
+        "s4": {
+          "type": "String",
+          "value": "cat"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "dog"
+        },
+        "s4": {
+          "type": "String",
+          "value": "dog"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "egg"
+        },
+        "s4": {
+          "type": "String",
+          "value": "egg"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "i1 > 7",
+    "true_list": [
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 8
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 9
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 12
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 17
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 107
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 7
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 6
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 5
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 2
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": -3
+        }
+      }
+    ]
+  },
+  {
+    "expr": "-3 > i2",
+    "true_list": [
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -4
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -5
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -8
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -13
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -103
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -3
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -2
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -1
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 2
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 7
+        }
+      }
+    ]
+  },
+  {
+    "expr": "i3 > i4",
+    "true_list": [
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 5
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 10
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 5
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 0
+        }
+      },
+      {
+        "i4": {
+          "type": "Integer",
+          "value": -5
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 0
+        }
+      },
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 50
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 100
+        }
+      },
+      {
+        "i4": {
+          "type": "Integer",
+          "value": -1
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 1
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 10
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 5
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 5
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 5
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 0
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 5
+        }
+      },
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 100
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 50
+        }
+      },
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 1
+        },
+        "i3": {
+          "type": "Integer",
+          "value": -1
+        }
+      }
+    ]
+  },
+  {
+    "expr": "f1 > 22.4",
+    "true_list": [
+      {
+        "f1": {
+          "type": "Float",
+          "value": 23.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 24.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 27.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 32.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 122.4
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "f1": {
+          "type": "Float",
+          "value": 22.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 21.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 20.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 17.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 12.399999999999999
+        }
+      }
+    ]
+  },
+  {
+    "expr": "50.1 > f2",
+    "true_list": [
+      {
+        "f2": {
+          "type": "Float",
+          "value": 49.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 48.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 45.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 40.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": -49.9
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "f2": {
+          "type": "Float",
+          "value": 50.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 51.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 52.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 55.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 60.1
+        }
+      }
+    ]
+  },
+  {
+    "expr": "f3 > f4",
+    "true_list": [
+      {
+        "f4": {
+          "type": "Float",
+          "value": 5.0
+        },
+        "f3": {
+          "type": "Float",
+          "value": 10.0
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": 5.5
+        },
+        "f4": {
+          "type": "Float",
+          "value": 0.0
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": 0.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": -5.0
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": 100.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 50.0
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": 1.1
+        },
+        "f4": {
+          "type": "Float",
+          "value": -1.1
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "f3": {
+          "type": "Float",
+          "value": 5.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 10.0
+        }
+      },
+      {
+        "f4": {
+          "type": "Float",
+          "value": 5.0
+        },
+        "f3": {
+          "type": "Float",
+          "value": 5.0
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": 0.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 5.0
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": 50.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 100.0
+        }
+      },
+      {
+        "f4": {
+          "type": "Float",
+          "value": 1.1
+        },
+        "f3": {
+          "type": "Float",
+          "value": -1.1
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s1 > 'banana'",
+    "true_list": [
+      {
+        "s1": {
+          "type": "String",
+          "value": "bananaz"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "bananazz"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "bananb"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "zzzzz"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "~~~~~"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s1": {
+          "type": "String",
+          "value": "banana"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "banan"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "bana"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "a"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "aa"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "'united' > s2",
+    "true_list": [
+      {
+        "s2": {
+          "type": "String",
+          "value": "unitec"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "unite"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "unit"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "a"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "aa"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s2": {
+          "type": "String",
+          "value": "united"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "unitedz"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "unitedzz"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "unitee"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "zzzzz"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s3 > s4",
+    "true_list": [
+      {
+        "s4": {
+          "type": "String",
+          "value": "apple"
+        },
+        "s3": {
+          "type": "String",
+          "value": "banana"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "dog"
+        },
+        "s4": {
+          "type": "String",
+          "value": "cat"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "fox"
+        },
+        "s4": {
+          "type": "String",
+          "value": "egg"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "grape"
+        },
+        "s3": {
+          "type": "String",
+          "value": "honey"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "juice"
+        },
+        "s4": {
+          "type": "String",
+          "value": "ice"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s3": {
+          "type": "String",
+          "value": "apple"
+        },
+        "s4": {
+          "type": "String",
+          "value": "banana"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "cat"
+        },
+        "s4": {
+          "type": "String",
+          "value": "dog"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "dog"
+        },
+        "s4": {
+          "type": "String",
+          "value": "dog"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "grape"
+        },
+        "s4": {
+          "type": "String",
+          "value": "honey"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "ice"
+        },
+        "s4": {
+          "type": "String",
+          "value": "juice"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "i1 >= 7",
+    "true_list": [
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 7
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 8
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 9
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 12
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 17
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 6
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 5
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 2
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": -3
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": -93
+        }
+      }
+    ]
+  },
+  {
+    "expr": "-3 >= i2",
+    "true_list": [
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -3
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -4
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -5
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -8
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -13
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -2
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -1
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 2
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 7
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 97
+        }
+      }
+    ]
+  },
+  {
+    "expr": "i3 >= i4",
+    "true_list": [
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 5
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 10
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 5
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 5
+        }
+      },
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 0
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 0
+        }
+      },
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 50
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 100
+        }
+      },
+      {
+        "i4": {
+          "type": "Integer",
+          "value": -1
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 1
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 10
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 5
+        }
+      },
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 5
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 0
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": -5
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 0
+        }
+      },
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 100
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 50
+        }
+      },
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 1
+        },
+        "i3": {
+          "type": "Integer",
+          "value": -1
+        }
+      }
+    ]
+  },
+  {
+    "expr": "f1 >= 22.4",
+    "true_list": [
+      {
+        "f1": {
+          "type": "Float",
+          "value": 22.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 23.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 24.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 27.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 32.4
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "f1": {
+          "type": "Float",
+          "value": 21.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 20.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 17.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 12.399999999999999
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": -77.6
+        }
+      }
+    ]
+  },
+  {
+    "expr": "50.1 >= f2",
+    "true_list": [
+      {
+        "f2": {
+          "type": "Float",
+          "value": 50.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 49.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 48.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 45.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 40.1
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "f2": {
+          "type": "Float",
+          "value": 51.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 52.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 55.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 60.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 150.1
+        }
+      }
+    ]
+  },
+  {
+    "expr": "f3 >= f4",
+    "true_list": [
+      {
+        "f3": {
+          "type": "Float",
+          "value": 10.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 5.0
+        }
+      },
+      {
+        "f4": {
+          "type": "Float",
+          "value": 5.0
+        },
+        "f3": {
+          "type": "Float",
+          "value": 5.0
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": 0.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 0.0
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": 100.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 50.0
+        }
+      },
+      {
+        "f4": {
+          "type": "Float",
+          "value": -1.1
+        },
+        "f3": {
+          "type": "Float",
+          "value": 1.1
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "f4": {
+          "type": "Float",
+          "value": 10.0
+        },
+        "f3": {
+          "type": "Float",
+          "value": 5.0
+        }
+      },
+      {
+        "f4": {
+          "type": "Float",
+          "value": 5.5
+        },
+        "f3": {
+          "type": "Float",
+          "value": 0.0
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": -5.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 0.0
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": 50.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 100.0
+        }
+      },
+      {
+        "f4": {
+          "type": "Float",
+          "value": 1.1
+        },
+        "f3": {
+          "type": "Float",
+          "value": -1.1
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s1 >= 'banana'",
+    "true_list": [
+      {
+        "s1": {
+          "type": "String",
+          "value": "banana"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "bananaz"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "bananazz"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "bananb"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "zzzzz"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s1": {
+          "type": "String",
+          "value": "banan"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "bana"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "a"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "aa"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "aaa"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "'united' >= s2",
+    "true_list": [
+      {
+        "s2": {
+          "type": "String",
+          "value": "united"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "unitec"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "unite"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "unit"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "a"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s2": {
+          "type": "String",
+          "value": "unitedz"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "unitedzz"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "unitee"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "zzzzz"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "~~~~~"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s3 >= s4",
+    "true_list": [
+      {
+        "s3": {
+          "type": "String",
+          "value": "banana"
+        },
+        "s4": {
+          "type": "String",
+          "value": "apple"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "cat"
+        },
+        "s3": {
+          "type": "String",
+          "value": "dog"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "dog"
+        },
+        "s3": {
+          "type": "String",
+          "value": "dog"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "grape"
+        },
+        "s3": {
+          "type": "String",
+          "value": "honey"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "ice"
+        },
+        "s3": {
+          "type": "String",
+          "value": "juice"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s4": {
+          "type": "String",
+          "value": "banana"
+        },
+        "s3": {
+          "type": "String",
+          "value": "apple"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "dog"
+        },
+        "s3": {
+          "type": "String",
+          "value": "cat"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "egg"
+        },
+        "s4": {
+          "type": "String",
+          "value": "fox"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "grape"
+        },
+        "s4": {
+          "type": "String",
+          "value": "honey"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "ice"
+        },
+        "s4": {
+          "type": "String",
+          "value": "juice"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "i1 < 7",
+    "true_list": [
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 6
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 5
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 2
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": -3
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": -93
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 7
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 8
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 9
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 12
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 17
+        }
+      }
+    ]
+  },
+  {
+    "expr": "-3 < i2",
+    "true_list": [
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -2
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -1
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 2
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 7
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 97
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -3
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -4
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -5
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -8
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -13
+        }
+      }
+    ]
+  },
+  {
+    "expr": "i3 < i4",
+    "true_list": [
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 10
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 5
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 0
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 5
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": -5
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 0
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 50
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 100
+        }
+      },
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 1
+        },
+        "i3": {
+          "type": "Integer",
+          "value": -1
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 5
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 10
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 5
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 5
+        }
+      },
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 0
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 5
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 100
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 50
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 1
+        },
+        "i4": {
+          "type": "Integer",
+          "value": -1
+        }
+      }
+    ]
+  },
+  {
+    "expr": "f1 < 22.4",
+    "true_list": [
+      {
+        "f1": {
+          "type": "Float",
+          "value": 21.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 20.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 17.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 12.399999999999999
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": -77.6
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "f1": {
+          "type": "Float",
+          "value": 22.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 23.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 24.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 27.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 32.4
+        }
+      }
+    ]
+  },
+  {
+    "expr": "50.1 < f2",
+    "true_list": [
+      {
+        "f2": {
+          "type": "Float",
+          "value": 51.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 52.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 55.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 60.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 150.1
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "f2": {
+          "type": "Float",
+          "value": 50.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 49.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 48.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 45.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 40.1
+        }
+      }
+    ]
+  },
+  {
+    "expr": "f3 < f4",
+    "true_list": [
+      {
+        "f4": {
+          "type": "Float",
+          "value": 10.0
+        },
+        "f3": {
+          "type": "Float",
+          "value": 5.0
+        }
+      },
+      {
+        "f4": {
+          "type": "Float",
+          "value": 5.5
+        },
+        "f3": {
+          "type": "Float",
+          "value": 0.0
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": -5.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 0.0
+        }
+      },
+      {
+        "f4": {
+          "type": "Float",
+          "value": 100.0
+        },
+        "f3": {
+          "type": "Float",
+          "value": 50.0
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": -1.1
+        },
+        "f4": {
+          "type": "Float",
+          "value": 1.1
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "f3": {
+          "type": "Float",
+          "value": 10.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 5.0
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": 5.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 5.0
+        }
+      },
+      {
+        "f4": {
+          "type": "Float",
+          "value": 0.0
+        },
+        "f3": {
+          "type": "Float",
+          "value": 5.0
+        }
+      },
+      {
+        "f4": {
+          "type": "Float",
+          "value": 50.0
+        },
+        "f3": {
+          "type": "Float",
+          "value": 100.0
+        }
+      },
+      {
+        "f4": {
+          "type": "Float",
+          "value": -1.1
+        },
+        "f3": {
+          "type": "Float",
+          "value": 1.1
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s1 < 'banana'",
+    "true_list": [
+      {
+        "s1": {
+          "type": "String",
+          "value": "banan"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "bana"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "a"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "aa"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "aaa"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s1": {
+          "type": "String",
+          "value": "banana"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "bananaz"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "bananazz"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "bananb"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "zzzzz"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "'united' < s2",
+    "true_list": [
+      {
+        "s2": {
+          "type": "String",
+          "value": "unitedz"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "unitedzz"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "unitee"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "zzzzz"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "~~~~~"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s2": {
+          "type": "String",
+          "value": "united"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "unitec"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "unite"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "unit"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "a"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s3 < s4",
+    "true_list": [
+      {
+        "s4": {
+          "type": "String",
+          "value": "banana"
+        },
+        "s3": {
+          "type": "String",
+          "value": "apple"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "dog"
+        },
+        "s3": {
+          "type": "String",
+          "value": "cat"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "egg"
+        },
+        "s4": {
+          "type": "String",
+          "value": "fox"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "honey"
+        },
+        "s3": {
+          "type": "String",
+          "value": "grape"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "juice"
+        },
+        "s3": {
+          "type": "String",
+          "value": "ice"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s3": {
+          "type": "String",
+          "value": "banana"
+        },
+        "s4": {
+          "type": "String",
+          "value": "apple"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "cat"
+        },
+        "s3": {
+          "type": "String",
+          "value": "dog"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "dog"
+        },
+        "s4": {
+          "type": "String",
+          "value": "dog"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "grape"
+        },
+        "s3": {
+          "type": "String",
+          "value": "honey"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "ice"
+        },
+        "s3": {
+          "type": "String",
+          "value": "juice"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "i1 <= 7",
+    "true_list": [
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 7
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 6
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 5
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 2
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": -3
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 8
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 9
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 12
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 17
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 107
+        }
+      }
+    ]
+  },
+  {
+    "expr": "-3 <= i2",
+    "true_list": [
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -3
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -2
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -1
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 2
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 7
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -4
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -5
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -8
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -13
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -103
+        }
+      }
+    ]
+  },
+  {
+    "expr": "i3 <= i4",
+    "true_list": [
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 5
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 10
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 5
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 5
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 0
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 0
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 50
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 100
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": -1
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 1
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 10
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 5
+        }
+      },
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 0
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 5
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 0
+        },
+        "i4": {
+          "type": "Integer",
+          "value": -5
+        }
+      },
+      {
+        "i4": {
+          "type": "Integer",
+          "value": 50
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 100
+        }
+      },
+      {
+        "i3": {
+          "type": "Integer",
+          "value": 1
+        },
+        "i4": {
+          "type": "Integer",
+          "value": -1
+        }
+      }
+    ]
+  },
+  {
+    "expr": "f1 <= 22.4",
+    "true_list": [
+      {
+        "f1": {
+          "type": "Float",
+          "value": 22.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 21.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 20.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 17.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 12.399999999999999
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "f1": {
+          "type": "Float",
+          "value": 23.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 24.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 27.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 32.4
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 122.4
+        }
+      }
+    ]
+  },
+  {
+    "expr": "50.1 <= f2",
+    "true_list": [
+      {
+        "f2": {
+          "type": "Float",
+          "value": 50.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 51.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 52.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 55.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 60.1
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "f2": {
+          "type": "Float",
+          "value": 49.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 48.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 45.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 40.1
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": -49.9
+        }
+      }
+    ]
+  },
+  {
+    "expr": "f3 <= f4",
+    "true_list": [
+      {
+        "f4": {
+          "type": "Float",
+          "value": 10.0
+        },
+        "f3": {
+          "type": "Float",
+          "value": 5.0
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": 5.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 5.0
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": 0.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 0.0
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": 50.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 100.0
+        }
+      },
+      {
+        "f4": {
+          "type": "Float",
+          "value": 1.1
+        },
+        "f3": {
+          "type": "Float",
+          "value": -1.1
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "f3": {
+          "type": "Float",
+          "value": 10.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 5.0
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": 5.5
+        },
+        "f4": {
+          "type": "Float",
+          "value": 0.0
+        }
+      },
+      {
+        "f4": {
+          "type": "Float",
+          "value": -5.0
+        },
+        "f3": {
+          "type": "Float",
+          "value": 0.0
+        }
+      },
+      {
+        "f4": {
+          "type": "Float",
+          "value": 50.0
+        },
+        "f3": {
+          "type": "Float",
+          "value": 100.0
+        }
+      },
+      {
+        "f4": {
+          "type": "Float",
+          "value": -1.1
+        },
+        "f3": {
+          "type": "Float",
+          "value": 1.1
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s1 <= 'banana'",
+    "true_list": [
+      {
+        "s1": {
+          "type": "String",
+          "value": "banana"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "banan"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "bana"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "a"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "aa"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s1": {
+          "type": "String",
+          "value": "bananaz"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "bananazz"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "bananb"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "zzzzz"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "~~~~~"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "'united' <= s2",
+    "true_list": [
+      {
+        "s2": {
+          "type": "String",
+          "value": "united"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "unitedz"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "unitedzz"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "unitee"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "zzzzz"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s2": {
+          "type": "String",
+          "value": "unitec"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "unite"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "unit"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "a"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "aa"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s3 <= s4",
+    "true_list": [
+      {
+        "s3": {
+          "type": "String",
+          "value": "apple"
+        },
+        "s4": {
+          "type": "String",
+          "value": "banana"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "cat"
+        },
+        "s4": {
+          "type": "String",
+          "value": "dog"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "dog"
+        },
+        "s4": {
+          "type": "String",
+          "value": "dog"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "grape"
+        },
+        "s4": {
+          "type": "String",
+          "value": "honey"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "juice"
+        },
+        "s3": {
+          "type": "String",
+          "value": "ice"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s3": {
+          "type": "String",
+          "value": "banana"
+        },
+        "s4": {
+          "type": "String",
+          "value": "apple"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "cat"
+        },
+        "s3": {
+          "type": "String",
+          "value": "dog"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "egg"
+        },
+        "s3": {
+          "type": "String",
+          "value": "fox"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "grape"
+        },
+        "s3": {
+          "type": "String",
+          "value": "honey"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "juice"
+        },
+        "s4": {
+          "type": "String",
+          "value": "ice"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s1 LIKE '%sometext'",
+    "true_list": [
+      {
+        "s1": {
+          "type": "String",
+          "value": "sometext"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "xsometext"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "yysometext"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "123sometext"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "___sometext"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s1": {
+          "type": "String",
+          "value": "nomatch1"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "nomatch2"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "nomatch3"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "nomatch4"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "nomatch5"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s10 NOT LIKE '%sometext'",
+    "true_list": [
+      {
+        "s10": {
+          "type": "String",
+          "value": "nomatch1"
+        }
+      },
+      {
+        "s10": {
+          "type": "String",
+          "value": "nomatch2"
+        }
+      },
+      {
+        "s10": {
+          "type": "String",
+          "value": "nomatch3"
+        }
+      },
+      {
+        "s10": {
+          "type": "String",
+          "value": "nomatch4"
+        }
+      },
+      {
+        "s10": {
+          "type": "String",
+          "value": "nomatch5"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s10": {
+          "type": "String",
+          "value": "sometext"
+        }
+      },
+      {
+        "s10": {
+          "type": "String",
+          "value": "xsometext"
+        }
+      },
+      {
+        "s10": {
+          "type": "String",
+          "value": "yysometext"
+        }
+      },
+      {
+        "s10": {
+          "type": "String",
+          "value": "123sometext"
+        }
+      },
+      {
+        "s10": {
+          "type": "String",
+          "value": "___sometext"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s2 LIKE '_sometext'",
+    "true_list": [
+      {
+        "s2": {
+          "type": "String",
+          "value": "asometext"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "bsometext"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "1sometext"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "xsometext"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "Zsometext"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s2": {
+          "type": "String",
+          "value": "nomatch1"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "nomatch2"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "nomatch3"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "nomatch4"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "nomatch5"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s11 NOT LIKE '_sometext'",
+    "true_list": [
+      {
+        "s11": {
+          "type": "String",
+          "value": "nomatch1"
+        }
+      },
+      {
+        "s11": {
+          "type": "String",
+          "value": "nomatch2"
+        }
+      },
+      {
+        "s11": {
+          "type": "String",
+          "value": "nomatch3"
+        }
+      },
+      {
+        "s11": {
+          "type": "String",
+          "value": "nomatch4"
+        }
+      },
+      {
+        "s11": {
+          "type": "String",
+          "value": "nomatch5"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s11": {
+          "type": "String",
+          "value": "asometext"
+        }
+      },
+      {
+        "s11": {
+          "type": "String",
+          "value": "bsometext"
+        }
+      },
+      {
+        "s11": {
+          "type": "String",
+          "value": "1sometext"
+        }
+      },
+      {
+        "s11": {
+          "type": "String",
+          "value": "xsometext"
+        }
+      },
+      {
+        "s11": {
+          "type": "String",
+          "value": "Zsometext"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s3 LIKE 'sometext%'",
+    "true_list": [
+      {
+        "s3": {
+          "type": "String",
+          "value": "sometext"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "sometextx"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "sometextyy"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "sometext123"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "sometext___"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s3": {
+          "type": "String",
+          "value": "nomatch1"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "nomatch2"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "nomatch3"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "nomatch4"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
+          "value": "nomatch5"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s12 NOT LIKE 'sometext%'",
+    "true_list": [
+      {
+        "s12": {
+          "type": "String",
+          "value": "nomatch1"
+        }
+      },
+      {
+        "s12": {
+          "type": "String",
+          "value": "nomatch2"
+        }
+      },
+      {
+        "s12": {
+          "type": "String",
+          "value": "nomatch3"
+        }
+      },
+      {
+        "s12": {
+          "type": "String",
+          "value": "nomatch4"
+        }
+      },
+      {
+        "s12": {
+          "type": "String",
+          "value": "nomatch5"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s12": {
+          "type": "String",
+          "value": "sometext"
+        }
+      },
+      {
+        "s12": {
+          "type": "String",
+          "value": "sometextx"
+        }
+      },
+      {
+        "s12": {
+          "type": "String",
+          "value": "sometextyy"
+        }
+      },
+      {
+        "s12": {
+          "type": "String",
+          "value": "sometext123"
+        }
+      },
+      {
+        "s12": {
+          "type": "String",
+          "value": "sometext___"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s4 LIKE 'sometext_'",
+    "true_list": [
+      {
+        "s4": {
+          "type": "String",
+          "value": "sometexta"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "sometextb"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "sometext1"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "sometextx"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "sometextZ"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s4": {
+          "type": "String",
+          "value": "nomatch1"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "nomatch2"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "nomatch3"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "nomatch4"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
+          "value": "nomatch5"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s13 NOT LIKE 'sometext_'",
+    "true_list": [
+      {
+        "s13": {
+          "type": "String",
+          "value": "nomatch1"
+        }
+      },
+      {
+        "s13": {
+          "type": "String",
+          "value": "nomatch2"
+        }
+      },
+      {
+        "s13": {
+          "type": "String",
+          "value": "nomatch3"
+        }
+      },
+      {
+        "s13": {
+          "type": "String",
+          "value": "nomatch4"
+        }
+      },
+      {
+        "s13": {
+          "type": "String",
+          "value": "nomatch5"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s13": {
+          "type": "String",
+          "value": "sometexta"
+        }
+      },
+      {
+        "s13": {
+          "type": "String",
+          "value": "sometextb"
+        }
+      },
+      {
+        "s13": {
+          "type": "String",
+          "value": "sometext1"
+        }
+      },
+      {
+        "s13": {
+          "type": "String",
+          "value": "sometextx"
+        }
+      },
+      {
+        "s13": {
+          "type": "String",
+          "value": "sometextZ"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s5 LIKE 'some%text'",
+    "true_list": [
+      {
+        "s5": {
+          "type": "String",
+          "value": "sometext"
+        }
+      },
+      {
+        "s5": {
+          "type": "String",
+          "value": "somextext"
+        }
+      },
+      {
+        "s5": {
+          "type": "String",
+          "value": "someyytext"
+        }
+      },
+      {
+        "s5": {
+          "type": "String",
+          "value": "some123text"
+        }
+      },
+      {
+        "s5": {
+          "type": "String",
+          "value": "some___text"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s5": {
+          "type": "String",
+          "value": "nomatch1"
+        }
+      },
+      {
+        "s5": {
+          "type": "String",
+          "value": "nomatch2"
+        }
+      },
+      {
+        "s5": {
+          "type": "String",
+          "value": "nomatch3"
+        }
+      },
+      {
+        "s5": {
+          "type": "String",
+          "value": "nomatch4"
+        }
+      },
+      {
+        "s5": {
+          "type": "String",
+          "value": "nomatch5"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s14 NOT LIKE 'some%text'",
+    "true_list": [
+      {
+        "s14": {
+          "type": "String",
+          "value": "nomatch1"
+        }
+      },
+      {
+        "s14": {
+          "type": "String",
+          "value": "nomatch2"
+        }
+      },
+      {
+        "s14": {
+          "type": "String",
+          "value": "nomatch3"
+        }
+      },
+      {
+        "s14": {
+          "type": "String",
+          "value": "nomatch4"
+        }
+      },
+      {
+        "s14": {
+          "type": "String",
+          "value": "nomatch5"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s14": {
+          "type": "String",
+          "value": "sometext"
+        }
+      },
+      {
+        "s14": {
+          "type": "String",
+          "value": "somextext"
+        }
+      },
+      {
+        "s14": {
+          "type": "String",
+          "value": "someyytext"
+        }
+      },
+      {
+        "s14": {
+          "type": "String",
+          "value": "some123text"
+        }
+      },
+      {
+        "s14": {
+          "type": "String",
+          "value": "some___text"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s6 LIKE 'some_text'",
+    "true_list": [
+      {
+        "s6": {
+          "type": "String",
+          "value": "someAtext"
+        }
+      },
+      {
+        "s6": {
+          "type": "String",
+          "value": "someBtext"
+        }
+      },
+      {
+        "s6": {
+          "type": "String",
+          "value": "some1text"
+        }
+      },
+      {
+        "s6": {
+          "type": "String",
+          "value": "somextext"
+        }
+      },
+      {
+        "s6": {
+          "type": "String",
+          "value": "someZtext"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s6": {
+          "type": "String",
+          "value": "nomatch1"
+        }
+      },
+      {
+        "s6": {
+          "type": "String",
+          "value": "nomatch2"
+        }
+      },
+      {
+        "s6": {
+          "type": "String",
+          "value": "nomatch3"
+        }
+      },
+      {
+        "s6": {
+          "type": "String",
+          "value": "nomatch4"
+        }
+      },
+      {
+        "s6": {
+          "type": "String",
+          "value": "nomatch5"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s15 NOT LIKE 'some_text'",
+    "true_list": [
+      {
+        "s15": {
+          "type": "String",
+          "value": "nomatch1"
+        }
+      },
+      {
+        "s15": {
+          "type": "String",
+          "value": "nomatch2"
+        }
+      },
+      {
+        "s15": {
+          "type": "String",
+          "value": "nomatch3"
+        }
+      },
+      {
+        "s15": {
+          "type": "String",
+          "value": "nomatch4"
+        }
+      },
+      {
+        "s15": {
+          "type": "String",
+          "value": "nomatch5"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s15": {
+          "type": "String",
+          "value": "someAtext"
+        }
+      },
+      {
+        "s15": {
+          "type": "String",
+          "value": "someBtext"
+        }
+      },
+      {
+        "s15": {
+          "type": "String",
+          "value": "some1text"
+        }
+      },
+      {
+        "s15": {
+          "type": "String",
+          "value": "somextext"
+        }
+      },
+      {
+        "s15": {
+          "type": "String",
+          "value": "someZtext"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s7 LIKE 'some_text%'",
+    "true_list": [
+      {
+        "s7": {
+          "type": "String",
+          "value": "someAtextx"
+        }
+      },
+      {
+        "s7": {
+          "type": "String",
+          "value": "someBtext"
+        }
+      },
+      {
+        "s7": {
+          "type": "String",
+          "value": "some1text___"
+        }
+      },
+      {
+        "s7": {
+          "type": "String",
+          "value": "somextextabc"
+        }
+      },
+      {
+        "s7": {
+          "type": "String",
+          "value": "someZtext123"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s7": {
+          "type": "String",
+          "value": "nomatch1"
+        }
+      },
+      {
+        "s7": {
+          "type": "String",
+          "value": "nomatch2"
+        }
+      },
+      {
+        "s7": {
+          "type": "String",
+          "value": "nomatch3"
+        }
+      },
+      {
+        "s7": {
+          "type": "String",
+          "value": "nomatch4"
+        }
+      },
+      {
+        "s7": {
+          "type": "String",
+          "value": "nomatch5"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s16 NOT LIKE 'some_text%'",
+    "true_list": [
+      {
+        "s16": {
+          "type": "String",
+          "value": "nomatch1"
+        }
+      },
+      {
+        "s16": {
+          "type": "String",
+          "value": "nomatch2"
+        }
+      },
+      {
+        "s16": {
+          "type": "String",
+          "value": "nomatch3"
+        }
+      },
+      {
+        "s16": {
+          "type": "String",
+          "value": "nomatch4"
+        }
+      },
+      {
+        "s16": {
+          "type": "String",
+          "value": "nomatch5"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s16": {
+          "type": "String",
+          "value": "someAtextx"
+        }
+      },
+      {
+        "s16": {
+          "type": "String",
+          "value": "someBtext"
+        }
+      },
+      {
+        "s16": {
+          "type": "String",
+          "value": "some1text___"
+        }
+      },
+      {
+        "s16": {
+          "type": "String",
+          "value": "somextextabc"
+        }
+      },
+      {
+        "s16": {
+          "type": "String",
+          "value": "someZtext123"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s8 LIKE 'some%text_'",
+    "true_list": [
+      {
+        "s8": {
+          "type": "String",
+          "value": "sometexta"
+        }
+      },
+      {
+        "s8": {
+          "type": "String",
+          "value": "someXtextb"
+        }
+      },
+      {
+        "s8": {
+          "type": "String",
+          "value": "some123text1"
+        }
+      },
+      {
+        "s8": {
+          "type": "String",
+          "value": "someyytextx"
+        }
+      },
+      {
+        "s8": {
+          "type": "String",
+          "value": "some__textZ"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s8": {
+          "type": "String",
+          "value": "nomatch1"
+        }
+      },
+      {
+        "s8": {
+          "type": "String",
+          "value": "nomatch2"
+        }
+      },
+      {
+        "s8": {
+          "type": "String",
+          "value": "nomatch3"
+        }
+      },
+      {
+        "s8": {
+          "type": "String",
+          "value": "nomatch4"
+        }
+      },
+      {
+        "s8": {
+          "type": "String",
+          "value": "nomatch5"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s17 NOT LIKE 'some%text_'",
+    "true_list": [
+      {
+        "s17": {
+          "type": "String",
+          "value": "nomatch1"
+        }
+      },
+      {
+        "s17": {
+          "type": "String",
+          "value": "nomatch2"
+        }
+      },
+      {
+        "s17": {
+          "type": "String",
+          "value": "nomatch3"
+        }
+      },
+      {
+        "s17": {
+          "type": "String",
+          "value": "nomatch4"
+        }
+      },
+      {
+        "s17": {
+          "type": "String",
+          "value": "nomatch5"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s17": {
+          "type": "String",
+          "value": "sometexta"
+        }
+      },
+      {
+        "s17": {
+          "type": "String",
+          "value": "someXtextb"
+        }
+      },
+      {
+        "s17": {
+          "type": "String",
+          "value": "some123text1"
+        }
+      },
+      {
+        "s17": {
+          "type": "String",
+          "value": "someyytextx"
+        }
+      },
+      {
+        "s17": {
+          "type": "String",
+          "value": "some__textZ"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "i1 BETWEEN 1 AND 10",
+    "true_list": [
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 1
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 10
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 5
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 2
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 9
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 0
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": -9
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 11
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 20
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": -99
+        }
+      }
+    ]
+  },
+  {
+    "expr": "i2 NOT BETWEEN 20 AND 30",
+    "true_list": [
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 19
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 10
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 31
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 40
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -80
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 20
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 30
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 25
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 21
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 29
+        }
+      }
+    ]
+  },
+  {
+    "expr": "f1 BETWEEN 1 AND 10",
+    "true_list": [
+      {
+        "f1": {
+          "type": "Float",
+          "value": 1.0
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 10.0
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 5.5
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 2.0
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 9.0
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "f1": {
+          "type": "Float",
+          "value": 0.0
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": -9.0
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 11.0
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 20.0
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": -99.0
+        }
+      }
+    ]
+  },
+  {
+    "expr": "f2 NOT BETWEEN 20 AND 30",
+    "true_list": [
+      {
+        "f2": {
+          "type": "Float",
+          "value": 19.0
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 10.0
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 31.0
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 40.0
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": -80.0
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "f2": {
+          "type": "Float",
+          "value": 20.0
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 30.0
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 25.0
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 21.0
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 29.0
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s1 BETWEEN 'aa' AND 'bb'",
+    "true_list": [
+      {
+        "s1": {
+          "type": "String",
+          "value": "aa"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "bb"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "aa"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "aa"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "aa"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s1": {
+          "type": "String",
+          "value": "a"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "a"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": ""
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "bbz"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "bbzz"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s2 NOT BETWEEN 'mm' AND 'zz'",
+    "true_list": [
+      {
+        "s2": {
+          "type": "String",
+          "value": "ml"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "m"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "a"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "zzz"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "zzzz"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s2": {
+          "type": "String",
+          "value": "mm"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "zz"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "na"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "oa"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "pa"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "i1 IN (1, 2, 3)",
+    "true_list": [
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 1
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 2
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 3
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 1
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 2
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 999
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": -999
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 0
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 500
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": -500
+        }
+      }
+    ]
+  },
+  {
+    "expr": "i2 NOT IN (10, 20, 30)",
+    "true_list": [
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 999
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -999
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 0
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 500
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -500
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 10
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 20
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 30
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 10
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 20
+        }
+      }
+    ]
+  },
+  {
+    "expr": "f1 IN (1, 2, 3)",
+    "true_list": [
+      {
+        "f1": {
+          "type": "Float",
+          "value": 1.0
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 2.0
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 3.0
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 1.0
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 2.0
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "f1": {
+          "type": "Float",
+          "value": 999.9
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": -999.9
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 0.5
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 500.5
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": -500.5
+        }
+      }
+    ]
+  },
+  {
+    "expr": "f2 NOT IN (10, 20, 30)",
+    "true_list": [
+      {
+        "f2": {
+          "type": "Float",
+          "value": 999.9
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": -999.9
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 0.5
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 500.5
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": -500.5
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "f2": {
+          "type": "Float",
+          "value": 10.0
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 20.0
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 30.0
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 10.0
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 20.0
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s1 IN ('apple', 'banana', 'cherry')",
+    "true_list": [
+      {
+        "s1": {
+          "type": "String",
+          "value": "apple"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "banana"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "cherry"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "apple"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "banana"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s1": {
+          "type": "String",
+          "value": "notinlist1"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "notinlist2"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "xxx"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "yyy"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "zzz"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s2 NOT IN ('dog', 'elephant', 'fox')",
+    "true_list": [
+      {
+        "s2": {
+          "type": "String",
+          "value": "notinlist1"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "notinlist2"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "xxx"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "yyy"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "zzz"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s2": {
+          "type": "String",
+          "value": "dog"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "elephant"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "fox"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "dog"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "elephant"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "i1 IS NULL",
+    "true_list": [
+      {
+        "i1": {
+          "type": "Null"
+        }
+      },
+      {
+        "i1": {
+          "type": "Null"
+        }
+      },
+      {
+        "i1": {
+          "type": "Null"
+        }
+      },
+      {
+        "i1": {
+          "type": "Null"
+        }
+      },
+      {
+        "i1": {
+          "type": "Null"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 0
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 1
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": -1
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": 100
+        }
+      },
+      {
+        "i1": {
+          "type": "Integer",
+          "value": -100
+        }
+      }
+    ]
+  },
+  {
+    "expr": "i2 IS NOT NULL",
+    "true_list": [
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 0
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 1
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -1
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": 100
+        }
+      },
+      {
+        "i2": {
+          "type": "Integer",
+          "value": -100
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "i2": {
+          "type": "Null"
+        }
+      },
+      {
+        "i2": {
+          "type": "Null"
+        }
+      },
+      {
+        "i2": {
+          "type": "Null"
+        }
+      },
+      {
+        "i2": {
+          "type": "Null"
+        }
+      },
+      {
+        "i2": {
+          "type": "Null"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "f1 IS NULL",
+    "true_list": [
+      {
+        "f1": {
+          "type": "Null"
+        }
+      },
+      {
+        "f1": {
+          "type": "Null"
+        }
+      },
+      {
+        "f1": {
+          "type": "Null"
+        }
+      },
+      {
+        "f1": {
+          "type": "Null"
+        }
+      },
+      {
+        "f1": {
+          "type": "Null"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "f1": {
+          "type": "Float",
+          "value": 0.0
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 1.0
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": -1.0
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": 100.5
+        }
+      },
+      {
+        "f1": {
+          "type": "Float",
+          "value": -100.5
+        }
+      }
+    ]
+  },
+  {
+    "expr": "f2 IS NOT NULL",
+    "true_list": [
+      {
+        "f2": {
+          "type": "Float",
+          "value": 0.0
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 1.0
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": -1.0
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": 100.5
+        }
+      },
+      {
+        "f2": {
+          "type": "Float",
+          "value": -100.5
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "f2": {
+          "type": "Null"
+        }
+      },
+      {
+        "f2": {
+          "type": "Null"
+        }
+      },
+      {
+        "f2": {
+          "type": "Null"
+        }
+      },
+      {
+        "f2": {
+          "type": "Null"
+        }
+      },
+      {
+        "f2": {
+          "type": "Null"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s1 IS NULL",
+    "true_list": [
+      {
+        "s1": {
+          "type": "Null"
+        }
+      },
+      {
+        "s1": {
+          "type": "Null"
+        }
+      },
+      {
+        "s1": {
+          "type": "Null"
+        }
+      },
+      {
+        "s1": {
+          "type": "Null"
+        }
+      },
+      {
+        "s1": {
+          "type": "Null"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s1": {
+          "type": "String",
+          "value": ""
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "a"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "test"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "hello"
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "world"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "s2 IS NOT NULL",
+    "true_list": [
+      {
+        "s2": {
+          "type": "String",
+          "value": ""
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "a"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "test"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "hello"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "world"
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "s2": {
+          "type": "Null"
+        }
+      },
+      {
+        "s2": {
+          "type": "Null"
+        }
+      },
+      {
+        "s2": {
+          "type": "Null"
+        }
+      },
+      {
+        "s2": {
+          "type": "Null"
+        }
+      },
+      {
+        "s2": {
+          "type": "Null"
+        }
+      }
+    ]
+  },
+  {
+    "expr": "b1",
+    "true_list": [
+      {
+        "b1": {
+          "type": "Boolean",
+          "value": true
+        }
+      },
+      {
+        "b1": {
+          "type": "Boolean",
+          "value": true
+        }
+      },
+      {
+        "b1": {
+          "type": "Boolean",
+          "value": true
+        }
+      },
+      {
+        "b1": {
+          "type": "Boolean",
+          "value": true
+        }
+      },
+      {
+        "b1": {
+          "type": "Boolean",
+          "value": true
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "b1": {
+          "type": "Boolean",
+          "value": false
+        }
+      },
+      {
+        "b1": {
+          "type": "Boolean",
+          "value": false
+        }
+      },
+      {
+        "b1": {
+          "type": "Boolean",
+          "value": false
+        }
+      },
+      {
+        "b1": {
+          "type": "Boolean",
+          "value": false
+        }
+      },
+      {
+        "b1": {
+          "type": "Boolean",
+          "value": false
+        }
+      }
+    ]
+  },
+  {
+    "expr": "NOT b2",
+    "true_list": [
+      {
+        "b2": {
+          "type": "Boolean",
+          "value": false
+        }
+      },
+      {
+        "b2": {
+          "type": "Boolean",
+          "value": false
+        }
+      },
+      {
+        "b2": {
+          "type": "Boolean",
+          "value": false
+        }
+      },
+      {
+        "b2": {
+          "type": "Boolean",
+          "value": false
+        }
+      },
+      {
+        "b2": {
+          "type": "Boolean",
+          "value": false
+        }
+      }
+    ],
+    "false_list": [
+      {
+        "b2": {
+          "type": "Boolean",
+          "value": true
+        }
+      },
+      {
+        "b2": {
+          "type": "Boolean",
+          "value": true
+        }
+      },
+      {
+        "b2": {
+          "type": "Boolean",
+          "value": true
+        }
+      },
+      {
+        "b2": {
+          "type": "Boolean",
+          "value": true
+        }
+      },
+      {
+        "b2": {
+          "type": "Boolean",
+          "value": true
+        }
+      }
+    ]
+  }
+]
