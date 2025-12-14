@@ -7,30 +7,6 @@
           "type": "Integer",
           "value": 7
         }
-      },
-      {
-        "i1": {
-          "type": "Integer",
-          "value": 7
-        }
-      },
-      {
-        "i1": {
-          "type": "Integer",
-          "value": 7
-        }
-      },
-      {
-        "i1": {
-          "type": "Integer",
-          "value": 7
-        }
-      },
-      {
-        "i1": {
-          "type": "Integer",
-          "value": 7
-        }
       }
     ],
     "false_list": [
@@ -69,30 +45,6 @@
   {
     "expr": "-3 = i2",
     "true_list": [
-      {
-        "i2": {
-          "type": "Integer",
-          "value": -3
-        }
-      },
-      {
-        "i2": {
-          "type": "Integer",
-          "value": -3
-        }
-      },
-      {
-        "i2": {
-          "type": "Integer",
-          "value": -3
-        }
-      },
-      {
-        "i2": {
-          "type": "Integer",
-          "value": -3
-        }
-      },
       {
         "i2": {
           "type": "Integer",
@@ -137,11 +89,11 @@
     "expr": "i3 = i4",
     "true_list": [
       {
-        "i3": {
+        "i4": {
           "type": "Integer",
           "value": 5
         },
-        "i4": {
+        "i3": {
           "type": "Integer",
           "value": 5
         }
@@ -167,21 +119,21 @@
         }
       },
       {
-        "i3": {
+        "i4": {
           "type": "Integer",
           "value": -5
         },
-        "i4": {
+        "i3": {
           "type": "Integer",
           "value": -5
         }
       },
       {
-        "i4": {
+        "i3": {
           "type": "Integer",
           "value": 100
         },
-        "i3": {
+        "i4": {
           "type": "Integer",
           "value": 100
         }
@@ -189,13 +141,13 @@
     ],
     "false_list": [
       {
-        "i3": {
-          "type": "Integer",
-          "value": 5
-        },
         "i4": {
           "type": "Integer",
           "value": 10
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 5
         }
       },
       {
@@ -219,13 +171,13 @@
         }
       },
       {
-        "i4": {
-          "type": "Integer",
-          "value": 5
-        },
         "i3": {
           "type": "Integer",
           "value": -5
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 5
         }
       },
       {
@@ -243,30 +195,6 @@
   {
     "expr": "f1 = 22.4",
     "true_list": [
-      {
-        "f1": {
-          "type": "Float",
-          "value": 22.4
-        }
-      },
-      {
-        "f1": {
-          "type": "Float",
-          "value": 22.4
-        }
-      },
-      {
-        "f1": {
-          "type": "Float",
-          "value": 22.4
-        }
-      },
-      {
-        "f1": {
-          "type": "Float",
-          "value": 22.4
-        }
-      },
       {
         "f1": {
           "type": "Float",
@@ -315,30 +243,6 @@
           "type": "Float",
           "value": 50.1
         }
-      },
-      {
-        "f2": {
-          "type": "Float",
-          "value": 50.1
-        }
-      },
-      {
-        "f2": {
-          "type": "Float",
-          "value": 50.1
-        }
-      },
-      {
-        "f2": {
-          "type": "Float",
-          "value": 50.1
-        }
-      },
-      {
-        "f2": {
-          "type": "Float",
-          "value": 50.1
-        }
       }
     ],
     "false_list": [
@@ -378,21 +282,21 @@
     "expr": "f3 = f4",
     "true_list": [
       {
-        "f3": {
+        "f4": {
           "type": "Float",
           "value": 5.0
         },
-        "f4": {
+        "f3": {
           "type": "Float",
           "value": 5.0
         }
       },
       {
-        "f3": {
+        "f4": {
           "type": "Float",
           "value": 10.0
         },
-        "f4": {
+        "f3": {
           "type": "Float",
           "value": 10.0
         }
@@ -408,21 +312,21 @@
         }
       },
       {
-        "f4": {
+        "f3": {
           "type": "Float",
           "value": -5.5
         },
-        "f3": {
+        "f4": {
           "type": "Float",
           "value": -5.5
         }
       },
       {
-        "f3": {
+        "f4": {
           "type": "Float",
           "value": 100.1
         },
-        "f4": {
+        "f3": {
           "type": "Float",
           "value": 100.1
         }
@@ -450,13 +354,13 @@
         }
       },
       {
-        "f3": {
-          "type": "Float",
-          "value": 0.0
-        },
         "f4": {
           "type": "Float",
           "value": 1.0
+        },
+        "f3": {
+          "type": "Float",
+          "value": 0.0
         }
       },
       {
@@ -470,13 +374,13 @@
         }
       },
       {
-        "f3": {
-          "type": "Float",
-          "value": 100.1
-        },
         "f4": {
           "type": "Float",
           "value": 200.2
+        },
+        "f3": {
+          "type": "Float",
+          "value": 100.1
         }
       }
     ]
@@ -484,30 +388,6 @@
   {
     "expr": "s1 = 'banana'",
     "true_list": [
-      {
-        "s1": {
-          "type": "String",
-          "value": "banana"
-        }
-      },
-      {
-        "s1": {
-          "type": "String",
-          "value": "banana"
-        }
-      },
-      {
-        "s1": {
-          "type": "String",
-          "value": "banana"
-        }
-      },
-      {
-        "s1": {
-          "type": "String",
-          "value": "banana"
-        }
-      },
       {
         "s1": {
           "type": "String",
@@ -551,30 +431,6 @@
   {
     "expr": "'united' = s2",
     "true_list": [
-      {
-        "s2": {
-          "type": "String",
-          "value": "united"
-        }
-      },
-      {
-        "s2": {
-          "type": "String",
-          "value": "united"
-        }
-      },
-      {
-        "s2": {
-          "type": "String",
-          "value": "united"
-        }
-      },
-      {
-        "s2": {
-          "type": "String",
-          "value": "united"
-        }
-      },
       {
         "s2": {
           "type": "String",
@@ -639,11 +495,11 @@
         }
       },
       {
-        "s3": {
+        "s4": {
           "type": "String",
           "value": "cat"
         },
-        "s4": {
+        "s3": {
           "type": "String",
           "value": "cat"
         }
@@ -659,11 +515,11 @@
         }
       },
       {
-        "s3": {
+        "s4": {
           "type": "String",
           "value": "egg"
         },
-        "s4": {
+        "s3": {
           "type": "String",
           "value": "egg"
         }
@@ -671,53 +527,53 @@
     ],
     "false_list": [
       {
-        "s3": {
-          "type": "String",
-          "value": "apple"
-        },
         "s4": {
           "type": "String",
           "value": "banana"
+        },
+        "s3": {
+          "type": "String",
+          "value": "apple"
         }
       },
       {
-        "s4": {
-          "type": "String",
-          "value": "dog"
-        },
         "s3": {
           "type": "String",
           "value": "cat"
+        },
+        "s4": {
+          "type": "String",
+          "value": "dog"
         }
       },
       {
-        "s3": {
-          "type": "String",
-          "value": "egg"
-        },
         "s4": {
           "type": "String",
           "value": "fox"
+        },
+        "s3": {
+          "type": "String",
+          "value": "egg"
         }
       },
       {
-        "s3": {
-          "type": "String",
-          "value": "grape"
-        },
         "s4": {
           "type": "String",
           "value": "honey"
-        }
-      },
-      {
-        "s4": {
-          "type": "String",
-          "value": "juice"
         },
         "s3": {
           "type": "String",
+          "value": "grape"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
           "value": "ice"
+        },
+        "s4": {
+          "type": "String",
+          "value": "juice"
         }
       }
     ]
@@ -757,30 +613,6 @@
       }
     ],
     "false_list": [
-      {
-        "i1": {
-          "type": "Integer",
-          "value": 7
-        }
-      },
-      {
-        "i1": {
-          "type": "Integer",
-          "value": 7
-        }
-      },
-      {
-        "i1": {
-          "type": "Integer",
-          "value": 7
-        }
-      },
-      {
-        "i1": {
-          "type": "Integer",
-          "value": 7
-        }
-      },
       {
         "i1": {
           "type": "Integer",
@@ -829,30 +661,6 @@
           "type": "Integer",
           "value": -3
         }
-      },
-      {
-        "i2": {
-          "type": "Integer",
-          "value": -3
-        }
-      },
-      {
-        "i2": {
-          "type": "Integer",
-          "value": -3
-        }
-      },
-      {
-        "i2": {
-          "type": "Integer",
-          "value": -3
-        }
-      },
-      {
-        "i2": {
-          "type": "Integer",
-          "value": -3
-        }
       }
     ]
   },
@@ -860,13 +668,13 @@
     "expr": "i3 <> i4",
     "true_list": [
       {
-        "i3": {
-          "type": "Integer",
-          "value": 5
-        },
         "i4": {
           "type": "Integer",
           "value": 10
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 5
         }
       },
       {
@@ -912,11 +720,11 @@
     ],
     "false_list": [
       {
-        "i4": {
+        "i3": {
           "type": "Integer",
           "value": 5
         },
-        "i3": {
+        "i4": {
           "type": "Integer",
           "value": 5
         }
@@ -1003,30 +811,6 @@
           "type": "Float",
           "value": 22.4
         }
-      },
-      {
-        "f1": {
-          "type": "Float",
-          "value": 22.4
-        }
-      },
-      {
-        "f1": {
-          "type": "Float",
-          "value": 22.4
-        }
-      },
-      {
-        "f1": {
-          "type": "Float",
-          "value": 22.4
-        }
-      },
-      {
-        "f1": {
-          "type": "Float",
-          "value": 22.4
-        }
       }
     ]
   },
@@ -1070,30 +854,6 @@
           "type": "Float",
           "value": 50.1
         }
-      },
-      {
-        "f2": {
-          "type": "Float",
-          "value": 50.1
-        }
-      },
-      {
-        "f2": {
-          "type": "Float",
-          "value": 50.1
-        }
-      },
-      {
-        "f2": {
-          "type": "Float",
-          "value": 50.1
-        }
-      },
-      {
-        "f2": {
-          "type": "Float",
-          "value": 50.1
-        }
       }
     ]
   },
@@ -1111,33 +871,33 @@
         }
       },
       {
-        "f4": {
-          "type": "Float",
-          "value": 5.0
-        },
         "f3": {
           "type": "Float",
           "value": 10.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 5.0
         }
       },
       {
-        "f4": {
-          "type": "Float",
-          "value": 1.0
-        },
         "f3": {
           "type": "Float",
           "value": 0.0
-        }
-      },
-      {
-        "f3": {
-          "type": "Float",
-          "value": -5.5
         },
         "f4": {
           "type": "Float",
+          "value": 1.0
+        }
+      },
+      {
+        "f4": {
+          "type": "Float",
           "value": 5.5
+        },
+        "f3": {
+          "type": "Float",
+          "value": -5.5
         }
       },
       {
@@ -1153,41 +913,41 @@
     ],
     "false_list": [
       {
-        "f4": {
-          "type": "Float",
-          "value": 5.0
-        },
         "f3": {
           "type": "Float",
           "value": 5.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 5.0
+        }
+      },
+      {
+        "f3": {
+          "type": "Float",
+          "value": 10.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 10.0
         }
       },
       {
         "f4": {
           "type": "Float",
-          "value": 10.0
+          "value": 0.0
         },
-        "f3": {
-          "type": "Float",
-          "value": 10.0
-        }
-      },
-      {
         "f3": {
           "type": "Float",
           "value": 0.0
-        },
+        }
+      },
+      {
         "f4": {
-          "type": "Float",
-          "value": 0.0
-        }
-      },
-      {
-        "f3": {
           "type": "Float",
           "value": -5.5
         },
-        "f4": {
+        "f3": {
           "type": "Float",
           "value": -5.5
         }
@@ -1244,30 +1004,6 @@
           "type": "String",
           "value": "banana"
         }
-      },
-      {
-        "s1": {
-          "type": "String",
-          "value": "banana"
-        }
-      },
-      {
-        "s1": {
-          "type": "String",
-          "value": "banana"
-        }
-      },
-      {
-        "s1": {
-          "type": "String",
-          "value": "banana"
-        }
-      },
-      {
-        "s1": {
-          "type": "String",
-          "value": "banana"
-        }
       }
     ]
   },
@@ -1311,30 +1047,6 @@
           "type": "String",
           "value": "united"
         }
-      },
-      {
-        "s2": {
-          "type": "String",
-          "value": "united"
-        }
-      },
-      {
-        "s2": {
-          "type": "String",
-          "value": "united"
-        }
-      },
-      {
-        "s2": {
-          "type": "String",
-          "value": "united"
-        }
-      },
-      {
-        "s2": {
-          "type": "String",
-          "value": "united"
-        }
       }
     ]
   },
@@ -1352,13 +1064,13 @@
         }
       },
       {
-        "s4": {
-          "type": "String",
-          "value": "dog"
-        },
         "s3": {
           "type": "String",
           "value": "cat"
+        },
+        "s4": {
+          "type": "String",
+          "value": "dog"
         }
       },
       {
@@ -1394,11 +1106,11 @@
     ],
     "false_list": [
       {
-        "s4": {
+        "s3": {
           "type": "String",
           "value": "apple"
         },
-        "s3": {
+        "s4": {
           "type": "String",
           "value": "apple"
         }
@@ -1414,21 +1126,21 @@
         }
       },
       {
-        "s3": {
+        "s4": {
           "type": "String",
           "value": "cat"
         },
-        "s4": {
+        "s3": {
           "type": "String",
           "value": "cat"
         }
       },
       {
-        "s3": {
+        "s4": {
           "type": "String",
           "value": "dog"
         },
-        "s4": {
+        "s3": {
           "type": "String",
           "value": "dog"
         }
@@ -1583,33 +1295,33 @@
     "expr": "i3 > i4",
     "true_list": [
       {
-        "i4": {
-          "type": "Integer",
-          "value": 5
-        },
         "i3": {
           "type": "Integer",
           "value": 10
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 5
         }
       },
       {
+        "i4": {
+          "type": "Integer",
+          "value": 0
+        },
         "i3": {
           "type": "Integer",
           "value": 5
-        },
-        "i4": {
-          "type": "Integer",
-          "value": 0
         }
       },
       {
-        "i4": {
-          "type": "Integer",
-          "value": -5
-        },
         "i3": {
           "type": "Integer",
           "value": 0
+        },
+        "i4": {
+          "type": "Integer",
+          "value": -5
         }
       },
       {
@@ -1623,33 +1335,33 @@
         }
       },
       {
-        "i4": {
-          "type": "Integer",
-          "value": -1
-        },
         "i3": {
           "type": "Integer",
           "value": 1
+        },
+        "i4": {
+          "type": "Integer",
+          "value": -1
         }
       }
     ],
     "false_list": [
       {
+        "i3": {
+          "type": "Integer",
+          "value": 5
+        },
         "i4": {
           "type": "Integer",
           "value": 10
-        },
-        "i3": {
-          "type": "Integer",
-          "value": 5
         }
       },
       {
-        "i3": {
+        "i4": {
           "type": "Integer",
           "value": 5
         },
-        "i4": {
+        "i3": {
           "type": "Integer",
           "value": 5
         }
@@ -1824,23 +1536,23 @@
     "expr": "f3 > f4",
     "true_list": [
       {
-        "f4": {
-          "type": "Float",
-          "value": 5.0
-        },
         "f3": {
           "type": "Float",
           "value": 10.0
-        }
-      },
-      {
-        "f3": {
-          "type": "Float",
-          "value": 5.5
         },
         "f4": {
           "type": "Float",
+          "value": 5.0
+        }
+      },
+      {
+        "f4": {
+          "type": "Float",
           "value": 0.0
+        },
+        "f3": {
+          "type": "Float",
+          "value": 5.5
         }
       },
       {
@@ -1854,13 +1566,13 @@
         }
       },
       {
-        "f3": {
-          "type": "Float",
-          "value": 100.0
-        },
         "f4": {
           "type": "Float",
           "value": 50.0
+        },
+        "f3": {
+          "type": "Float",
+          "value": 100.0
         }
       },
       {
@@ -1886,23 +1598,23 @@
         }
       },
       {
-        "f4": {
+        "f3": {
           "type": "Float",
           "value": 5.0
         },
-        "f3": {
+        "f4": {
           "type": "Float",
           "value": 5.0
         }
       },
       {
-        "f3": {
-          "type": "Float",
-          "value": 0.0
-        },
         "f4": {
           "type": "Float",
           "value": 5.0
+        },
+        "f3": {
+          "type": "Float",
+          "value": 0.0
         }
       },
       {
@@ -2065,23 +1777,23 @@
     "expr": "s3 > s4",
     "true_list": [
       {
-        "s4": {
-          "type": "String",
-          "value": "apple"
-        },
         "s3": {
           "type": "String",
           "value": "banana"
-        }
-      },
-      {
-        "s3": {
-          "type": "String",
-          "value": "dog"
         },
         "s4": {
           "type": "String",
+          "value": "apple"
+        }
+      },
+      {
+        "s4": {
+          "type": "String",
           "value": "cat"
+        },
+        "s3": {
+          "type": "String",
+          "value": "dog"
         }
       },
       {
@@ -2117,53 +1829,53 @@
     ],
     "false_list": [
       {
-        "s3": {
-          "type": "String",
-          "value": "apple"
-        },
         "s4": {
           "type": "String",
           "value": "banana"
+        },
+        "s3": {
+          "type": "String",
+          "value": "apple"
         }
       },
       {
+        "s4": {
+          "type": "String",
+          "value": "dog"
+        },
         "s3": {
           "type": "String",
           "value": "cat"
-        },
+        }
+      },
+      {
         "s4": {
+          "type": "String",
+          "value": "dog"
+        },
+        "s3": {
           "type": "String",
           "value": "dog"
         }
       },
       {
-        "s3": {
-          "type": "String",
-          "value": "dog"
-        },
-        "s4": {
-          "type": "String",
-          "value": "dog"
-        }
-      },
-      {
-        "s3": {
-          "type": "String",
-          "value": "grape"
-        },
         "s4": {
           "type": "String",
           "value": "honey"
+        },
+        "s3": {
+          "type": "String",
+          "value": "grape"
         }
       },
       {
-        "s3": {
-          "type": "String",
-          "value": "ice"
-        },
         "s4": {
           "type": "String",
           "value": "juice"
+        },
+        "s3": {
+          "type": "String",
+          "value": "ice"
         }
       }
     ]
@@ -2326,23 +2038,23 @@
         }
       },
       {
-        "i4": {
+        "i3": {
           "type": "Integer",
           "value": 0
         },
-        "i3": {
+        "i4": {
           "type": "Integer",
           "value": 0
         }
       },
       {
-        "i4": {
-          "type": "Integer",
-          "value": 50
-        },
         "i3": {
           "type": "Integer",
           "value": 100
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 50
         }
       },
       {
@@ -2358,11 +2070,21 @@
     ],
     "false_list": [
       {
+        "i3": {
+          "type": "Integer",
+          "value": 5
+        },
         "i4": {
           "type": "Integer",
           "value": 10
-        },
+        }
+      },
+      {
         "i3": {
+          "type": "Integer",
+          "value": 0
+        },
+        "i4": {
           "type": "Integer",
           "value": 5
         }
@@ -2370,21 +2092,11 @@
       {
         "i4": {
           "type": "Integer",
-          "value": 5
-        },
-        "i3": {
-          "type": "Integer",
           "value": 0
-        }
-      },
-      {
+        },
         "i3": {
           "type": "Integer",
           "value": -5
-        },
-        "i4": {
-          "type": "Integer",
-          "value": 0
         }
       },
       {
@@ -2557,11 +2269,11 @@
         }
       },
       {
-        "f4": {
+        "f3": {
           "type": "Float",
           "value": 5.0
         },
-        "f3": {
+        "f4": {
           "type": "Float",
           "value": 5.0
         }
@@ -2798,33 +2510,33 @@
         }
       },
       {
+        "s3": {
+          "type": "String",
+          "value": "dog"
+        },
         "s4": {
           "type": "String",
           "value": "cat"
-        },
+        }
+      },
+      {
         "s3": {
+          "type": "String",
+          "value": "dog"
+        },
+        "s4": {
           "type": "String",
           "value": "dog"
         }
       },
       {
-        "s4": {
-          "type": "String",
-          "value": "dog"
-        },
-        "s3": {
-          "type": "String",
-          "value": "dog"
-        }
-      },
-      {
-        "s4": {
-          "type": "String",
-          "value": "grape"
-        },
         "s3": {
           "type": "String",
           "value": "honey"
+        },
+        "s4": {
+          "type": "String",
+          "value": "grape"
         }
       },
       {
@@ -2840,23 +2552,23 @@
     ],
     "false_list": [
       {
-        "s4": {
-          "type": "String",
-          "value": "banana"
-        },
         "s3": {
           "type": "String",
           "value": "apple"
+        },
+        "s4": {
+          "type": "String",
+          "value": "banana"
         }
       },
       {
-        "s4": {
-          "type": "String",
-          "value": "dog"
-        },
         "s3": {
           "type": "String",
           "value": "cat"
+        },
+        "s4": {
+          "type": "String",
+          "value": "dog"
         }
       },
       {
@@ -2870,23 +2582,23 @@
         }
       },
       {
-        "s3": {
-          "type": "String",
-          "value": "grape"
-        },
         "s4": {
           "type": "String",
           "value": "honey"
+        },
+        "s3": {
+          "type": "String",
+          "value": "grape"
         }
       },
       {
-        "s3": {
-          "type": "String",
-          "value": "ice"
-        },
         "s4": {
           "type": "String",
           "value": "juice"
+        },
+        "s3": {
+          "type": "String",
+          "value": "ice"
         }
       }
     ]
@@ -3029,23 +2741,23 @@
     "expr": "i3 < i4",
     "true_list": [
       {
+        "i3": {
+          "type": "Integer",
+          "value": 5
+        },
         "i4": {
           "type": "Integer",
           "value": 10
-        },
-        "i3": {
-          "type": "Integer",
-          "value": 5
         }
       },
       {
-        "i3": {
-          "type": "Integer",
-          "value": 0
-        },
         "i4": {
           "type": "Integer",
           "value": 5
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 0
         }
       },
       {
@@ -3059,13 +2771,13 @@
         }
       },
       {
-        "i3": {
-          "type": "Integer",
-          "value": 50
-        },
         "i4": {
           "type": "Integer",
           "value": 100
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 50
         }
       },
       {
@@ -3101,13 +2813,13 @@
         }
       },
       {
-        "i4": {
-          "type": "Integer",
-          "value": 0
-        },
         "i3": {
           "type": "Integer",
           "value": 5
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 0
         }
       },
       {
@@ -3121,13 +2833,13 @@
         }
       },
       {
-        "i3": {
-          "type": "Integer",
-          "value": 1
-        },
         "i4": {
           "type": "Integer",
           "value": -1
+        },
+        "i3": {
+          "type": "Integer",
+          "value": 1
         }
       }
     ]
@@ -3270,43 +2982,43 @@
     "expr": "f3 < f4",
     "true_list": [
       {
-        "f4": {
-          "type": "Float",
-          "value": 10.0
-        },
         "f3": {
           "type": "Float",
           "value": 5.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 10.0
         }
       },
       {
+        "f3": {
+          "type": "Float",
+          "value": 0.0
+        },
         "f4": {
           "type": "Float",
           "value": 5.5
-        },
-        "f3": {
-          "type": "Float",
-          "value": 0.0
         }
       },
       {
+        "f4": {
+          "type": "Float",
+          "value": 0.0
+        },
         "f3": {
           "type": "Float",
           "value": -5.0
-        },
-        "f4": {
-          "type": "Float",
-          "value": 0.0
         }
       },
       {
-        "f4": {
-          "type": "Float",
-          "value": 100.0
-        },
         "f3": {
           "type": "Float",
           "value": 50.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 100.0
         }
       },
       {
@@ -3322,13 +3034,13 @@
     ],
     "false_list": [
       {
+        "f4": {
+          "type": "Float",
+          "value": 5.0
+        },
         "f3": {
           "type": "Float",
           "value": 10.0
-        },
-        "f4": {
-          "type": "Float",
-          "value": 5.0
         }
       },
       {
@@ -3342,23 +3054,23 @@
         }
       },
       {
+        "f3": {
+          "type": "Float",
+          "value": 5.0
+        },
         "f4": {
           "type": "Float",
           "value": 0.0
-        },
-        "f3": {
-          "type": "Float",
-          "value": 5.0
         }
       },
       {
-        "f4": {
-          "type": "Float",
-          "value": 50.0
-        },
         "f3": {
           "type": "Float",
           "value": 100.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 50.0
         }
       },
       {
@@ -3511,23 +3223,23 @@
     "expr": "s3 < s4",
     "true_list": [
       {
-        "s4": {
-          "type": "String",
-          "value": "banana"
-        },
         "s3": {
           "type": "String",
           "value": "apple"
+        },
+        "s4": {
+          "type": "String",
+          "value": "banana"
         }
       },
       {
-        "s4": {
-          "type": "String",
-          "value": "dog"
-        },
         "s3": {
           "type": "String",
           "value": "cat"
+        },
+        "s4": {
+          "type": "String",
+          "value": "dog"
         }
       },
       {
@@ -3541,13 +3253,13 @@
         }
       },
       {
-        "s4": {
-          "type": "String",
-          "value": "honey"
-        },
         "s3": {
           "type": "String",
           "value": "grape"
+        },
+        "s4": {
+          "type": "String",
+          "value": "honey"
         }
       },
       {
@@ -3573,13 +3285,13 @@
         }
       },
       {
+        "s3": {
+          "type": "String",
+          "value": "dog"
+        },
         "s4": {
           "type": "String",
           "value": "cat"
-        },
-        "s3": {
-          "type": "String",
-          "value": "dog"
         }
       },
       {
@@ -3593,13 +3305,13 @@
         }
       },
       {
-        "s4": {
-          "type": "String",
-          "value": "grape"
-        },
         "s3": {
           "type": "String",
           "value": "honey"
+        },
+        "s4": {
+          "type": "String",
+          "value": "grape"
         }
       },
       {
@@ -3772,11 +3484,11 @@
         }
       },
       {
-        "i3": {
+        "i4": {
           "type": "Integer",
           "value": 0
         },
-        "i4": {
+        "i3": {
           "type": "Integer",
           "value": 0
         }
@@ -3834,13 +3546,13 @@
         }
       },
       {
-        "i4": {
-          "type": "Integer",
-          "value": 50
-        },
         "i3": {
           "type": "Integer",
           "value": 100
+        },
+        "i4": {
+          "type": "Integer",
+          "value": 50
         }
       },
       {
@@ -3993,13 +3705,13 @@
     "expr": "f3 <= f4",
     "true_list": [
       {
+        "f3": {
+          "type": "Float",
+          "value": 5.0
+        },
         "f4": {
           "type": "Float",
           "value": 10.0
-        },
-        "f3": {
-          "type": "Float",
-          "value": 5.0
         }
       },
       {
@@ -4023,13 +3735,13 @@
         }
       },
       {
-        "f3": {
-          "type": "Float",
-          "value": 50.0
-        },
         "f4": {
           "type": "Float",
           "value": 100.0
+        },
+        "f3": {
+          "type": "Float",
+          "value": 50.0
         }
       },
       {
@@ -4065,33 +3777,33 @@
         }
       },
       {
-        "f4": {
-          "type": "Float",
-          "value": -5.0
-        },
         "f3": {
           "type": "Float",
           "value": 0.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": -5.0
         }
       },
       {
-        "f4": {
-          "type": "Float",
-          "value": 50.0
-        },
         "f3": {
           "type": "Float",
           "value": 100.0
+        },
+        "f4": {
+          "type": "Float",
+          "value": 50.0
         }
       },
       {
-        "f4": {
-          "type": "Float",
-          "value": -1.1
-        },
         "f3": {
           "type": "Float",
           "value": 1.1
+        },
+        "f4": {
+          "type": "Float",
+          "value": -1.1
         }
       }
     ]
@@ -4254,11 +3966,11 @@
         }
       },
       {
-        "s3": {
+        "s4": {
           "type": "String",
           "value": "dog"
         },
-        "s4": {
+        "s3": {
           "type": "String",
           "value": "dog"
         }
@@ -4286,23 +3998,23 @@
     ],
     "false_list": [
       {
-        "s3": {
-          "type": "String",
-          "value": "banana"
-        },
         "s4": {
           "type": "String",
           "value": "apple"
-        }
-      },
-      {
-        "s4": {
-          "type": "String",
-          "value": "cat"
         },
         "s3": {
           "type": "String",
+          "value": "banana"
+        }
+      },
+      {
+        "s3": {
+          "type": "String",
           "value": "dog"
+        },
+        "s4": {
+          "type": "String",
+          "value": "cat"
         }
       },
       {
@@ -5691,43 +5403,19 @@
           "type": "String",
           "value": "bb"
         }
-      },
-      {
-        "s1": {
-          "type": "String",
-          "value": "aa"
-        }
-      },
-      {
-        "s1": {
-          "type": "String",
-          "value": "aa"
-        }
-      },
-      {
-        "s1": {
-          "type": "String",
-          "value": "aa"
-        }
       }
     ],
     "false_list": [
       {
         "s1": {
           "type": "String",
-          "value": "a"
-        }
-      },
-      {
-        "s1": {
-          "type": "String",
-          "value": "a"
-        }
-      },
-      {
-        "s1": {
-          "type": "String",
           "value": ""
+        }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "a"
         }
       },
       {
@@ -5741,6 +5429,12 @@
           "type": "String",
           "value": "bbzz"
         }
+      },
+      {
+        "s1": {
+          "type": "String",
+          "value": "bc"
+        }
       }
     ]
   },
@@ -5750,7 +5444,7 @@
       {
         "s2": {
           "type": "String",
-          "value": "ml"
+          "value": "a"
         }
       },
       {
@@ -5762,7 +5456,7 @@
       {
         "s2": {
           "type": "String",
-          "value": "a"
+          "value": "ml"
         }
       },
       {
@@ -5788,12 +5482,6 @@
       {
         "s2": {
           "type": "String",
-          "value": "zz"
-        }
-      },
-      {
-        "s2": {
-          "type": "String",
           "value": "na"
         }
       },
@@ -5807,6 +5495,12 @@
         "s2": {
           "type": "String",
           "value": "pa"
+        }
+      },
+      {
+        "s2": {
+          "type": "String",
+          "value": "zz"
         }
       }
     ]
@@ -5830,18 +5524,6 @@
         "i1": {
           "type": "Integer",
           "value": 3
-        }
-      },
-      {
-        "i1": {
-          "type": "Integer",
-          "value": 1
-        }
-      },
-      {
-        "i1": {
-          "type": "Integer",
-          "value": 2
         }
       }
     ],
@@ -5930,18 +5612,6 @@
           "type": "Integer",
           "value": 30
         }
-      },
-      {
-        "i2": {
-          "type": "Integer",
-          "value": 10
-        }
-      },
-      {
-        "i2": {
-          "type": "Integer",
-          "value": 20
-        }
       }
     ]
   },
@@ -5964,18 +5634,6 @@
         "f1": {
           "type": "Float",
           "value": 3.0
-        }
-      },
-      {
-        "f1": {
-          "type": "Float",
-          "value": 1.0
-        }
-      },
-      {
-        "f1": {
-          "type": "Float",
-          "value": 2.0
         }
       }
     ],
@@ -6064,18 +5722,6 @@
           "type": "Float",
           "value": 30.0
         }
-      },
-      {
-        "f2": {
-          "type": "Float",
-          "value": 10.0
-        }
-      },
-      {
-        "f2": {
-          "type": "Float",
-          "value": 20.0
-        }
       }
     ]
   },
@@ -6098,18 +5744,6 @@
         "s1": {
           "type": "String",
           "value": "cherry"
-        }
-      },
-      {
-        "s1": {
-          "type": "String",
-          "value": "apple"
-        }
-      },
-      {
-        "s1": {
-          "type": "String",
-          "value": "banana"
         }
       }
     ],
@@ -6198,44 +5832,12 @@
           "type": "String",
           "value": "fox"
         }
-      },
-      {
-        "s2": {
-          "type": "String",
-          "value": "dog"
-        }
-      },
-      {
-        "s2": {
-          "type": "String",
-          "value": "elephant"
-        }
       }
     ]
   },
   {
     "expr": "i1 IS NULL",
     "true_list": [
-      {
-        "i1": {
-          "type": "Null"
-        }
-      },
-      {
-        "i1": {
-          "type": "Null"
-        }
-      },
-      {
-        "i1": {
-          "type": "Null"
-        }
-      },
-      {
-        "i1": {
-          "type": "Null"
-        }
-      },
       {
         "i1": {
           "type": "Null"
@@ -6314,52 +5916,12 @@
         "i2": {
           "type": "Null"
         }
-      },
-      {
-        "i2": {
-          "type": "Null"
-        }
-      },
-      {
-        "i2": {
-          "type": "Null"
-        }
-      },
-      {
-        "i2": {
-          "type": "Null"
-        }
-      },
-      {
-        "i2": {
-          "type": "Null"
-        }
       }
     ]
   },
   {
     "expr": "f1 IS NULL",
     "true_list": [
-      {
-        "f1": {
-          "type": "Null"
-        }
-      },
-      {
-        "f1": {
-          "type": "Null"
-        }
-      },
-      {
-        "f1": {
-          "type": "Null"
-        }
-      },
-      {
-        "f1": {
-          "type": "Null"
-        }
-      },
       {
         "f1": {
           "type": "Null"
@@ -6438,52 +6000,12 @@
         "f2": {
           "type": "Null"
         }
-      },
-      {
-        "f2": {
-          "type": "Null"
-        }
-      },
-      {
-        "f2": {
-          "type": "Null"
-        }
-      },
-      {
-        "f2": {
-          "type": "Null"
-        }
-      },
-      {
-        "f2": {
-          "type": "Null"
-        }
       }
     ]
   },
   {
     "expr": "s1 IS NULL",
     "true_list": [
-      {
-        "s1": {
-          "type": "Null"
-        }
-      },
-      {
-        "s1": {
-          "type": "Null"
-        }
-      },
-      {
-        "s1": {
-          "type": "Null"
-        }
-      },
-      {
-        "s1": {
-          "type": "Null"
-        }
-      },
       {
         "s1": {
           "type": "Null"
@@ -6562,26 +6084,6 @@
         "s2": {
           "type": "Null"
         }
-      },
-      {
-        "s2": {
-          "type": "Null"
-        }
-      },
-      {
-        "s2": {
-          "type": "Null"
-        }
-      },
-      {
-        "s2": {
-          "type": "Null"
-        }
-      },
-      {
-        "s2": {
-          "type": "Null"
-        }
       }
     ]
   },
@@ -6593,57 +6095,9 @@
           "type": "Boolean",
           "value": true
         }
-      },
-      {
-        "b1": {
-          "type": "Boolean",
-          "value": true
-        }
-      },
-      {
-        "b1": {
-          "type": "Boolean",
-          "value": true
-        }
-      },
-      {
-        "b1": {
-          "type": "Boolean",
-          "value": true
-        }
-      },
-      {
-        "b1": {
-          "type": "Boolean",
-          "value": true
-        }
       }
     ],
     "false_list": [
-      {
-        "b1": {
-          "type": "Boolean",
-          "value": false
-        }
-      },
-      {
-        "b1": {
-          "type": "Boolean",
-          "value": false
-        }
-      },
-      {
-        "b1": {
-          "type": "Boolean",
-          "value": false
-        }
-      },
-      {
-        "b1": {
-          "type": "Boolean",
-          "value": false
-        }
-      },
       {
         "b1": {
           "type": "Boolean",
@@ -6660,57 +6114,9 @@
           "type": "Boolean",
           "value": false
         }
-      },
-      {
-        "b2": {
-          "type": "Boolean",
-          "value": false
-        }
-      },
-      {
-        "b2": {
-          "type": "Boolean",
-          "value": false
-        }
-      },
-      {
-        "b2": {
-          "type": "Boolean",
-          "value": false
-        }
-      },
-      {
-        "b2": {
-          "type": "Boolean",
-          "value": false
-        }
       }
     ],
     "false_list": [
-      {
-        "b2": {
-          "type": "Boolean",
-          "value": true
-        }
-      },
-      {
-        "b2": {
-          "type": "Boolean",
-          "value": true
-        }
-      },
-      {
-        "b2": {
-          "type": "Boolean",
-          "value": true
-        }
-      },
-      {
-        "b2": {
-          "type": "Boolean",
-          "value": true
-        }
-      },
       {
         "b2": {
           "type": "Boolean",

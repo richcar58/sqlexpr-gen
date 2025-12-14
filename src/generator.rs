@@ -42,7 +42,7 @@ fn generate_values_var_op_lit(var: &str, op: &str, lit: &LiteralValue) -> (Vec<H
     match lit {
         LiteralValue::Integer(n) => {
             let true_vals = match op {
-                "=" => vec![*n, *n, *n, *n, *n],
+                "=" => vec![*n],  // Only one value makes equality true
                 "<>" | "!=" => vec![n - 1, n - 2, n + 1, n + 2, n - 10],
                 ">" => vec![n + 1, n + 2, n + 5, n + 10, n + 100],
                 ">=" => vec![*n, n + 1, n + 2, n + 5, n + 10],
@@ -52,7 +52,7 @@ fn generate_values_var_op_lit(var: &str, op: &str, lit: &LiteralValue) -> (Vec<H
             };
             let false_vals = match op {
                 "=" => vec![n - 1, n - 2, n + 1, n + 2, n - 10],
-                "<>" | "!=" => vec![*n, *n, *n, *n, *n],
+                "<>" | "!=" => vec![*n],  // Only one value makes inequality false
                 ">" => vec![*n, n - 1, n - 2, n - 5, n - 10],
                 ">=" => vec![n - 1, n - 2, n - 5, n - 10, n - 100],
                 "<" => vec![*n, n + 1, n + 2, n + 5, n + 10],
@@ -74,7 +74,7 @@ fn generate_values_var_op_lit(var: &str, op: &str, lit: &LiteralValue) -> (Vec<H
         }
         LiteralValue::Float(n) => {
             let true_vals = match op {
-                "=" => vec![*n, *n, *n, *n, *n],
+                "=" => vec![*n],  // Only one value makes equality true
                 "<>" | "!=" => vec![n - 1.0, n - 2.0, n + 1.0, n + 2.0, n - 10.0],
                 ">" => vec![n + 1.0, n + 2.0, n + 5.0, n + 10.0, n + 100.0],
                 ">=" => vec![*n, n + 1.0, n + 2.0, n + 5.0, n + 10.0],
@@ -84,7 +84,7 @@ fn generate_values_var_op_lit(var: &str, op: &str, lit: &LiteralValue) -> (Vec<H
             };
             let false_vals = match op {
                 "=" => vec![n - 1.0, n - 2.0, n + 1.0, n + 2.0, n - 10.0],
-                "<>" | "!=" => vec![*n, *n, *n, *n, *n],
+                "<>" | "!=" => vec![*n],  // Only one value makes inequality false
                 ">" => vec![*n, n - 1.0, n - 2.0, n - 5.0, n - 10.0],
                 ">=" => vec![n - 1.0, n - 2.0, n - 5.0, n - 10.0, n - 100.0],
                 "<" => vec![*n, n + 1.0, n + 2.0, n + 5.0, n + 10.0],
@@ -111,7 +111,7 @@ fn generate_values_var_op_lit(var: &str, op: &str, lit: &LiteralValue) -> (Vec<H
             let different_strings = generate_different_strings(s, 5);
 
             let true_vals = match op {
-                "=" => vec![s.clone(); 5],
+                "=" => vec![s.clone()],  // Only one value makes equality true
                 "<>" | "!=" => different_strings.clone(),
                 ">" => greater_strings.clone(),
                 ">=" => {
@@ -129,7 +129,7 @@ fn generate_values_var_op_lit(var: &str, op: &str, lit: &LiteralValue) -> (Vec<H
             };
             let false_vals = match op {
                 "=" => different_strings,
-                "<>" | "!=" => vec![s.clone(); 5],
+                "<>" | "!=" => vec![s.clone()],  // Only one value makes inequality false
                 ">" => {
                     let mut vals = vec![s.clone()];
                     vals.extend(lesser_strings.into_iter().take(4));
@@ -389,10 +389,9 @@ fn generate_between(template: &BetweenTemplate) -> TestExpression {
                 }
             }
 
-            // Pad if needed
-            while inside.len() < 5 {
-                inside.push(low.clone());
-            }
+            // Remove duplicates and truncate
+            inside.sort();
+            inside.dedup();
             inside.truncate(5);
 
             // Generate values outside the range [low, high]
@@ -400,6 +399,10 @@ fn generate_between(template: &BetweenTemplate) -> TestExpression {
             let after_high = generate_greater_strings(high, 3);
             let mut outside = before_low;
             outside.extend(after_high);
+
+            // Remove duplicates
+            outside.sort();
+            outside.dedup();
             outside.truncate(5);
 
             (
@@ -444,6 +447,7 @@ fn generate_in(template: &InTemplate) -> TestExpression {
         format!("{} IN ({})", template.variable, values_str)
     };
 
+    // Use the actual IN list values (no padding to avoid duplicates)
     let in_vals: Vec<RuntimeValue> = template.values.iter().map(|lit| {
         match lit {
             LiteralValue::Integer(i) => RuntimeValue::Integer(*i),
@@ -451,13 +455,6 @@ fn generate_in(template: &InTemplate) -> TestExpression {
             LiteralValue::String(s) => RuntimeValue::String(s.clone()),
         }
     }).collect();
-
-    // Pad to 5 values by repeating
-    let mut in_vals_5 = in_vals.clone();
-    while in_vals_5.len() < 5 {
-        in_vals_5.extend(in_vals.clone());
-    }
-    in_vals_5.truncate(5);
 
     let not_in_vals: Vec<RuntimeValue> = match template.value_type {
         ValueType::Integer => vec![
@@ -485,9 +482,9 @@ fn generate_in(template: &InTemplate) -> TestExpression {
     };
 
     let (true_list, false_list) = if template.not {
-        (not_in_vals, in_vals_5)
+        (not_in_vals, in_vals)
     } else {
-        (in_vals_5, not_in_vals)
+        (in_vals, not_in_vals)
     };
 
     let true_list = true_list.into_iter().map(|v| {
@@ -513,7 +510,7 @@ fn generate_is_null(template: &IsNullTemplate) -> TestExpression {
         format!("{} IS NULL", template.variable)
     };
 
-    let null_vals = vec![RuntimeValue::Null; 5];
+    let null_vals = vec![RuntimeValue::Null];  // Only one NULL value needed
 
     let not_null_vals: Vec<RuntimeValue> = match template.value_type {
         ValueType::Integer => vec![
@@ -575,8 +572,8 @@ fn generate_boolean(template: &BooleanTemplate) -> TestExpression {
         template.variable.clone()
     };
 
-    let true_vals = vec![RuntimeValue::Boolean(true); 5];
-    let false_vals = vec![RuntimeValue::Boolean(false); 5];
+    let true_vals = vec![RuntimeValue::Boolean(true)];  // Only one true value needed
+    let false_vals = vec![RuntimeValue::Boolean(false)];  // Only one false value needed
 
     let (true_list, false_list) = if template.not {
         (false_vals, true_vals)

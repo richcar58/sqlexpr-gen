@@ -89,5 +89,7 @@ The goal of this phase is to plan for the generation of simple, single operator 
 
 Please generate possible approaches for implementing the above requirements.      
 
+### Tweaks to Generated Expressions and Value Assignments
 
+The *resources/simple_expressions.json* looks good.  Let's tighten things up by removing duplicate entries in all *true_list* and *false_list* fields.  Also, change the generation code to not insert duplicates into those lists.
 
