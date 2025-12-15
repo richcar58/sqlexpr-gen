@@ -1,3 +1,47 @@
+/// Variable name counter for generating unique variable names
+pub struct VarCounter {
+    counter: usize,
+}
+
+impl VarCounter {
+    pub fn new() -> Self {
+        Self { counter: 1 }
+    }
+
+    /// Generate next integer variable name (e.g., "i1", "i2", ...)
+    pub fn next_int(&mut self) -> String {
+        let name = format!("i{}", self.counter);
+        self.counter += 1;
+        name
+    }
+
+    /// Generate next float variable name (e.g., "f3", "f4", ...)
+    pub fn next_float(&mut self) -> String {
+        let name = format!("f{}", self.counter);
+        self.counter += 1;
+        name
+    }
+
+    /// Generate next string variable name (e.g., "s5", "s6", ...)
+    pub fn next_string(&mut self) -> String {
+        let name = format!("s{}", self.counter);
+        self.counter += 1;
+        name
+    }
+
+    /// Generate next boolean variable name (e.g., "b7", "b8", ...)
+    pub fn next_bool(&mut self) -> String {
+        let name = format!("b{}", self.counter);
+        self.counter += 1;
+        name
+    }
+
+    /// Get current counter value
+    pub fn current(&self) -> usize {
+        self.counter
+    }
+}
+
 /// Value types supported in expressions
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum ValueType {
@@ -106,30 +150,33 @@ pub enum Template {
 /// Get all templates for Phase I test generation
 pub fn get_all_templates() -> Vec<Template> {
     let mut templates = Vec::new();
+    let mut counter = VarCounter::new();
 
     // Comparison operators
-    templates.extend(get_comparison_templates());
+    templates.extend(get_comparison_templates(&mut counter));
 
     // LIKE operators
-    templates.extend(get_like_templates());
+    templates.extend(get_like_templates(&mut counter));
 
     // BETWEEN operators
-    templates.extend(get_between_templates());
+    templates.extend(get_between_templates(&mut counter));
 
     // IN operators
-    templates.extend(get_in_templates());
+    templates.extend(get_in_templates(&mut counter));
 
     // IS NULL operators
-    templates.extend(get_is_null_templates());
+    templates.extend(get_is_null_templates(&mut counter));
 
     // Boolean expressions
-    templates.extend(get_boolean_templates());
+    templates.extend(get_boolean_templates(&mut counter));
+
+    println!("Generated {} templates using {} unique variables", templates.len(), counter.current() - 1);
 
     templates
 }
 
 /// Generate comparison templates (9 prototypes × 6 operators = 54 templates)
-fn get_comparison_templates() -> Vec<Template> {
+fn get_comparison_templates(counter: &mut VarCounter) -> Vec<Template> {
     let operators = vec!["=", "<>", ">", ">=", "<", "<="];
     let mut templates = Vec::new();
 
@@ -137,60 +184,60 @@ fn get_comparison_templates() -> Vec<Template> {
         // Integer comparisons (9 prototypes)
         templates.push(Template::Comparison(ComparisonTemplate {
             operator,
-            left: Pattern::Variable("i1".to_string()),
+            left: Pattern::Variable(counter.next_int()),
             right: Pattern::Literal(LiteralValue::Integer(7)),
             value_type: ValueType::Integer,
         }));
         templates.push(Template::Comparison(ComparisonTemplate {
             operator,
             left: Pattern::Literal(LiteralValue::Integer(-3)),
-            right: Pattern::Variable("i2".to_string()),
+            right: Pattern::Variable(counter.next_int()),
             value_type: ValueType::Integer,
         }));
         templates.push(Template::Comparison(ComparisonTemplate {
             operator,
-            left: Pattern::Variable("i3".to_string()),
-            right: Pattern::Variable("i4".to_string()),
+            left: Pattern::Variable(counter.next_int()),
+            right: Pattern::Variable(counter.next_int()),
             value_type: ValueType::Integer,
         }));
 
         // Float comparisons (3 prototypes)
         templates.push(Template::Comparison(ComparisonTemplate {
             operator,
-            left: Pattern::Variable("f1".to_string()),
+            left: Pattern::Variable(counter.next_float()),
             right: Pattern::Literal(LiteralValue::Float(22.4)),
             value_type: ValueType::Float,
         }));
         templates.push(Template::Comparison(ComparisonTemplate {
             operator,
             left: Pattern::Literal(LiteralValue::Float(50.1)),
-            right: Pattern::Variable("f2".to_string()),
+            right: Pattern::Variable(counter.next_float()),
             value_type: ValueType::Float,
         }));
         templates.push(Template::Comparison(ComparisonTemplate {
             operator,
-            left: Pattern::Variable("f3".to_string()),
-            right: Pattern::Variable("f4".to_string()),
+            left: Pattern::Variable(counter.next_float()),
+            right: Pattern::Variable(counter.next_float()),
             value_type: ValueType::Float,
         }));
 
         // String comparisons (3 prototypes)
         templates.push(Template::Comparison(ComparisonTemplate {
             operator,
-            left: Pattern::Variable("s1".to_string()),
+            left: Pattern::Variable(counter.next_string()),
             right: Pattern::Literal(LiteralValue::String("banana".to_string())),
             value_type: ValueType::String,
         }));
         templates.push(Template::Comparison(ComparisonTemplate {
             operator,
             left: Pattern::Literal(LiteralValue::String("united".to_string())),
-            right: Pattern::Variable("s2".to_string()),
+            right: Pattern::Variable(counter.next_string()),
             value_type: ValueType::String,
         }));
         templates.push(Template::Comparison(ComparisonTemplate {
             operator,
-            left: Pattern::Variable("s3".to_string()),
-            right: Pattern::Variable("s4".to_string()),
+            left: Pattern::Variable(counter.next_string()),
+            right: Pattern::Variable(counter.next_string()),
             value_type: ValueType::String,
         }));
     }
@@ -199,7 +246,7 @@ fn get_comparison_templates() -> Vec<Template> {
 }
 
 /// Generate LIKE templates (8 LIKE + 8 NOT LIKE = 16 templates)
-fn get_like_templates() -> Vec<Template> {
+fn get_like_templates(counter: &mut VarCounter) -> Vec<Template> {
     let mut templates = Vec::new();
     let patterns = vec![
         "%sometext",
@@ -212,18 +259,18 @@ fn get_like_templates() -> Vec<Template> {
         "some%text_",
     ];
 
-    for (i, pattern) in patterns.iter().enumerate() {
+    for pattern in patterns.iter() {
         // LIKE
         templates.push(Template::Like(LikeTemplate {
             not: false,
-            variable: format!("s{}", i + 1),
+            variable: counter.next_string(),
             pattern: pattern.to_string(),
         }));
 
         // NOT LIKE
         templates.push(Template::Like(LikeTemplate {
             not: true,
-            variable: format!("s{}", i + 10),
+            variable: counter.next_string(),
             pattern: pattern.to_string(),
         }));
     }
@@ -232,19 +279,19 @@ fn get_like_templates() -> Vec<Template> {
 }
 
 /// Generate BETWEEN templates (3 BETWEEN + 3 NOT BETWEEN = 6 templates)
-fn get_between_templates() -> Vec<Template> {
+fn get_between_templates(counter: &mut VarCounter) -> Vec<Template> {
     vec![
         // Integer BETWEEN
         Template::Between(BetweenTemplate {
             not: false,
-            variable: "i1".to_string(),
+            variable: counter.next_int(),
             lower: LiteralValue::Integer(1),
             upper: LiteralValue::Integer(10),
             value_type: ValueType::Integer,
         }),
         Template::Between(BetweenTemplate {
             not: true,
-            variable: "i2".to_string(),
+            variable: counter.next_int(),
             lower: LiteralValue::Integer(20),
             upper: LiteralValue::Integer(30),
             value_type: ValueType::Integer,
@@ -253,14 +300,14 @@ fn get_between_templates() -> Vec<Template> {
         // Float BETWEEN
         Template::Between(BetweenTemplate {
             not: false,
-            variable: "f1".to_string(),
+            variable: counter.next_float(),
             lower: LiteralValue::Float(1.0),
             upper: LiteralValue::Float(10.0),
             value_type: ValueType::Float,
         }),
         Template::Between(BetweenTemplate {
             not: true,
-            variable: "f2".to_string(),
+            variable: counter.next_float(),
             lower: LiteralValue::Float(20.0),
             upper: LiteralValue::Float(30.0),
             value_type: ValueType::Float,
@@ -269,14 +316,14 @@ fn get_between_templates() -> Vec<Template> {
         // String BETWEEN
         Template::Between(BetweenTemplate {
             not: false,
-            variable: "s1".to_string(),
+            variable: counter.next_string(),
             lower: LiteralValue::String("aa".to_string()),
             upper: LiteralValue::String("bb".to_string()),
             value_type: ValueType::String,
         }),
         Template::Between(BetweenTemplate {
             not: true,
-            variable: "s2".to_string(),
+            variable: counter.next_string(),
             lower: LiteralValue::String("mm".to_string()),
             upper: LiteralValue::String("zz".to_string()),
             value_type: ValueType::String,
@@ -285,12 +332,12 @@ fn get_between_templates() -> Vec<Template> {
 }
 
 /// Generate IN templates (3 IN + 3 NOT IN = 6 templates)
-fn get_in_templates() -> Vec<Template> {
+fn get_in_templates(counter: &mut VarCounter) -> Vec<Template> {
     vec![
         // Integer IN
         Template::In(InTemplate {
             not: false,
-            variable: "i1".to_string(),
+            variable: counter.next_int(),
             values: vec![
                 LiteralValue::Integer(1),
                 LiteralValue::Integer(2),
@@ -300,7 +347,7 @@ fn get_in_templates() -> Vec<Template> {
         }),
         Template::In(InTemplate {
             not: true,
-            variable: "i2".to_string(),
+            variable: counter.next_int(),
             values: vec![
                 LiteralValue::Integer(10),
                 LiteralValue::Integer(20),
@@ -312,7 +359,7 @@ fn get_in_templates() -> Vec<Template> {
         // Float IN
         Template::In(InTemplate {
             not: false,
-            variable: "f1".to_string(),
+            variable: counter.next_float(),
             values: vec![
                 LiteralValue::Float(1.0),
                 LiteralValue::Float(2.0),
@@ -322,7 +369,7 @@ fn get_in_templates() -> Vec<Template> {
         }),
         Template::In(InTemplate {
             not: true,
-            variable: "f2".to_string(),
+            variable: counter.next_float(),
             values: vec![
                 LiteralValue::Float(10.0),
                 LiteralValue::Float(20.0),
@@ -334,7 +381,7 @@ fn get_in_templates() -> Vec<Template> {
         // String IN
         Template::In(InTemplate {
             not: false,
-            variable: "s1".to_string(),
+            variable: counter.next_string(),
             values: vec![
                 LiteralValue::String("apple".to_string()),
                 LiteralValue::String("banana".to_string()),
@@ -344,7 +391,7 @@ fn get_in_templates() -> Vec<Template> {
         }),
         Template::In(InTemplate {
             not: true,
-            variable: "s2".to_string(),
+            variable: counter.next_string(),
             values: vec![
                 LiteralValue::String("dog".to_string()),
                 LiteralValue::String("elephant".to_string()),
@@ -356,56 +403,56 @@ fn get_in_templates() -> Vec<Template> {
 }
 
 /// Generate IS NULL templates (3 IS NULL + 3 IS NOT NULL = 6 templates)
-fn get_is_null_templates() -> Vec<Template> {
+fn get_is_null_templates(counter: &mut VarCounter) -> Vec<Template> {
     vec![
         // Integer IS NULL
         Template::IsNull(IsNullTemplate {
             not: false,
-            variable: "i1".to_string(),
+            variable: counter.next_int(),
             value_type: ValueType::Integer,
         }),
         Template::IsNull(IsNullTemplate {
             not: true,
-            variable: "i2".to_string(),
+            variable: counter.next_int(),
             value_type: ValueType::Integer,
         }),
 
         // Float IS NULL
         Template::IsNull(IsNullTemplate {
             not: false,
-            variable: "f1".to_string(),
+            variable: counter.next_float(),
             value_type: ValueType::Float,
         }),
         Template::IsNull(IsNullTemplate {
             not: true,
-            variable: "f2".to_string(),
+            variable: counter.next_float(),
             value_type: ValueType::Float,
         }),
 
         // String IS NULL
         Template::IsNull(IsNullTemplate {
             not: false,
-            variable: "s1".to_string(),
+            variable: counter.next_string(),
             value_type: ValueType::String,
         }),
         Template::IsNull(IsNullTemplate {
             not: true,
-            variable: "s2".to_string(),
+            variable: counter.next_string(),
             value_type: ValueType::String,
         }),
     ]
 }
 
 /// Generate boolean expression templates
-fn get_boolean_templates() -> Vec<Template> {
+fn get_boolean_templates(counter: &mut VarCounter) -> Vec<Template> {
     vec![
         Template::Boolean(BooleanTemplate {
             not: false,
-            variable: "b1".to_string(),
+            variable: counter.next_bool(),
         }),
         Template::Boolean(BooleanTemplate {
             not: true,
-            variable: "b2".to_string(),
+            variable: counter.next_bool(),
         }),
     ]
 }

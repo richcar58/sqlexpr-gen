@@ -93,3 +93,7 @@ Please generate possible approaches for implementing the above requirements.
 
 The *resources/simple_expressions.json* looks good.  Let's tighten things up by removing duplicate entries in all *true_list* and *false_list* fields.  Also, change the generation code to not insert duplicates into those lists.
 
+To make it easier to combine expression in the next phase of test generation, please modify the code so that all variable names are generated using a single monotonically increasing counter.  The counter is intialized at 1 and is incremented after its value is read during name generation.  The same counter is used to generate the names of variables of all types so that after all variable names have been generated, the counter's value will be one more than the number of variables.  
+
+## Phase II Design - Generating Complex Relational Expressions
+
