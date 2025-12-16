@@ -95,5 +95,44 @@ The *resources/simple_expressions.json* looks good.  Let's tighten things up by 
 
 To make it easier to combine expression in the next phase of test generation, please modify the code so that all variable names are generated using a single monotonically increasing counter.  The counter is intialized at 1 and is incremented after its value is read during name generation.  The same counter is used to generate the names of variables of all types so that after all variable names have been generated, the counter's value will be one more than the number of variables.  
 
+Let's improve upon the JSON format of the *resources/simple_expressions.json* file.  The *true_list* and *false_list* are each arrays of objects.  This should stay the same, but each object should be 1 or more key/value pairs where the key is the variable name and the value is the variable value.  For example, *i2: 88* assigns integer value 88 to the variable named i2.  The first letter of each variable name indicates its type, so there's no need to separately store type information.  Please modify the code to output the new format for *simple_expression.json* and test that no regression has taken place.   
+
+**UNDER CONSTRUCTION**
+
 ## Phase II Design - Generating Complex Relational Expressions
 
+In this phase, we combine simple expressions generated in Phase I to yield complex expresses that will be used in performance load testing.  Complex expression strings along with their value mappings are used as input into Evaluate::evaluate(input: &str, map: &HashMap<String, RuntimeValue>) during load testing.  The defining characteristics of a complex expression generation are:
+
+1. The simple expressions added to a complex expression are randomly chosen from among the top-level objects in *resources/simple_expressions.json*.
+2. Each selected simple expression may be transformed.
+3. Each selected simple expression is always parenthesized to improve readability and avoid unexpected capture.
+4. Sequences of two or more OR clauses are always parenthisized.  This implies that before and after such a sequence there is either (1) no logical operator, or (2) an AND operator, or (3) a NOT operator.
+5. Short circuiting that provides for early termination of conjuctive and disjunctive expressions must be avoided by adhering to these rules:
+    1. The variables in each AND clause will be assigned values such that the clause to evaluate to true. 
+    2. Only the last clause in a disjuction of two or more OR operators will be assigned values that cause that clause to evaluate to true, all other clauses will evaluate to false.
+6. The value mapping chosen for each complex expression covers all variables in the expression.  The elements of the mapping are listed in alphabetic order by variable name.
+
+### The Generation Process
+
+Complex expression strings are constructed using the simple expressions and their associated value lists from *resources/simple_expressions.json*.  The defining characteristics of a complex expression are:
+
+1. The process is driven by the goal of generating 500 unique combinations of expressions and value maps for each complexity class listed here:
+    1. Complexity classes for each integer 1 to 10, inclusive.
+    2. Complexity classes 15, 20, 25, 30, 35, 40, 45, 50.
+    3. Complexity classes 75, 100.
+2. 
+
+2. For each complexity class, generation of a complex expression begins with these actions:
+    1. Select at random a JSON object from the top-level array in *resources/simple_expressions.json*.
+    2. Randomly select either the AND or OR operator.
+    3. Use the selected operator and rules in the Simple Expression Transformation Rules section below to transform the JSON object.
+
+
+
+#### Simple Expression Transformation Rules
+
+Given a JSON object from the top-level array in *resources/simple_expressions.json* and either an AND or OR operator, perform these transformations before incorporating it into a complex expression.
+
+1. Parenthesize the expression string in the *expr* field.
+2. Choose the value list depending on the operation.
+    1. If an AND operator was

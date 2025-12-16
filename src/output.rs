@@ -3,8 +3,9 @@ use sqlexpr_rust::RuntimeValue as SqlExprRuntimeValue;
 use std::collections::HashMap;
 
 /// Serializable wrapper for sqlexpr-rust's RuntimeValue
+/// Serializes directly as the value without type tags (type inferred from variable name prefix)
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
-#[serde(tag = "type", content = "value")]
+#[serde(untagged)]
 pub enum RuntimeValue {
     Integer(i64),
     Float(f64),
