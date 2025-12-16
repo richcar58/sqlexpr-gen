@@ -97,35 +97,46 @@ To make it easier to combine expression in the next phase of test generation, pl
 
 Let's improve upon the JSON format of the *resources/simple_expressions.json* file.  The *true_list* and *false_list* are each arrays of objects.  This should stay the same, but each object should be 1 or more key/value pairs where the key is the variable name and the value is the variable value.  For example, *i2: 88* assigns integer value 88 to the variable named i2.  The first letter of each variable name indicates its type, so there's no need to separately store type information.  Please modify the code to output the new format for *simple_expression.json* and test that no regression has taken place.   
 
-**UNDER CONSTRUCTION**
-
 ## Phase II Design - Generating Complex Relational Expressions
 
-In this phase, we combine simple expressions generated in Phase I to yield complex expresses that will be used in performance load testing.  Complex expression strings along with their value mappings are used as input into Evaluate::evaluate(input: &str, map: &HashMap<String, RuntimeValue>) during load testing.  The defining characteristics of a complex expression generation are:
+In this phase, we combine simple expressions generated in Phase I to yield the complex expressions appropriate for performance load testing.  Complex expression strings along with their value mappings are used as input into Evaluate::evaluate(input: &str, map: &HashMap<String, RuntimeValue>) during load testing.  Complex expressions are generated as follows:
 
-1. The simple expressions added to a complex expression are randomly chosen from among the top-level objects in *resources/simple_expressions.json*.
-2. Each selected simple expression may be transformed.
-3. Each selected simple expression is always parenthesized to improve readability and avoid unexpected capture.
-4. Sequences of two or more OR clauses are always parenthisized.  This implies that before and after such a sequence there is either (1) no logical operator, or (2) an AND operator, or (3) a NOT operator.
-5. Short circuiting that provides for early termination of conjuctive and disjunctive expressions must be avoided by adhering to these rules:
-    1. The variables in each AND clause will be assigned values such that the clause to evaluate to true. 
-    2. Only the last clause in a disjuction of two or more OR operators will be assigned values that cause that clause to evaluate to true, all other clauses will evaluate to false.
-6. The value mapping chosen for each complex expression covers all variables in the expression.  The elements of the mapping are listed in alphabetic order by variable name.
-
-### The Generation Process
-
-Complex expression strings are constructed using the simple expressions and their associated value lists from *resources/simple_expressions.json*.  The defining characteristics of a complex expression are:
-
-1. The process is driven by the goal of generating 500 unique combinations of expressions and value maps for each complexity class listed here:
+1. The goal of the generation process is to generate 500 unique combinations of expressions and value maps for each complexity class listed here:
     1. Complexity classes for each integer 1 to 10, inclusive.
     2. Complexity classes 15, 20, 25, 30, 35, 40, 45, 50.
     3. Complexity classes 75, 100.
-2. 
+2. The simple expressions that are incorporated into each complex expression are randomly chosen from the set of all expresions in *resources/simple_expressions.json*.
+3. Simple expressions are joined together by AND or OR operators to incrementally build a complex expression.
+4. All selected simple expression are enclosed in parentheses.  This is to improve readability and avoid unexpected capture.
+5. A random sampling of simple expressions are arithmetically transformed before being added into a complex expression.
+    1. To be a candidate for transformation, a simple expression must meet these qualifications:
+        1. Only simple expressions of numeric type can be transformed.  Specifically, expression that contain integer or float variables.
+        2. Only expressions that contain an Equal, NotEqual, GreaterThan, GreaterOrEqual, LessThan or LessOrEqual relational operator can be transformed.  
+    2. Approximately 20% of candidate expressions get transformed.  The candidates transformed are randomly chosen for each complex expression; different complex expressions will have different simple expressions transformed.  
+    3. An arimethic transformation is applied using these rules:
+        1. An integer between 2 and 100 is randomly chosen.
+        2. An arithmetic operator is randomly chosen.  Possible choices are *\*, + and -* (multiply, add and subtract). 
+        3. The chosen arithmetic operation and integer are concatenated to the text to the left and to the right of the simple expression's relational operator.  For example, if *33* and *+** were chosen to transform the expression, *i2 > 6*, then the transformed expression would be *i2 + 33 > 6 + 33*.
+    4. Note that the specified arithmetic transformations have the following characteristics:
+        1. Since the same operation is applied to both the left and right side of the relational expression, the *true_list* and *false_list* values continue to have their desired effect.
+        2. Because of type coersion, newly inserted integer values will be automatically converted to float during evaluation.
+6. Sequences of two or more OR clauses are always parenthesized.  This implies that before and after such a sequence there is either (1) no logical operator, or (2) an AND operator, or (3) a NOT operator.
+7. Short circuiting terminates conjuctive and disjunctive expression evaluation early.  This defeats the goal of maximizing test load, so we defeat short circuiting by following these rules:
+    1. The variables in each AND clause are assigned values such that each clause evaluates to true. 
+    2. In parenthesized sequence of OR clauses, only the last clause is assigned values that to evaluate to true, all other clauses evaluate to false.
+    3. Standalone OR clauses, i.e., those that are not part of a parenthesized sequence of OR clauses, can take on any value.
+8. The value mapping chosen for each complex expression covers all variables in the expression.  The elements of the mapping are outputted in alphabetic order by variable name.
 
-2. For each complexity class, generation of a complex expression begins with these actions:
-    1. Select at random a JSON object from the top-level array in *resources/simple_expressions.json*.
-    2. Randomly select either the AND or OR operator.
-    3. Use the selected operator and rules in the Simple Expression Transformation Rules section below to transform the JSON object.
+### Details of the Generation Process
+
+Complex expression strings are constructed using simple expressions and their associated value lists from *resources/simple_expressions.json*.  
+
+2. 
+3. To increase the load of complex expression evaluation, simple expressions may be transformed before they are inserted into a complex expression.  The possible transformations are defined below in the **Simple Expression Transformation Rules** section.  
+4.  
+5. The first logical operator (AND or OR) to appear in a complex expression is randomly selected.
+    1. Every subsequent operator is selected using a weighed 60/40 probability.  60% of the time the next operator selected is the same as last operator selected; 40% of the time it differs from the last operator.  This bias slightly favors creating moderate length sequences of either AND or OR operators.
+6. Using the short circuiting rule specified above, either the *true_list* or the *false_list* of a given simple expression is selected as its value source.  The actual value chosen from the selected list is random.
 
 
 
