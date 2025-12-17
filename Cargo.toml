@@ -6,4 +6,18 @@ edition = "2021"
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-sqlexpr-rust = { path = "../sqlexpr-rust" }
+sqlexpr-rust = "1"
+rand = "0.8"
+regex = "1.0"
+
+[[bin]]
+name = "phase1"
+path = "src/bin/phase1.rs"
+
+[[bin]]
+name = "phase2"
+path = "src/bin/phase2.rs"
+
+[[bin]]
+name = "evaluator_test"
+path = "src/bin/evaluator_test.rs"

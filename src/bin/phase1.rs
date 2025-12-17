@@ -1,22 +1,18 @@
-mod templates;
-mod generator;
-mod validator;
-mod output;
-
+use sqlexpr_gen::phase1;
 use std::fs;
 use std::path::Path;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
-    println!("Generating Phase I test expressions...");
+    println!("Phase I: Generating simple test expressions...");
 
     // 1. Load all templates
-    let all_templates = templates::get_all_templates();
+    let all_templates = phase1::get_all_templates();
     println!("Loaded {} templates", all_templates.len());
 
     // 2. Generate expressions from templates
     let mut all_tests = Vec::new();
     for template in &all_templates {
-        let test = generator::generate_from_template(template);
+        let test = phase1::generate_from_template(template);
         all_tests.push(test);
     }
 
@@ -28,7 +24,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut validated_count = 0;
 
     for (i, test) in all_tests.iter().enumerate() {
-        if let Err(errors) = validator::validate_expression(test) {
+        if let Err(errors) = phase1::validate_expression(test) {
             eprintln!("\nValidation failed for expression #{}: {}", i + 1, test.expr);
             for error in &errors {
                 eprintln!("  {}", error);

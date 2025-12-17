@@ -1,5 +1,5 @@
 use sqlexpr_rust::{evaluate, RuntimeValue as SqlExprRuntimeValue};
-use crate::output::{TestExpression, RuntimeValue};
+use crate::common::output::{TestExpression, RuntimeValue};
 use std::collections::HashMap;
 
 /// Validation error information

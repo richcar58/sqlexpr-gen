@@ -1,5 +1,5 @@
-use crate::templates::*;
-use crate::output::{TestExpression, RuntimeValue};
+use super::templates::*;
+use crate::common::output::{TestExpression, RuntimeValue};
 use std::collections::HashMap;
 
 /// Generate a test expression from a template

@@ -103,47 +103,37 @@ In this phase, we combine simple expressions generated in Phase I to yield the c
 
 1. The goal of the generation process is to generate 500 unique combinations of expressions and value maps for each complexity class listed here:
     1. Complexity classes for each integer 1 to 10, inclusive.
-    2. Complexity classes 15, 20, 25, 30, 35, 40, 45, 50.
-    3. Complexity classes 75, 100.
+    2. Complexity classes 15, 20, 25, 30, 35, 40, 45, 50, 60, 75.
 2. The simple expressions that are incorporated into each complex expression are randomly chosen from the set of all expresions in *resources/simple_expressions.json*.
-3. Simple expressions are joined together by AND or OR operators to incrementally build a complex expression.
-4. All selected simple expression are enclosed in parentheses.  This is to improve readability and avoid unexpected capture.
-5. A random sampling of simple expressions are arithmetically transformed before being added into a complex expression.
-    1. To be a candidate for transformation, a simple expression must meet these qualifications:
-        1. Only simple expressions of numeric type can be transformed.  Specifically, expression that contain integer or float variables.
-        2. Only expressions that contain an Equal, NotEqual, GreaterThan, GreaterOrEqual, LessThan or LessOrEqual relational operator can be transformed.  
-    2. Approximately 20% of candidate expressions get transformed.  The candidates transformed are randomly chosen for each complex expression; different complex expressions will have different simple expressions transformed.  
-    3. An arimethic transformation is applied using these rules:
-        1. An integer between 2 and 100 is randomly chosen.
-        2. An arithmetic operator is randomly chosen.  Possible choices are *\*, + and -* (multiply, add and subtract). 
-        3. The chosen arithmetic operation and integer are concatenated to the text to the left and to the right of the simple expression's relational operator.  For example, if *33* and *+** were chosen to transform the expression, *i2 > 6*, then the transformed expression would be *i2 + 33 > 6 + 33*.
-    4. Note that the specified arithmetic transformations have the following characteristics:
-        1. Since the same operation is applied to both the left and right side of the relational expression, the *true_list* and *false_list* values continue to have their desired effect.
-        2. Because of type coersion, newly inserted integer values will be automatically converted to float during evaluation.
-6. Sequences of two or more OR clauses are always parenthesized.  This implies that before and after such a sequence there is either (1) no logical operator, or (2) an AND operator, or (3) a NOT operator.
-7. Short circuiting terminates conjuctive and disjunctive expression evaluation early.  This defeats the goal of maximizing test load, so we defeat short circuiting by following these rules:
+    1. A simple expression can only be used once per complex expression.
+3. All selected simple expressions are enclosed in parentheses.  This is to improve readability and avoid unexpected capture.
+4. Simple expressions are joined together by AND or OR operators to incrementally build a complex expression.
+    1. The first logical operator (AND or OR) to appear in a complex expression is randomly selected.
+    2. Every subsequent operator is selected using a weighed 60/40 probability.  60% of the time the next operator selected is the same as last operator selected; 40% of the time it differs from the last operator.  This bias slightly favors creating moderate length sequences of either AND or OR operators.
+5. Sequences of two or more OR clauses are always parenthesized.  This implies that before and after such a sequence there is either (1) no logical operator, or (2) an AND operator, or (3) a NOT operator.
+6. Short circuiting terminates conjuctive and disjunctive expression evaluation early.  This defeats the goal of maximizing test load, so we avoid short circuiting by following these rules:
     1. The variables in each AND clause are assigned values such that each clause evaluates to true. 
     2. In parenthesized sequence of OR clauses, only the last clause is assigned values that to evaluate to true, all other clauses evaluate to false.
     3. Standalone OR clauses, i.e., those that are not part of a parenthesized sequence of OR clauses, can take on any value.
-8. The value mapping chosen for each complex expression covers all variables in the expression.  The elements of the mapping are outputted in alphabetic order by variable name.
+7. Using the short circuiting rule specified above, either the *true_list* or the *false_list* of a given simple expression is selected as its value source.  The actual value object chosen from the selected list is randomly assigned.
+8. The value mapping chosen for each complex expression covers all variables in the expression, but should not contain variable assignments that aren't referenced in the complex expression.  
+9. The newly constructed complex expressions and their value maps are written to a JSON file, *resources/complex_expressions.json*.
+    1. The JSON file contains an array of JSON objects with each object having the following fields:
+        1. The *expr* field contains a complex expression string.
+        2. The *value_map* field is a JSON object that contains 1 or more key/value pairs.  Each key is a variable name and the value is the variable's value.
+        3. The keys in the *value_map* are arranged in alphabetic order.
+10. A test program named *evaluator_test.rs* should be created perform the following function.
+    1. Read *resources/complex_expressions.json*.
+    2. For each JSON object read, call Evaluate::evaluate(input: &str, map: &HashMap<String, RuntimeValue>) with *expr* string and *value_map* used to construct the function's parameters.
+    3. The output file, *evaluator_test.out*, should record (1) the number of successful and failed evaluate() calls and (2) total execution time.
+    4. If any failures occur, the file *evaluator_test.failed* should contain (1) the JSON objects whose executions failed and (2) the error messages returned by evaluate().
 
-### Details of the Generation Process
+Before planning for the Phase II implementation, we probably need to move or refactor the existing Phase I implementation.  Phase I processing generates simple expressions in *resources/simple_expressions.json*, which are then used by Phase II to generate complex expressions in *resources/complex_expressions.json*.  Currently, the code in the *src* directory only implements Phase I processing.  Please suggest a plan to reorganize the code so that Phase I and Phase II code can cohabitate in the same project.
 
-Complex expression strings are constructed using simple expressions and their associated value lists from *resources/simple_expressions.json*.  
+Before planning for the Phase II implementation, please use version sqlexpr-rust version 1 from crates.io rather than depending on local source code.
 
-2. 
-3. To increase the load of complex expression evaluation, simple expressions may be transformed before they are inserted into a complex expression.  The possible transformations are defined below in the **Simple Expression Transformation Rules** section.  
-4.  
-5. The first logical operator (AND or OR) to appear in a complex expression is randomly selected.
-    1. Every subsequent operator is selected using a weighed 60/40 probability.  60% of the time the next operator selected is the same as last operator selected; 40% of the time it differs from the last operator.  This bias slightly favors creating moderate length sequences of either AND or OR operators.
-6. Using the short circuiting rule specified above, either the *true_list* or the *false_list* of a given simple expression is selected as its value source.  The actual value chosen from the selected list is random.
+### Phase II Tweaks
 
+I notice that in *complex_expressions.json* the content of *value_map* fields are not sorted alphabetically by variable name.  Please make sure all *value_map* fields are sorted when written to file.
 
-
-#### Simple Expression Transformation Rules
-
-Given a JSON object from the top-level array in *resources/simple_expressions.json* and either an AND or OR operator, perform these transformations before incorporating it into a complex expression.
-
-1. Parenthesize the expression string in the *expr* field.
-2. Choose the value list depending on the operation.
-    1. If an AND operator was
+I also notice that in *complex_expressions.json* the complexity class 1 and 2 expressions allow for short-circuiting on sequences of OR clauses.  There may be other instances of short-cicuiting in higher complexity class expressions, though in at least some cases short-circuiting is handled properly.  Please modify the code so that short-circuiting never occurs.
