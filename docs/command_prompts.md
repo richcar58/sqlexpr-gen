@@ -137,3 +137,25 @@ Before planning for the Phase II implementation, please use version sqlexpr-rust
 I notice that in *complex_expressions.json* the content of *value_map* fields are not sorted alphabetically by variable name.  Please make sure all *value_map* fields are sorted when written to file.
 
 I also notice that in *complex_expressions.json* the complexity class 1 and 2 expressions allow for short-circuiting on sequences of OR clauses.  There may be other instances of short-cicuiting in higher complexity class expressions, though in at least some cases short-circuiting is handled properly.  Please modify the code so that short-circuiting never occurs.
+
+## Finalizing Release 1.0.0
+
+Everything looks good for Release 1.0.0!  Please do a clean rebuild of the debug and release code for version 1.0.0. Wrap up by finalizing the documentation listed below.
+
+Create an MIT license in a file named LICENSE.
+
+Create a README.md file that:
+1. Give an overview of what this project does and its purpose.
+    1. Reference this project's github repository.
+    2. Reference the sqlexpr-rust project's github repository and crates.io library.
+2. Give directions on how to compile the code.
+3. Give a user guide on how to:
+    1. Generate simple expressions.
+    2. Generate complex expressions.
+    3. Run the evaluator test.
+4. Describe the features of simple and complex expression generation.
+   1. Define complexity classes and other concepts implemented in this project.
+
+Update CLAUDE.MD with the latest design and features descriptions.
+
+Create a RELEASE_NOTES.md file that provides basic information on release 1.0.0.
