@@ -181,6 +181,8 @@ Expressions per second: 11300.45
 
 ## Performance Characteristics
 
+*Unscientific statistics from execution on an AMD® Ryzen 9 9950x 16-core desktop with 96GB of RAM.* 
+
 ### Generation Performance
 
 - Phase I: Generates ~150 expressions in < 1 second
