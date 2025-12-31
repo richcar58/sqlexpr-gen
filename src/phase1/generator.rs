@@ -11,6 +11,7 @@ pub fn generate_from_template(template: &Template) -> TestExpression {
         Template::In(t) => generate_in(t),
         Template::IsNull(t) => generate_is_null(t),
         Template::Boolean(t) => generate_boolean(t),
+        Template::ArithmeticComparison(t) => generate_arithmetic_comparison(t),
     }
 }
 
@@ -678,4 +679,223 @@ fn generate_different_strings(s: &str, count: usize) -> Vec<String> {
         .take(count)
         .map(|x| x.to_string())
         .collect()
+}
+
+/// Generate arithmetic comparison expression
+fn generate_arithmetic_comparison(template: &ArithmeticComparisonTemplate) -> TestExpression {
+    let expr = format!("{} {} {} {} {}",
+        template.left_var,
+        template.arith_op,
+        template.arith_operand.to_string(),
+        template.cmp_op,
+        template.right.to_string());
+
+    let (true_list, false_list) = generate_arithmetic_values(
+        &template.left_var,
+        template.arith_op,
+        &template.arith_operand,
+        template.cmp_op,
+        &template.right,
+        &template.value_type
+    );
+
+    TestExpression::new(expr, true_list, false_list)
+}
+
+/// Generate values for arithmetic comparison expressions
+/// For expression: var {arith_op} arith_operand {cmp_op} right
+/// We need to solve for var values that make the expression true/false
+fn generate_arithmetic_values(
+    var: &str,
+    arith_op: &str,
+    arith_operand: &LiteralValue,
+    cmp_op: &str,
+    right: &LiteralValue,
+    value_type: &ValueType,
+) -> (Vec<HashMap<String, RuntimeValue>>, Vec<HashMap<String, RuntimeValue>>) {
+    match value_type {
+        ValueType::Integer => {
+            let arith_val = match arith_operand {
+                LiteralValue::Integer(v) => *v,
+                _ => panic!("Mismatched type in arithmetic operand"),
+            };
+            let target = match right {
+                LiteralValue::Integer(v) => *v,
+                _ => panic!("Mismatched type in comparison target"),
+            };
+
+            // Solve for var: var {arith_op} arith_val {cmp_op} target
+            // For each comparison operator, find var values that satisfy
+            let base_var = match arith_op {
+                "+" => target - arith_val,  // var + a = t => var = t - a
+                "-" => target + arith_val,  // var - a = t => var = t + a
+                "*" => {
+                    if arith_val != 0 {
+                        target / arith_val  // var * a = t => var = t / a (integer division)
+                    } else {
+                        panic!("Division by zero in arithmetic template");
+                    }
+                }
+                _ => panic!("Unknown arithmetic operator: {}", arith_op),
+            };
+
+            // Generate true values based on comparison operator
+            let true_vals = match cmp_op {
+                "=" => vec![base_var],
+                "!=" | "<>" => {
+                    // Values that make result != target
+                    match arith_op {
+                        "+" => vec![base_var - 1, base_var + 1, base_var - 5, base_var + 5, base_var - 10],
+                        "-" => vec![base_var - 1, base_var + 1, base_var - 5, base_var + 5, base_var + 10],
+                        "*" => vec![base_var - 1, base_var + 1, base_var - 2, base_var + 2, base_var + 5],
+                        _ => unreachable!(),
+                    }
+                }
+                ">" => {
+                    // var {arith_op} arith_val > target
+                    // Need var such that result > target
+                    match arith_op {
+                        "+" => vec![base_var + 1, base_var + 2, base_var + 5, base_var + 10, base_var + 20],
+                        "-" => vec![base_var + 1, base_var + 2, base_var + 5, base_var + 10, base_var + 20],
+                        "*" => vec![base_var + 1, base_var + 2, base_var + 3, base_var + 5, base_var + 10],
+                        _ => unreachable!(),
+                    }
+                }
+                ">=" => {
+                    match arith_op {
+                        "+" => vec![base_var, base_var + 1, base_var + 2, base_var + 5, base_var + 10],
+                        "-" => vec![base_var, base_var + 1, base_var + 2, base_var + 5, base_var + 10],
+                        "*" => vec![base_var, base_var + 1, base_var + 2, base_var + 3, base_var + 5],
+                        _ => unreachable!(),
+                    }
+                }
+                "<" => {
+                    match arith_op {
+                        "+" => vec![base_var - 1, base_var - 2, base_var - 5, base_var - 10, base_var - 20],
+                        "-" => vec![base_var - 1, base_var - 2, base_var - 5, base_var - 10, base_var - 20],
+                        "*" => vec![base_var - 1, base_var - 2, base_var - 3, base_var - 5, base_var - 10],
+                        _ => unreachable!(),
+                    }
+                }
+                "<=" => {
+                    match arith_op {
+                        "+" => vec![base_var, base_var - 1, base_var - 2, base_var - 5, base_var - 10],
+                        "-" => vec![base_var, base_var - 1, base_var - 2, base_var - 5, base_var - 10],
+                        "*" => vec![base_var, base_var - 1, base_var - 2, base_var - 3, base_var - 5],
+                        _ => unreachable!(),
+                    }
+                }
+                _ => panic!("Unknown comparison operator: {}", cmp_op),
+            };
+
+            // Generate false values (opposite of true values)
+            let false_vals = match cmp_op {
+                "=" => vec![base_var - 1, base_var + 1, base_var - 5, base_var + 5, base_var + 10],
+                "!=" | "<>" => vec![base_var],
+                ">" => {
+                    match arith_op {
+                        "+" => vec![base_var, base_var - 1, base_var - 2, base_var - 5, base_var - 10],
+                        "-" => vec![base_var, base_var - 1, base_var - 2, base_var - 5, base_var - 10],
+                        "*" => vec![base_var, base_var - 1, base_var - 2, base_var - 3, base_var - 5],
+                        _ => unreachable!(),
+                    }
+                }
+                ">=" => {
+                    match arith_op {
+                        "+" => vec![base_var - 1, base_var - 2, base_var - 5, base_var - 10, base_var - 20],
+                        "-" => vec![base_var - 1, base_var - 2, base_var - 5, base_var - 10, base_var - 20],
+                        "*" => vec![base_var - 1, base_var - 2, base_var - 3, base_var - 5, base_var - 10],
+                        _ => unreachable!(),
+                    }
+                }
+                "<" => {
+                    match arith_op {
+                        "+" => vec![base_var, base_var + 1, base_var + 2, base_var + 5, base_var + 10],
+                        "-" => vec![base_var, base_var + 1, base_var + 2, base_var + 5, base_var + 10],
+                        "*" => vec![base_var, base_var + 1, base_var + 2, base_var + 3, base_var + 5],
+                        _ => unreachable!(),
+                    }
+                }
+                "<=" => {
+                    match arith_op {
+                        "+" => vec![base_var + 1, base_var + 2, base_var + 5, base_var + 10, base_var + 20],
+                        "-" => vec![base_var + 1, base_var + 2, base_var + 5, base_var + 10, base_var + 20],
+                        "*" => vec![base_var + 1, base_var + 2, base_var + 3, base_var + 5, base_var + 10],
+                        _ => unreachable!(),
+                    }
+                }
+                _ => panic!("Unknown comparison operator: {}", cmp_op),
+            };
+
+            (
+                true_vals.into_iter().map(|v| {
+                    let mut map = HashMap::new();
+                    map.insert(var.to_string(), RuntimeValue::Integer(v));
+                    map
+                }).collect(),
+                false_vals.into_iter().map(|v| {
+                    let mut map = HashMap::new();
+                    map.insert(var.to_string(), RuntimeValue::Integer(v));
+                    map
+                }).collect(),
+            )
+        }
+        ValueType::Float => {
+            let arith_val = match arith_operand {
+                LiteralValue::Float(v) => *v,
+                _ => panic!("Mismatched type in arithmetic operand"),
+            };
+            let target = match right {
+                LiteralValue::Float(v) => *v,
+                _ => panic!("Mismatched type in comparison target"),
+            };
+
+            let base_var = match arith_op {
+                "+" => target - arith_val,
+                "-" => target + arith_val,
+                "*" => {
+                    if arith_val != 0.0 {
+                        target / arith_val
+                    } else {
+                        panic!("Division by zero in arithmetic template");
+                    }
+                }
+                _ => panic!("Unknown arithmetic operator: {}", arith_op),
+            };
+
+            let true_vals = match cmp_op {
+                "=" => vec![base_var],
+                "!=" | "<>" => vec![base_var - 1.0, base_var + 1.0, base_var - 5.0, base_var + 5.0, base_var - 10.0],
+                ">" => vec![base_var + 1.0, base_var + 2.0, base_var + 5.0, base_var + 10.0, base_var + 20.0],
+                ">=" => vec![base_var, base_var + 1.0, base_var + 2.0, base_var + 5.0, base_var + 10.0],
+                "<" => vec![base_var - 1.0, base_var - 2.0, base_var - 5.0, base_var - 10.0, base_var - 20.0],
+                "<=" => vec![base_var, base_var - 1.0, base_var - 2.0, base_var - 5.0, base_var - 10.0],
+                _ => panic!("Unknown comparison operator: {}", cmp_op),
+            };
+
+            let false_vals = match cmp_op {
+                "=" => vec![base_var - 1.0, base_var + 1.0, base_var - 5.0, base_var + 5.0, base_var + 10.0],
+                "!=" | "<>" => vec![base_var],
+                ">" => vec![base_var, base_var - 1.0, base_var - 2.0, base_var - 5.0, base_var - 10.0],
+                ">=" => vec![base_var - 1.0, base_var - 2.0, base_var - 5.0, base_var - 10.0, base_var - 20.0],
+                "<" => vec![base_var, base_var + 1.0, base_var + 2.0, base_var + 5.0, base_var + 10.0],
+                "<=" => vec![base_var + 1.0, base_var + 2.0, base_var + 5.0, base_var + 10.0, base_var + 20.0],
+                _ => panic!("Unknown comparison operator: {}", cmp_op),
+            };
+
+            (
+                true_vals.into_iter().map(|v| {
+                    let mut map = HashMap::new();
+                    map.insert(var.to_string(), RuntimeValue::Float(v));
+                    map
+                }).collect(),
+                false_vals.into_iter().map(|v| {
+                    let mut map = HashMap::new();
+                    map.insert(var.to_string(), RuntimeValue::Float(v));
+                    map
+                }).collect(),
+            )
+        }
+        _ => panic!("Unsupported value type for arithmetic comparison"),
+    }
 }

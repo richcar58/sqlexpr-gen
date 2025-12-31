@@ -110,6 +110,52 @@ cargo build
 cargo build --release
 ```
 
+### Language Support
+
+All binaries support the `--lang` argument to target different expression language levels:
+
+```bash
+# Generate for max language (full unrestricted language - default)
+cargo run --bin phase1 -- --lang max
+cargo run --bin phase2 -- --lang max
+cargo run --bin evaluator_test -- --lang max
+
+# Generate for limited language (restricted subset)
+cargo run --bin phase1 -- --lang limited
+cargo run --bin phase2 -- --lang limited
+cargo run --bin evaluator_test -- --lang limited
+
+# If --lang is not specified, 'max' is used by default
+cargo run --bin phase1  # Uses max language
+```
+
+#### Language Differences
+
+| Feature | Max | Limited |
+|---------|-----|---------|
+| String comparisons (>, >=, <, <=) | ✓ | ✗ |
+| String BETWEEN | ✓ | ✗ |
+| Numeric IN | ✓ | ✗ |
+| String IN | ✓ | ✓ |
+| String equality (=, <>) | ✓ | ✓ |
+| All numeric operations | ✓ | ✓ |
+
+The **max** language supports the full unrestricted expression language (~90 templates).
+
+The **limited** language is a restricted subset (~72 templates) designed for implementations that prohibit:
+- String operands in comparison operators: `>`, `>=`, `<`, `<=`
+- String operands in `BETWEEN` clauses
+- Numeric operands (integer/float) in `IN` clauses (only strings allowed)
+
+#### Language-Specific Output Files
+
+- `resources/simple_expressions-{lang}.json` - Phase I output
+- `resources/complex_expressions-{lang}.json` - Phase II output
+- `evaluator_test-{lang}.out` - Test results
+- `evaluator_test-{lang}.failed` - Failure details (if any)
+
+Where `{lang}` is either `max` or `limited`.
+
 ## User Guide
 
 ### 1. Generate Simple Expressions (Phase I)
@@ -117,16 +163,21 @@ cargo build --release
 Generate the foundational set of simple relational expressions:
 
 ```bash
-# Debug build
-cargo run --bin phase1
-
-# Release build (faster)
+# Generate with default (max) language
 cargo run --release --bin phase1
+
+# Or explicitly specify the language
+cargo run --release --bin phase1 -- --lang max
+cargo run --release --bin phase1 -- --lang limited
 ```
 
-**Output**: `resources/simple_expressions.json`
+**Output**: `resources/simple_expressions-{lang}.json`
 
-This creates approximately 150 simple expressions covering all operator/operand type combinations. Each expression includes:
+This creates simple expressions covering operator/operand type combinations for the specified language:
+- **max language**: ~90 templates
+- **limited language**: ~72 templates
+
+Each expression includes:
 - The expression string (e.g., `"i1 = 7"`)
 - A `true_list` with 5 value sets that make the expression evaluate to true
 - A `false_list` with 5 value sets that make the expression evaluate to false
@@ -136,36 +187,38 @@ This creates approximately 150 simple expressions covering all operator/operand 
 Combine simple expressions into complex test expressions:
 
 ```bash
-# Debug build
-cargo run --bin phase2
-
-# Release build (recommended for speed)
+# Generate with default (max) language
 cargo run --release --bin phase2
+
+# Or explicitly specify the language (must match Phase I language)
+cargo run --release --bin phase2 -- --lang max
+cargo run --release --bin phase2 -- --lang limited
 ```
 
-**Output**: `resources/complex_expressions.json`
+**Output**: `resources/complex_expressions-{lang}.json`
 
 This generates 10,000 complex expressions (500 per complexity class) by randomly combining simple expressions. Each complex expression includes:
 - The expression string with proper parenthesization
 - A `value_map` with variable assignments that avoid short-circuiting
 
-**Note**: Phase II requires Phase I output (`resources/simple_expressions.json`) to exist.
+**Note**: Phase II requires the corresponding Phase I output file (`resources/simple_expressions-{lang}.json`) to exist for the specified language.
 
 ### 3. Run Evaluator Test
 
 Validate all generated complex expressions:
 
 ```bash
-# Debug build
-cargo run --bin evaluator_test
-
-# Release build (recommended for accurate performance metrics)
+# Test with default (max) language
 cargo run --release --bin evaluator_test
+
+# Or explicitly specify the language (must match Phase II language)
+cargo run --release --bin evaluator_test -- --lang max
+cargo run --release --bin evaluator_test -- --lang limited
 ```
 
 **Outputs**:
-- `evaluator_test.out` - Test summary with success rate and performance metrics
-- `evaluator_test.failed` - Failed expressions with error messages (only created if failures occur)
+- `evaluator_test-{lang}.out` - Test summary with success rate and performance metrics
+- `evaluator_test-{lang}.failed` - Failed expressions with error messages (only created if failures occur)
 
 **Example output**:
 ```

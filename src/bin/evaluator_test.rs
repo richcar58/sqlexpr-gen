@@ -1,5 +1,7 @@
-use sqlexpr_gen::phase2::types::ComplexExpression;
-use sqlexpr_gen::common::output::RuntimeValue;
+use sqlexpr_gen::{
+    phase2::types::ComplexExpression,
+    common::{output::RuntimeValue, parse_language_arg},
+};
 use sqlexpr_rust::evaluate;
 use std::fs;
 use std::path::Path;
@@ -15,11 +17,15 @@ struct FailureRecord {
 }
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
-    println!("Evaluator Test: Testing complex expressions...");
-    println!("Loading complex_expressions.json...");
+    // Parse language argument
+    let lang = parse_language_arg()?;
+
+    println!("Evaluator Test: Testing '{}' language expressions...", lang.file_suffix());
+    println!("Loading {}...", lang.complex_expressions_path());
 
     // Load complex expressions
-    let input_path = Path::new("resources/complex_expressions.json");
+    let input_path_string = lang.complex_expressions_path();
+    let input_path = Path::new(&input_path_string);
     let json = fs::read_to_string(input_path)?;
     let expressions: Vec<ComplexExpression> = serde_json::from_str(&json)?;
 
@@ -73,8 +79,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     // Write results summary
     let results_output = format!(
-        "Evaluator Test Results\n\
-         ======================\n\
+        "Evaluator Test Results (Language: {})\n\
+         ========================================\n\
          \n\
          Total expressions evaluated: {}\n\
          Successful evaluations: {}\n\
@@ -84,6 +90,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
          Total execution time: {:.3} seconds\n\
          Average time per expression: {:.6} seconds\n\
          Expressions per second: {:.2}\n",
+        lang.file_suffix(),
         expressions.len(),
         success_count,
         failure_count,
@@ -93,17 +100,19 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         expressions.len() as f64 / elapsed.as_secs_f64()
     );
 
-    let output_path = Path::new("evaluator_test.out");
+    let output_path_string = lang.evaluator_output_path();
+    let output_path = Path::new(&output_path_string);
     fs::write(output_path, &results_output)?;
     println!("\n{}", results_output);
-    println!("Results written to: evaluator_test.out");
+    println!("Results written to: {}", output_path.display());
 
     // Write failures if any
     if !failures.is_empty() {
         let failures_json = serde_json::to_string_pretty(&failures)?;
-        let failures_path = Path::new("evaluator_test.failed");
+        let failures_path_string = lang.evaluator_failure_path();
+        let failures_path = Path::new(&failures_path_string);
         fs::write(failures_path, failures_json)?;
-        println!("Failure details written to: evaluator_test.failed");
+        println!("Failure details written to: {}", failures_path.display());
     } else {
         println!("No failures - all expressions evaluated successfully!");
     }

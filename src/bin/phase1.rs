@@ -1,12 +1,15 @@
-use sqlexpr_gen::phase1;
+use sqlexpr_gen::{phase1, common::parse_language_arg};
 use std::fs;
 use std::path::Path;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
-    println!("Phase I: Generating simple test expressions...");
+    // Parse language argument
+    let lang = parse_language_arg()?;
+
+    println!("Phase I: Generating simple test expressions for '{}' language...", lang.file_suffix());
 
     // 1. Load all templates
-    let all_templates = phase1::get_all_templates();
+    let all_templates = phase1::get_all_templates(lang);
     println!("Loaded {} templates", all_templates.len());
 
     // 2. Generate expressions from templates
@@ -47,8 +50,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     // 4. Serialize to JSON
     let json = serde_json::to_string_pretty(&all_tests)?;
 
-    // 5. Write to resources/simple_expressions.json
-    let output_path = Path::new("resources/simple_expressions.json");
+    // 5. Write to language-specific output file
+    let output_path_string = lang.simple_expressions_path();
+    let output_path = Path::new(&output_path_string);
     fs::create_dir_all("resources")?;
     fs::write(output_path, json)?;
 

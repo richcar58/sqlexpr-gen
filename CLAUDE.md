@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 `sqlexpr-gen` is a test generation tool for the `sqlexpr-rust` project. The goal is to generate 10,000 evaluation tests for validating different implementations of a SQL expression parser/evaluator that share the same expression language.
 
-**Version**: 1.0.0 - Fully implemented and tested
+**Version**: 1.1.0 - Fully implemented and tested
 
 ## Commands
 
@@ -17,17 +17,29 @@ cargo build --release            # Build release version (optimized)
 cargo test                       # Run unit tests
 cargo check                      # Fast compile check
 
-# Phase I: Generate simple expressions
+# Phase I: Generate simple expressions (default: max language)
 cargo run --bin phase1
 cargo run --release --bin phase1
 
-# Phase II: Generate complex expressions
+# Phase I: Generate for specific language
+cargo run --release --bin phase1 -- --lang max
+cargo run --release --bin phase1 -- --lang limited
+
+# Phase II: Generate complex expressions (default: max language)
 cargo run --bin phase2
 cargo run --release --bin phase2
 
-# Run evaluator tests
+# Phase II: Generate for specific language
+cargo run --release --bin phase2 -- --lang max
+cargo run --release --bin phase2 -- --lang limited
+
+# Run evaluator tests (default: max language)
 cargo run --bin evaluator_test
 cargo run --release --bin evaluator_test
+
+# Run evaluator tests for specific language
+cargo run --release --bin evaluator_test -- --lang max
+cargo run --release --bin evaluator_test -- --lang limited
 ```
 
 ## Project Architecture
@@ -35,6 +47,14 @@ cargo run --release --bin evaluator_test
 ### Core Concepts
 
 The project generates test data for `sqlexpr-rust`, which uses the following conventions:
+
+**Language Levels:**
+- `max`: Full unrestricted language (all operators, all type combinations) - ~90 templates
+- `limited`: Restricted subset excluding:
+  - String operands in: `>`, `>=`, `<`, `<=`, `BETWEEN`
+  - Numeric operands in: `IN` clauses (only strings allowed)
+  - Results in ~72 templates
+- Default language if `--lang` not specified: `max`
 
 **Variable Naming Convention:**
 - All variables: single lowercase character + integer (e.g., `i1`, `f2`, `s3`, `b4`)
@@ -64,7 +84,7 @@ Generate single-operator relational expressions with:
 - Two validation lists per expression:
   - `true_list`: 5 value sets that evaluate to true
   - `false_list`: 5 value sets that evaluate to false
-- Output to `resources/simple_expressions.json` as array of objects with `expr`, `true_list`, and `false_list` fields
+- Output to `resources/simple_expressions-{lang}.json` as array of objects with `expr`, `true_list`, and `false_list` fields (where `{lang}` is `max` or `limited`)
 
 **Phase I Operator-Specific Constraints:**
 - LIKE: second operand must be string with wildcards (%, _)
@@ -78,7 +98,7 @@ Generate single-operator relational expressions with:
 Combine simple expressions into complex boolean expressions for load testing:
 - Generate 500 unique expressions per complexity class (10,000 total)
 - Complexity classes: 1-10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 75
-- Output to `resources/complex_expressions.json` with `expr` and `value_map` fields
+- Output to `resources/complex_expressions-{lang}.json` with `expr` and `value_map` fields (where `{lang}` is `max` or `limited`)
 
 **Phase II Generation Rules:**
 1. Simple expressions randomly selected from Phase I output
@@ -96,10 +116,10 @@ Combine simple expressions into complex boolean expressions for load testing:
 8. Value maps alphabetically sorted by variable name
 
 **Evaluator Test:**
-- Reads `resources/complex_expressions.json`
+- Reads `resources/complex_expressions-{lang}.json` (where `{lang}` is `max` or `limited`)
 - Evaluates all expressions using `evaluate()` from sqlexpr-rust
-- Outputs success/failure counts and timing to `evaluator_test.out`
-- Logs failures (if any) to `evaluator_test.failed`
+- Outputs success/failure counts and timing to `evaluator_test-{lang}.out`
+- Logs failures (if any) to `evaluator_test-{lang}.failed`
 
 ### Directory Structure
 
@@ -121,12 +141,16 @@ sqlexpr-gen/
 │   │   ├── types.rs           # Data structures and complexity classes
 │   │   └── mod.rs
 │   ├── common/
+│   │   ├── cli.rs             # Command-line argument parsing
+│   │   ├── language.rs        # Language enum and path helpers
 │   │   ├── output.rs          # Shared RuntimeValue types
 │   │   └── mod.rs
 │   └── lib.rs
 ├── resources/
-│   ├── simple_expressions.json   # Phase I output (~150 expressions)
-│   └── complex_expressions.json  # Phase II output (10,000 expressions)
+│   ├── simple_expressions-max.json      # Phase I output for max language (~90 expressions)
+│   ├── simple_expressions-limited.json  # Phase I output for limited language (~72 expressions)
+│   ├── complex_expressions-max.json     # Phase II output for max language (10,000 expressions)
+│   └── complex_expressions-limited.json # Phase II output for limited language (10,000 expressions)
 ├── docs/
 │   └── command_prompts.md        # Detailed specifications
 ├── Cargo.toml

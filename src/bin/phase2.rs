@@ -1,15 +1,21 @@
-use sqlexpr_gen::phase2::loader::SimpleExpressionLoader;
-use sqlexpr_gen::phase2::combiner::ExpressionCombiner;
-use sqlexpr_gen::phase2::types::{ComplexExpression, COMPLEXITY_CLASSES, TARGET_COUNT_PER_CLASS};
+use sqlexpr_gen::{
+    phase2::loader::SimpleExpressionLoader,
+    phase2::combiner::ExpressionCombiner,
+    phase2::types::{ComplexExpression, COMPLEXITY_CLASSES, TARGET_COUNT_PER_CLASS},
+    common::parse_language_arg,
+};
 use std::fs;
 use std::path::Path;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
-    println!("Phase II: Generating complex test expressions...");
-    println!("Loading simple expressions from Phase I...");
+    // Parse language argument
+    let lang = parse_language_arg()?;
+
+    println!("Phase II: Generating complex test expressions for '{}' language...", lang.file_suffix());
+    println!("Loading simple expressions from {}...", lang.simple_expressions_path());
 
     // Load simple expressions
-    let loader = SimpleExpressionLoader::load()?;
+    let loader = SimpleExpressionLoader::load(&lang)?;
     println!("Loaded simple expressions successfully");
 
     let mut all_complex_expressions = Vec::new();
@@ -26,10 +32,12 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     }
 
     // Write output
-    println!("\nWriting {} complex expressions to resources/complex_expressions.json...",
-             all_complex_expressions.len());
+    println!("\nWriting {} complex expressions to {}...",
+             all_complex_expressions.len(),
+             lang.complex_expressions_path());
 
-    let output_path = Path::new("resources/complex_expressions.json");
+    let output_path_string = lang.complex_expressions_path();
+    let output_path = Path::new(&output_path_string);
     let json = serde_json::to_string_pretty(&all_complex_expressions)?;
     fs::write(output_path, json)?;
 

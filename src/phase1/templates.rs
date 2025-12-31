@@ -1,3 +1,5 @@
+use crate::common::Language;
+
 /// Variable name counter for generating unique variable names
 pub struct VarCounter {
     counter: usize,
@@ -136,6 +138,17 @@ pub struct BooleanTemplate {
     pub variable: String,
 }
 
+/// Template for arithmetic comparison expressions: var {+|-|*} literal {cmp_op} literal
+#[derive(Debug, Clone)]
+pub struct ArithmeticComparisonTemplate {
+    pub left_var: String,          // e.g., "i1"
+    pub arith_op: &'static str,    // +, -, or *
+    pub arith_operand: LiteralValue,  // operand for arithmetic (e.g., 10)
+    pub cmp_op: &'static str,      // =, !=, >, >=, <, <=
+    pub right: LiteralValue,       // comparison target (e.g., 20)
+    pub value_type: ValueType,     // Integer or Float
+}
+
 /// Unified template enum
 #[derive(Debug, Clone)]
 pub enum Template {
@@ -145,24 +158,25 @@ pub enum Template {
     In(InTemplate),
     IsNull(IsNullTemplate),
     Boolean(BooleanTemplate),
+    ArithmeticComparison(ArithmeticComparisonTemplate),
 }
 
 /// Get all templates for Phase I test generation
-pub fn get_all_templates() -> Vec<Template> {
+pub fn get_all_templates(lang: Language) -> Vec<Template> {
     let mut templates = Vec::new();
     let mut counter = VarCounter::new();
 
     // Comparison operators
-    templates.extend(get_comparison_templates(&mut counter));
+    templates.extend(get_comparison_templates(&mut counter, lang));
 
     // LIKE operators
     templates.extend(get_like_templates(&mut counter));
 
     // BETWEEN operators
-    templates.extend(get_between_templates(&mut counter));
+    templates.extend(get_between_templates(&mut counter, lang));
 
     // IN operators
-    templates.extend(get_in_templates(&mut counter));
+    templates.extend(get_in_templates(&mut counter, lang));
 
     // IS NULL operators
     templates.extend(get_is_null_templates(&mut counter));
@@ -170,13 +184,16 @@ pub fn get_all_templates() -> Vec<Template> {
     // Boolean expressions
     templates.extend(get_boolean_templates(&mut counter));
 
+    // Arithmetic comparison expressions
+    templates.extend(get_arithmetic_comparison_templates(&mut counter));
+
     println!("Generated {} templates using {} unique variables", templates.len(), counter.current() - 1);
 
     templates
 }
 
 /// Generate comparison templates (9 prototypes × 6 operators = 54 templates)
-fn get_comparison_templates(counter: &mut VarCounter) -> Vec<Template> {
+fn get_comparison_templates(counter: &mut VarCounter, lang: Language) -> Vec<Template> {
     let operators = vec!["=", "<>", ">", ">=", "<", "<="];
     let mut templates = Vec::new();
 
@@ -222,24 +239,28 @@ fn get_comparison_templates(counter: &mut VarCounter) -> Vec<Template> {
         }));
 
         // String comparisons (3 prototypes)
-        templates.push(Template::Comparison(ComparisonTemplate {
-            operator,
-            left: Pattern::Variable(counter.next_string()),
-            right: Pattern::Literal(LiteralValue::String("banana".to_string())),
-            value_type: ValueType::String,
-        }));
-        templates.push(Template::Comparison(ComparisonTemplate {
-            operator,
-            left: Pattern::Literal(LiteralValue::String("united".to_string())),
-            right: Pattern::Variable(counter.next_string()),
-            value_type: ValueType::String,
-        }));
-        templates.push(Template::Comparison(ComparisonTemplate {
-            operator,
-            left: Pattern::Variable(counter.next_string()),
-            right: Pattern::Variable(counter.next_string()),
-            value_type: ValueType::String,
-        }));
+        // Limited language: exclude string comparisons for >, >=, <, <=
+        let is_ordering_op = operator == ">" || operator == ">=" || operator == "<" || operator == "<=";
+        if lang == Language::Max || !is_ordering_op {
+            templates.push(Template::Comparison(ComparisonTemplate {
+                operator,
+                left: Pattern::Variable(counter.next_string()),
+                right: Pattern::Literal(LiteralValue::String("banana".to_string())),
+                value_type: ValueType::String,
+            }));
+            templates.push(Template::Comparison(ComparisonTemplate {
+                operator,
+                left: Pattern::Literal(LiteralValue::String("united".to_string())),
+                right: Pattern::Variable(counter.next_string()),
+                value_type: ValueType::String,
+            }));
+            templates.push(Template::Comparison(ComparisonTemplate {
+                operator,
+                left: Pattern::Variable(counter.next_string()),
+                right: Pattern::Variable(counter.next_string()),
+                value_type: ValueType::String,
+            }));
+        }
     }
 
     templates
@@ -279,8 +300,8 @@ fn get_like_templates(counter: &mut VarCounter) -> Vec<Template> {
 }
 
 /// Generate BETWEEN templates (3 BETWEEN + 3 NOT BETWEEN = 6 templates)
-fn get_between_templates(counter: &mut VarCounter) -> Vec<Template> {
-    vec![
+fn get_between_templates(counter: &mut VarCounter, lang: Language) -> Vec<Template> {
+    let mut templates = vec![
         // Integer BETWEEN
         Template::Between(BetweenTemplate {
             not: false,
@@ -312,73 +333,85 @@ fn get_between_templates(counter: &mut VarCounter) -> Vec<Template> {
             upper: LiteralValue::Float(30.0),
             value_type: ValueType::Float,
         }),
+    ];
 
-        // String BETWEEN
-        Template::Between(BetweenTemplate {
-            not: false,
-            variable: counter.next_string(),
-            lower: LiteralValue::String("aa".to_string()),
-            upper: LiteralValue::String("bb".to_string()),
-            value_type: ValueType::String,
-        }),
-        Template::Between(BetweenTemplate {
-            not: true,
-            variable: counter.next_string(),
-            lower: LiteralValue::String("mm".to_string()),
-            upper: LiteralValue::String("zz".to_string()),
-            value_type: ValueType::String,
-        }),
-    ]
+    // String BETWEEN - only in Max language
+    if lang == Language::Max {
+        templates.extend(vec![
+            Template::Between(BetweenTemplate {
+                not: false,
+                variable: counter.next_string(),
+                lower: LiteralValue::String("aa".to_string()),
+                upper: LiteralValue::String("bb".to_string()),
+                value_type: ValueType::String,
+            }),
+            Template::Between(BetweenTemplate {
+                not: true,
+                variable: counter.next_string(),
+                lower: LiteralValue::String("mm".to_string()),
+                upper: LiteralValue::String("zz".to_string()),
+                value_type: ValueType::String,
+            }),
+        ]);
+    }
+
+    templates
 }
 
 /// Generate IN templates (3 IN + 3 NOT IN = 6 templates)
-fn get_in_templates(counter: &mut VarCounter) -> Vec<Template> {
-    vec![
-        // Integer IN
-        Template::In(InTemplate {
-            not: false,
-            variable: counter.next_int(),
-            values: vec![
-                LiteralValue::Integer(1),
-                LiteralValue::Integer(2),
-                LiteralValue::Integer(3),
-            ],
-            value_type: ValueType::Integer,
-        }),
-        Template::In(InTemplate {
-            not: true,
-            variable: counter.next_int(),
-            values: vec![
-                LiteralValue::Integer(10),
-                LiteralValue::Integer(20),
-                LiteralValue::Integer(30),
-            ],
-            value_type: ValueType::Integer,
-        }),
+fn get_in_templates(counter: &mut VarCounter, lang: Language) -> Vec<Template> {
+    let mut templates = vec![];
 
-        // Float IN
-        Template::In(InTemplate {
-            not: false,
-            variable: counter.next_float(),
-            values: vec![
-                LiteralValue::Float(1.0),
-                LiteralValue::Float(2.0),
-                LiteralValue::Float(3.0),
-            ],
-            value_type: ValueType::Float,
-        }),
-        Template::In(InTemplate {
-            not: true,
-            variable: counter.next_float(),
-            values: vec![
-                LiteralValue::Float(10.0),
-                LiteralValue::Float(20.0),
-                LiteralValue::Float(30.0),
-            ],
-            value_type: ValueType::Float,
-        }),
+    // Numeric IN - only in Max language
+    if lang == Language::Max {
+        templates.extend(vec![
+            // Integer IN
+            Template::In(InTemplate {
+                not: false,
+                variable: counter.next_int(),
+                values: vec![
+                    LiteralValue::Integer(1),
+                    LiteralValue::Integer(2),
+                    LiteralValue::Integer(3),
+                ],
+                value_type: ValueType::Integer,
+            }),
+            Template::In(InTemplate {
+                not: true,
+                variable: counter.next_int(),
+                values: vec![
+                    LiteralValue::Integer(10),
+                    LiteralValue::Integer(20),
+                    LiteralValue::Integer(30),
+                ],
+                value_type: ValueType::Integer,
+            }),
+            // Float IN
+            Template::In(InTemplate {
+                not: false,
+                variable: counter.next_float(),
+                values: vec![
+                    LiteralValue::Float(1.0),
+                    LiteralValue::Float(2.0),
+                    LiteralValue::Float(3.0),
+                ],
+                value_type: ValueType::Float,
+            }),
+            Template::In(InTemplate {
+                not: true,
+                variable: counter.next_float(),
+                values: vec![
+                    LiteralValue::Float(10.0),
+                    LiteralValue::Float(20.0),
+                    LiteralValue::Float(30.0),
+                ],
+                value_type: ValueType::Float,
+            }),
+        ]);
+    }
 
-        // String IN
+    // String IN - always included
+    templates.extend(vec![
         Template::In(InTemplate {
             not: false,
             variable: counter.next_string(),
@@ -399,7 +432,9 @@ fn get_in_templates(counter: &mut VarCounter) -> Vec<Template> {
             ],
             value_type: ValueType::String,
         }),
-    ]
+    ]);
+
+    templates
 }
 
 /// Generate IS NULL templates (3 IS NULL + 3 IS NOT NULL = 6 templates)
@@ -455,4 +490,128 @@ fn get_boolean_templates(counter: &mut VarCounter) -> Vec<Template> {
             variable: counter.next_bool(),
         }),
     ]
+}
+
+/// Generate arithmetic comparison templates (12 templates)
+/// Integer: 6 templates (2 add, 2 sub, 2 mul)
+/// Float: 6 templates (3 add, 3 sub)
+fn get_arithmetic_comparison_templates(counter: &mut VarCounter) -> Vec<Template> {
+    let mut templates = Vec::new();
+
+    // Integer arithmetic comparisons (6 templates)
+    // Addition: =, !=
+    templates.push(Template::ArithmeticComparison(ArithmeticComparisonTemplate {
+        left_var: counter.next_int(),
+        arith_op: "+",
+        arith_operand: LiteralValue::Integer(10),
+        cmp_op: "=",
+        right: LiteralValue::Integer(20),
+        value_type: ValueType::Integer,
+    }));
+
+    templates.push(Template::ArithmeticComparison(ArithmeticComparisonTemplate {
+        left_var: counter.next_int(),
+        arith_op: "+",
+        arith_operand: LiteralValue::Integer(5),
+        cmp_op: "!=",
+        right: LiteralValue::Integer(15),
+        value_type: ValueType::Integer,
+    }));
+
+    // Subtraction: >, >=
+    templates.push(Template::ArithmeticComparison(ArithmeticComparisonTemplate {
+        left_var: counter.next_int(),
+        arith_op: "-",
+        arith_operand: LiteralValue::Integer(7),
+        cmp_op: ">",
+        right: LiteralValue::Integer(10),
+        value_type: ValueType::Integer,
+    }));
+
+    templates.push(Template::ArithmeticComparison(ArithmeticComparisonTemplate {
+        left_var: counter.next_int(),
+        arith_op: "-",
+        arith_operand: LiteralValue::Integer(3),
+        cmp_op: ">=",
+        right: LiteralValue::Integer(20),
+        value_type: ValueType::Integer,
+    }));
+
+    // Multiplication: <, <=
+    templates.push(Template::ArithmeticComparison(ArithmeticComparisonTemplate {
+        left_var: counter.next_int(),
+        arith_op: "*",
+        arith_operand: LiteralValue::Integer(2),
+        cmp_op: "<",
+        right: LiteralValue::Integer(100),
+        value_type: ValueType::Integer,
+    }));
+
+    templates.push(Template::ArithmeticComparison(ArithmeticComparisonTemplate {
+        left_var: counter.next_int(),
+        arith_op: "*",
+        arith_operand: LiteralValue::Integer(3),
+        cmp_op: "<=",
+        right: LiteralValue::Integer(50),
+        value_type: ValueType::Integer,
+    }));
+
+    // Float arithmetic comparisons (6 templates)
+    // Addition: =, >, <
+    templates.push(Template::ArithmeticComparison(ArithmeticComparisonTemplate {
+        left_var: counter.next_float(),
+        arith_op: "+",
+        arith_operand: LiteralValue::Float(5.0),
+        cmp_op: "=",
+        right: LiteralValue::Float(15.0),
+        value_type: ValueType::Float,
+    }));
+
+    templates.push(Template::ArithmeticComparison(ArithmeticComparisonTemplate {
+        left_var: counter.next_float(),
+        arith_op: "+",
+        arith_operand: LiteralValue::Float(2.5),
+        cmp_op: ">",
+        right: LiteralValue::Float(10.0),
+        value_type: ValueType::Float,
+    }));
+
+    templates.push(Template::ArithmeticComparison(ArithmeticComparisonTemplate {
+        left_var: counter.next_float(),
+        arith_op: "+",
+        arith_operand: LiteralValue::Float(1.0),
+        cmp_op: "<",
+        right: LiteralValue::Float(20.0),
+        value_type: ValueType::Float,
+    }));
+
+    // Subtraction: !=, >=, <=
+    templates.push(Template::ArithmeticComparison(ArithmeticComparisonTemplate {
+        left_var: counter.next_float(),
+        arith_op: "-",
+        arith_operand: LiteralValue::Float(3.0),
+        cmp_op: "!=",
+        right: LiteralValue::Float(7.0),
+        value_type: ValueType::Float,
+    }));
+
+    templates.push(Template::ArithmeticComparison(ArithmeticComparisonTemplate {
+        left_var: counter.next_float(),
+        arith_op: "-",
+        arith_operand: LiteralValue::Float(2.0),
+        cmp_op: ">=",
+        right: LiteralValue::Float(5.0),
+        value_type: ValueType::Float,
+    }));
+
+    templates.push(Template::ArithmeticComparison(ArithmeticComparisonTemplate {
+        left_var: counter.next_float(),
+        arith_op: "-",
+        arith_operand: LiteralValue::Float(1.5),
+        cmp_op: "<=",
+        right: LiteralValue::Float(10.0),
+        value_type: ValueType::Float,
+    }));
+
+    templates
 }

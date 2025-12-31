@@ -61,12 +61,12 @@
         "i3": 10
       },
       {
-        "i3": 0,
-        "i4": 0
+        "i4": 0,
+        "i3": 0
       },
       {
-        "i4": -5,
-        "i3": -5
+        "i3": -5,
+        "i4": -5
       },
       {
         "i4": 100,
@@ -75,12 +75,12 @@
     ],
     "false_list": [
       {
-        "i4": 10,
-        "i3": 5
+        "i3": 5,
+        "i4": 10
       },
       {
-        "i4": 5,
-        "i3": 10
+        "i3": 10,
+        "i4": 5
       },
       {
         "i3": 0,
@@ -91,8 +91,8 @@
         "i3": -5
       },
       {
-        "i4": 200,
-        "i3": 100
+        "i3": 100,
+        "i4": 200
       }
     ]
   },
@@ -158,22 +158,22 @@
         "f7": 10.0
       },
       {
-        "f7": 0.0,
-        "f8": 0.0
+        "f8": 0.0,
+        "f7": 0.0
       },
       {
         "f8": -5.5,
         "f7": -5.5
       },
       {
-        "f8": 100.1,
-        "f7": 100.1
+        "f7": 100.1,
+        "f8": 100.1
       }
     ],
     "false_list": [
       {
-        "f8": 10.0,
-        "f7": 5.0
+        "f7": 5.0,
+        "f8": 10.0
       },
       {
         "f8": 5.0,
@@ -184,8 +184,8 @@
         "f7": 0.0
       },
       {
-        "f7": -5.5,
-        "f8": 5.5
+        "f8": 5.5,
+        "f7": -5.5
       },
       {
         "f8": 200.2,
@@ -255,8 +255,8 @@
         "s12": "banana"
       },
       {
-        "s12": "cat",
-        "s11": "cat"
+        "s11": "cat",
+        "s12": "cat"
       },
       {
         "s11": "dog",
@@ -273,16 +273,16 @@
         "s12": "banana"
       },
       {
-        "s11": "cat",
-        "s12": "dog"
+        "s12": "dog",
+        "s11": "cat"
       },
       {
-        "s12": "fox",
-        "s11": "egg"
+        "s11": "egg",
+        "s12": "fox"
       },
       {
-        "s12": "honey",
-        "s11": "grape"
+        "s11": "grape",
+        "s12": "honey"
       },
       {
         "s12": "juice",
@@ -356,8 +356,8 @@
         "i16": 1
       },
       {
-        "i16": 5,
-        "i15": -5
+        "i15": -5,
+        "i16": 5
       },
       {
         "i15": 100,
@@ -366,8 +366,8 @@
     ],
     "false_list": [
       {
-        "i16": 5,
-        "i15": 5
+        "i15": 5,
+        "i16": 5
       },
       {
         "i15": 10,
@@ -378,12 +378,12 @@
         "i16": 0
       },
       {
-        "i15": -5,
-        "i16": -5
+        "i16": -5,
+        "i15": -5
       },
       {
-        "i16": 100,
-        "i15": 100
+        "i15": 100,
+        "i16": 100
       }
     ]
   },
@@ -441,8 +441,8 @@
     "expr": "f19 <> f20",
     "true_list": [
       {
-        "f19": 5.0,
-        "f20": 10.0
+        "f20": 10.0,
+        "f19": 5.0
       },
       {
         "f19": 10.0,
@@ -453,8 +453,8 @@
         "f19": 0.0
       },
       {
-        "f19": -5.5,
-        "f20": 5.5
+        "f20": 5.5,
+        "f19": -5.5
       },
       {
         "f20": 200.2,
@@ -467,20 +467,20 @@
         "f20": 5.0
       },
       {
-        "f19": 10.0,
-        "f20": 10.0
+        "f20": 10.0,
+        "f19": 10.0
       },
       {
-        "f19": 0.0,
-        "f20": 0.0
+        "f20": 0.0,
+        "f19": 0.0
       },
       {
         "f19": -5.5,
         "f20": -5.5
       },
       {
-        "f20": 100.1,
-        "f19": 100.1
+        "f19": 100.1,
+        "f20": 100.1
       }
     ]
   },
@@ -546,34 +546,34 @@
         "s24": "dog"
       },
       {
-        "s24": "fox",
-        "s23": "egg"
+        "s23": "egg",
+        "s24": "fox"
       },
       {
-        "s23": "grape",
-        "s24": "honey"
+        "s24": "honey",
+        "s23": "grape"
       },
       {
-        "s24": "juice",
-        "s23": "ice"
+        "s23": "ice",
+        "s24": "juice"
       }
     ],
     "false_list": [
       {
-        "s24": "apple",
-        "s23": "apple"
+        "s23": "apple",
+        "s24": "apple"
       },
       {
         "s24": "banana",
         "s23": "banana"
       },
       {
-        "s23": "cat",
-        "s24": "cat"
+        "s24": "cat",
+        "s23": "cat"
       },
       {
-        "s24": "dog",
-        "s23": "dog"
+        "s23": "dog",
+        "s24": "dog"
       },
       {
         "s24": "egg",
@@ -663,12 +663,12 @@
         "i28": 5
       },
       {
-        "i27": 5,
-        "i28": 0
+        "i28": 0,
+        "i27": 5
       },
       {
-        "i27": 0,
-        "i28": -5
+        "i28": -5,
+        "i27": 0
       },
       {
         "i28": 50,
@@ -685,16 +685,16 @@
         "i28": 10
       },
       {
-        "i28": 5,
-        "i27": 5
+        "i27": 5,
+        "i28": 5
       },
       {
         "i28": 5,
         "i27": 0
       },
       {
-        "i27": 50,
-        "i28": 100
+        "i28": 100,
+        "i27": 50
       },
       {
         "i27": -1,
@@ -784,532 +784,535 @@
         "f32": 5.0
       },
       {
-        "f32": 0.0,
-        "f31": 5.5
+        "f31": 5.5,
+        "f32": 0.0
       },
       {
-        "f31": 0.0,
-        "f32": -5.0
+        "f32": -5.0,
+        "f31": 0.0
       },
       {
         "f31": 100.0,
         "f32": 50.0
       },
       {
-        "f32": -1.1,
-        "f31": 1.1
+        "f31": 1.1,
+        "f32": -1.1
       }
     ],
     "false_list": [
       {
-        "f32": 10.0,
-        "f31": 5.0
+        "f31": 5.0,
+        "f32": 10.0
       },
       {
-        "f32": 5.0,
-        "f31": 5.0
+        "f31": 5.0,
+        "f32": 5.0
       },
       {
         "f31": 0.0,
         "f32": 5.0
       },
       {
-        "f32": 100.0,
-        "f31": 50.0
+        "f31": 50.0,
+        "f32": 100.0
       },
       {
-        "f31": -1.1,
-        "f32": 1.1
+        "f32": 1.1,
+        "f31": -1.1
       }
     ]
   },
   {
-    "expr": "s33 > 'banana'",
+    "expr": "i33 >= 7",
     "true_list": [
       {
-        "s33": "bananaz"
+        "i33": 7
       },
       {
-        "s33": "bananazz"
+        "i33": 8
       },
       {
-        "s33": "bananb"
+        "i33": 9
       },
       {
-        "s33": "zzzzz"
+        "i33": 12
       },
       {
-        "s33": "~~~~~"
+        "i33": 17
       }
     ],
     "false_list": [
       {
-        "s33": "banana"
+        "i33": 6
       },
       {
-        "s33": "banan"
+        "i33": 5
       },
       {
-        "s33": "bana"
+        "i33": 2
       },
       {
-        "s33": "a"
+        "i33": -3
       },
       {
-        "s33": "aa"
+        "i33": -93
       }
     ]
   },
   {
-    "expr": "'united' > s34",
+    "expr": "-3 >= i34",
     "true_list": [
       {
-        "s34": "unitec"
+        "i34": -3
       },
       {
-        "s34": "unite"
+        "i34": -4
       },
       {
-        "s34": "unit"
+        "i34": -5
       },
       {
-        "s34": "a"
+        "i34": -8
       },
       {
-        "s34": "aa"
+        "i34": -13
       }
     ],
     "false_list": [
       {
-        "s34": "united"
+        "i34": -2
       },
       {
-        "s34": "unitedz"
+        "i34": -1
       },
       {
-        "s34": "unitedzz"
+        "i34": 2
       },
       {
-        "s34": "unitee"
+        "i34": 7
       },
       {
-        "s34": "zzzzz"
+        "i34": 97
       }
     ]
   },
   {
-    "expr": "s35 > s36",
+    "expr": "i35 >= i36",
     "true_list": [
       {
-        "s35": "banana",
-        "s36": "apple"
+        "i36": 5,
+        "i35": 10
       },
       {
-        "s35": "dog",
-        "s36": "cat"
+        "i36": 5,
+        "i35": 5
       },
       {
-        "s35": "fox",
-        "s36": "egg"
+        "i35": 0,
+        "i36": 0
       },
       {
-        "s35": "honey",
-        "s36": "grape"
+        "i36": 50,
+        "i35": 100
       },
       {
-        "s35": "juice",
-        "s36": "ice"
+        "i36": -1,
+        "i35": 1
       }
     ],
     "false_list": [
       {
-        "s36": "banana",
-        "s35": "apple"
+        "i35": 5,
+        "i36": 10
       },
       {
-        "s35": "cat",
-        "s36": "dog"
+        "i35": 0,
+        "i36": 5
       },
       {
-        "s36": "dog",
-        "s35": "dog"
+        "i35": -5,
+        "i36": 0
       },
       {
-        "s35": "grape",
-        "s36": "honey"
+        "i36": 100,
+        "i35": 50
       },
       {
-        "s35": "ice",
-        "s36": "juice"
+        "i36": 1,
+        "i35": -1
       }
     ]
   },
   {
-    "expr": "i37 >= 7",
+    "expr": "f37 >= 22.4",
     "true_list": [
       {
-        "i37": 7
+        "f37": 22.4
       },
       {
-        "i37": 8
+        "f37": 23.4
       },
       {
-        "i37": 9
+        "f37": 24.4
       },
       {
-        "i37": 12
+        "f37": 27.4
       },
       {
-        "i37": 17
+        "f37": 32.4
       }
     ],
     "false_list": [
       {
-        "i37": 6
+        "f37": 21.4
       },
       {
-        "i37": 5
+        "f37": 20.4
       },
       {
-        "i37": 2
+        "f37": 17.4
       },
       {
-        "i37": -3
+        "f37": 12.399999999999999
       },
       {
-        "i37": -93
+        "f37": -77.6
       }
     ]
   },
   {
-    "expr": "-3 >= i38",
+    "expr": "50.1 >= f38",
     "true_list": [
       {
-        "i38": -3
+        "f38": 50.1
       },
       {
-        "i38": -4
+        "f38": 49.1
       },
       {
-        "i38": -5
+        "f38": 48.1
       },
       {
-        "i38": -8
+        "f38": 45.1
       },
       {
-        "i38": -13
+        "f38": 40.1
       }
     ],
     "false_list": [
       {
-        "i38": -2
+        "f38": 51.1
       },
       {
-        "i38": -1
+        "f38": 52.1
       },
       {
-        "i38": 2
+        "f38": 55.1
       },
       {
-        "i38": 7
+        "f38": 60.1
       },
       {
-        "i38": 97
+        "f38": 150.1
       }
     ]
   },
   {
-    "expr": "i39 >= i40",
+    "expr": "f39 >= f40",
     "true_list": [
       {
-        "i40": 5,
-        "i39": 10
+        "f39": 10.0,
+        "f40": 5.0
       },
       {
-        "i39": 5,
-        "i40": 5
+        "f39": 5.0,
+        "f40": 5.0
       },
       {
-        "i39": 0,
-        "i40": 0
+        "f40": 0.0,
+        "f39": 0.0
       },
       {
-        "i40": 50,
-        "i39": 100
+        "f39": 100.0,
+        "f40": 50.0
       },
       {
-        "i40": -1,
-        "i39": 1
+        "f39": 1.1,
+        "f40": -1.1
       }
     ],
     "false_list": [
       {
-        "i39": 5,
-        "i40": 10
+        "f40": 10.0,
+        "f39": 5.0
       },
       {
-        "i39": 0,
-        "i40": 5
+        "f40": 5.5,
+        "f39": 0.0
       },
       {
-        "i40": 0,
-        "i39": -5
+        "f40": 0.0,
+        "f39": -5.0
       },
       {
-        "i40": 100,
-        "i39": 50
+        "f39": 50.0,
+        "f40": 100.0
       },
       {
-        "i39": -1,
-        "i40": 1
+        "f39": -1.1,
+        "f40": 1.1
       }
     ]
   },
   {
-    "expr": "f41 >= 22.4",
+    "expr": "i41 < 7",
     "true_list": [
       {
-        "f41": 22.4
+        "i41": 6
       },
       {
-        "f41": 23.4
+        "i41": 5
       },
       {
-        "f41": 24.4
+        "i41": 2
       },
       {
-        "f41": 27.4
+        "i41": -3
       },
       {
-        "f41": 32.4
+        "i41": -93
       }
     ],
     "false_list": [
       {
-        "f41": 21.4
+        "i41": 7
       },
       {
-        "f41": 20.4
+        "i41": 8
       },
       {
-        "f41": 17.4
+        "i41": 9
       },
       {
-        "f41": 12.399999999999999
+        "i41": 12
       },
       {
-        "f41": -77.6
+        "i41": 17
       }
     ]
   },
   {
-    "expr": "50.1 >= f42",
+    "expr": "-3 < i42",
     "true_list": [
       {
-        "f42": 50.1
+        "i42": -2
       },
       {
-        "f42": 49.1
+        "i42": -1
       },
       {
-        "f42": 48.1
+        "i42": 2
       },
       {
-        "f42": 45.1
+        "i42": 7
       },
       {
-        "f42": 40.1
+        "i42": 97
       }
     ],
     "false_list": [
       {
-        "f42": 51.1
+        "i42": -3
       },
       {
-        "f42": 52.1
+        "i42": -4
       },
       {
-        "f42": 55.1
+        "i42": -5
       },
       {
-        "f42": 60.1
+        "i42": -8
       },
       {
-        "f42": 150.1
+        "i42": -13
       }
     ]
   },
   {
-    "expr": "f43 >= f44",
+    "expr": "i43 < i44",
     "true_list": [
       {
-        "f44": 5.0,
-        "f43": 10.0
+        "i44": 10,
+        "i43": 5
       },
       {
-        "f43": 5.0,
-        "f44": 5.0
+        "i44": 5,
+        "i43": 0
       },
       {
-        "f44": 0.0,
-        "f43": 0.0
+        "i43": -5,
+        "i44": 0
       },
       {
-        "f44": 50.0,
-        "f43": 100.0
+        "i44": 100,
+        "i43": 50
       },
       {
-        "f43": 1.1,
-        "f44": -1.1
+        "i44": 1,
+        "i43": -1
       }
     ],
     "false_list": [
       {
-        "f44": 10.0,
-        "f43": 5.0
+        "i44": 5,
+        "i43": 10
       },
       {
-        "f44": 5.5,
-        "f43": 0.0
+        "i44": 5,
+        "i43": 5
       },
       {
-        "f44": 0.0,
-        "f43": -5.0
+        "i43": 5,
+        "i44": 0
       },
       {
-        "f43": 50.0,
-        "f44": 100.0
+        "i43": 100,
+        "i44": 50
       },
       {
-        "f43": -1.1,
-        "f44": 1.1
+        "i44": -1,
+        "i43": 1
       }
     ]
   },
   {
-    "expr": "s45 >= 'banana'",
+    "expr": "f45 < 22.4",
     "true_list": [
       {
-        "s45": "banana"
+        "f45": 21.4
       },
       {
-        "s45": "bananaz"
+        "f45": 20.4
       },
       {
-        "s45": "bananazz"
+        "f45": 17.4
       },
       {
-        "s45": "bananb"
+        "f45": 12.399999999999999
       },
       {
-        "s45": "zzzzz"
+        "f45": -77.6
       }
     ],
     "false_list": [
       {
-        "s45": "banan"
+        "f45": 22.4
       },
       {
-        "s45": "bana"
+        "f45": 23.4
       },
       {
-        "s45": "a"
+        "f45": 24.4
       },
       {
-        "s45": "aa"
+        "f45": 27.4
       },
       {
-        "s45": "aaa"
+        "f45": 32.4
       }
     ]
   },
   {
-    "expr": "'united' >= s46",
+    "expr": "50.1 < f46",
     "true_list": [
       {
-        "s46": "united"
+        "f46": 51.1
       },
       {
-        "s46": "unitec"
+        "f46": 52.1
       },
       {
-        "s46": "unite"
+        "f46": 55.1
       },
       {
-        "s46": "unit"
+        "f46": 60.1
       },
       {
-        "s46": "a"
+        "f46": 150.1
       }
     ],
     "false_list": [
       {
-        "s46": "unitedz"
+        "f46": 50.1
       },
       {
-        "s46": "unitedzz"
+        "f46": 49.1
       },
       {
-        "s46": "unitee"
+        "f46": 48.1
       },
       {
-        "s46": "zzzzz"
+        "f46": 45.1
       },
       {
-        "s46": "~~~~~"
+        "f46": 40.1
       }
     ]
   },
   {
-    "expr": "s47 >= s48",
+    "expr": "f47 < f48",
     "true_list": [
       {
-        "s48": "apple",
-        "s47": "banana"
+        "f48": 10.0,
+        "f47": 5.0
       },
       {
-        "s47": "dog",
-        "s48": "cat"
+        "f48": 5.5,
+        "f47": 0.0
       },
       {
-        "s48": "dog",
-        "s47": "dog"
+        "f47": -5.0,
+        "f48": 0.0
       },
       {
-        "s48": "grape",
-        "s47": "honey"
+        "f48": 100.0,
+        "f47": 50.0
       },
       {
-        "s47": "juice",
-        "s48": "ice"
+        "f47": -1.1,
+        "f48": 1.1
       }
     ],
     "false_list": [
       {
-        "s48": "banana",
-        "s47": "apple"
+        "f48": 5.0,
+        "f47": 10.0
       },
       {
-        "s48": "dog",
-        "s47": "cat"
+        "f48": 5.0,
+        "f47": 5.0
       },
       {
-        "s47": "egg",
-        "s48": "fox"
+        "f48": 0.0,
+        "f47": 5.0
       },
       {
-        "s47": "grape",
-        "s48": "honey"
+        "f47": 100.0,
+        "f48": 50.0
       },
       {
-        "s48": "juice",
-        "s47": "ice"
+        "f47": 1.1,
+        "f48": -1.1
       }
     ]
   },
   {
-    "expr": "i49 < 7",
+    "expr": "i49 <= 7",
     "true_list": [
+      {
+        "i49": 7
+      },
       {
         "i49": 6
       },
@@ -1321,15 +1324,9 @@
       },
       {
         "i49": -3
-      },
-      {
-        "i49": -93
       }
     ],
     "false_list": [
-      {
-        "i49": 7
-      },
       {
         "i49": 8
       },
@@ -1341,12 +1338,18 @@
       },
       {
         "i49": 17
+      },
+      {
+        "i49": 107
       }
     ]
   },
   {
-    "expr": "-3 < i50",
+    "expr": "-3 <= i50",
     "true_list": [
+      {
+        "i50": -3
+      },
       {
         "i50": -2
       },
@@ -1358,15 +1361,9 @@
       },
       {
         "i50": 7
-      },
-      {
-        "i50": 97
       }
     ],
     "false_list": [
-      {
-        "i50": -3
-      },
       {
         "i50": -4
       },
@@ -1378,27 +1375,30 @@
       },
       {
         "i50": -13
+      },
+      {
+        "i50": -103
       }
     ]
   },
   {
-    "expr": "i51 < i52",
+    "expr": "i51 <= i52",
     "true_list": [
       {
         "i52": 10,
         "i51": 5
       },
       {
-        "i51": 0,
+        "i51": 5,
         "i52": 5
       },
       {
-        "i52": 0,
-        "i51": -5
+        "i51": 0,
+        "i52": 0
       },
       {
-        "i51": 50,
-        "i52": 100
+        "i52": 100,
+        "i51": 50
       },
       {
         "i51": -1,
@@ -1411,16 +1411,16 @@
         "i52": 5
       },
       {
-        "i52": 5,
-        "i51": 5
-      },
-      {
         "i51": 5,
         "i52": 0
       },
       {
-        "i52": 50,
-        "i51": 100
+        "i51": 0,
+        "i52": -5
+      },
+      {
+        "i51": 100,
+        "i52": 50
       },
       {
         "i51": 1,
@@ -1429,8 +1429,11 @@
     ]
   },
   {
-    "expr": "f53 < 22.4",
+    "expr": "f53 <= 22.4",
     "true_list": [
+      {
+        "f53": 22.4
+      },
       {
         "f53": 21.4
       },
@@ -1442,15 +1445,9 @@
       },
       {
         "f53": 12.399999999999999
-      },
-      {
-        "f53": -77.6
       }
     ],
     "false_list": [
-      {
-        "f53": 22.4
-      },
       {
         "f53": 23.4
       },
@@ -1462,12 +1459,18 @@
       },
       {
         "f53": 32.4
+      },
+      {
+        "f53": 122.4
       }
     ]
   },
   {
-    "expr": "50.1 < f54",
+    "expr": "50.1 <= f54",
     "true_list": [
+      {
+        "f54": 50.1
+      },
       {
         "f54": 51.1
       },
@@ -1479,15 +1482,9 @@
       },
       {
         "f54": 60.1
-      },
-      {
-        "f54": 150.1
       }
     ],
     "false_list": [
-      {
-        "f54": 50.1
-      },
       {
         "f54": 49.1
       },
@@ -1499,31 +1496,34 @@
       },
       {
         "f54": 40.1
+      },
+      {
+        "f54": -49.9
       }
     ]
   },
   {
-    "expr": "f55 < f56",
+    "expr": "f55 <= f56",
     "true_list": [
       {
-        "f56": 10.0,
+        "f55": 5.0,
+        "f56": 10.0
+      },
+      {
+        "f56": 5.0,
         "f55": 5.0
       },
       {
-        "f56": 5.5,
-        "f55": 0.0
-      },
-      {
-        "f56": 0.0,
-        "f55": -5.0
+        "f55": 0.0,
+        "f56": 0.0
       },
       {
         "f56": 100.0,
         "f55": 50.0
       },
       {
-        "f56": 1.1,
-        "f55": -1.1
+        "f55": -1.1,
+        "f56": 1.1
       }
     ],
     "false_list": [
@@ -1532,1671 +1532,1394 @@
         "f56": 5.0
       },
       {
-        "f56": 5.0,
-        "f55": 5.0
-      },
-      {
         "f56": 0.0,
-        "f55": 5.0
+        "f55": 5.5
       },
       {
-        "f55": 100.0,
-        "f56": 50.0
+        "f56": -5.0,
+        "f55": 0.0
       },
       {
-        "f55": 1.1,
-        "f56": -1.1
+        "f56": 50.0,
+        "f55": 100.0
+      },
+      {
+        "f56": -1.1,
+        "f55": 1.1
       }
     ]
   },
   {
-    "expr": "s57 < 'banana'",
+    "expr": "s57 LIKE '%sometext'",
     "true_list": [
       {
-        "s57": "banan"
+        "s57": "sometext"
       },
       {
-        "s57": "bana"
+        "s57": "xsometext"
       },
       {
-        "s57": "a"
+        "s57": "yysometext"
       },
       {
-        "s57": "aa"
+        "s57": "123sometext"
       },
       {
-        "s57": "aaa"
+        "s57": "___sometext"
       }
     ],
     "false_list": [
       {
-        "s57": "banana"
+        "s57": "nomatch1"
       },
       {
-        "s57": "bananaz"
+        "s57": "nomatch2"
       },
       {
-        "s57": "bananazz"
+        "s57": "nomatch3"
       },
       {
-        "s57": "bananb"
+        "s57": "nomatch4"
       },
       {
-        "s57": "zzzzz"
+        "s57": "nomatch5"
       }
     ]
   },
   {
-    "expr": "'united' < s58",
+    "expr": "s58 NOT LIKE '%sometext'",
     "true_list": [
       {
-        "s58": "unitedz"
+        "s58": "nomatch1"
       },
       {
-        "s58": "unitedzz"
+        "s58": "nomatch2"
       },
       {
-        "s58": "unitee"
+        "s58": "nomatch3"
       },
       {
-        "s58": "zzzzz"
+        "s58": "nomatch4"
       },
       {
-        "s58": "~~~~~"
+        "s58": "nomatch5"
       }
     ],
     "false_list": [
       {
-        "s58": "united"
+        "s58": "sometext"
       },
       {
-        "s58": "unitec"
+        "s58": "xsometext"
       },
       {
-        "s58": "unite"
+        "s58": "yysometext"
       },
       {
-        "s58": "unit"
+        "s58": "123sometext"
       },
       {
-        "s58": "a"
+        "s58": "___sometext"
       }
     ]
   },
   {
-    "expr": "s59 < s60",
+    "expr": "s59 LIKE '_sometext'",
     "true_list": [
       {
-        "s59": "apple",
-        "s60": "banana"
+        "s59": "asometext"
       },
       {
-        "s59": "cat",
-        "s60": "dog"
+        "s59": "bsometext"
       },
       {
-        "s59": "egg",
-        "s60": "fox"
+        "s59": "1sometext"
       },
       {
-        "s59": "grape",
-        "s60": "honey"
+        "s59": "xsometext"
       },
       {
-        "s59": "ice",
-        "s60": "juice"
+        "s59": "Zsometext"
       }
     ],
     "false_list": [
       {
-        "s59": "banana",
-        "s60": "apple"
+        "s59": "nomatch1"
       },
       {
-        "s59": "dog",
-        "s60": "cat"
+        "s59": "nomatch2"
       },
       {
-        "s60": "dog",
-        "s59": "dog"
+        "s59": "nomatch3"
       },
       {
-        "s59": "honey",
-        "s60": "grape"
+        "s59": "nomatch4"
       },
       {
-        "s60": "ice",
-        "s59": "juice"
+        "s59": "nomatch5"
       }
     ]
   },
   {
-    "expr": "i61 <= 7",
+    "expr": "s60 NOT LIKE '_sometext'",
     "true_list": [
       {
-        "i61": 7
+        "s60": "nomatch1"
       },
       {
-        "i61": 6
+        "s60": "nomatch2"
       },
       {
-        "i61": 5
+        "s60": "nomatch3"
       },
       {
-        "i61": 2
+        "s60": "nomatch4"
       },
       {
-        "i61": -3
+        "s60": "nomatch5"
       }
     ],
     "false_list": [
       {
-        "i61": 8
+        "s60": "asometext"
       },
       {
-        "i61": 9
+        "s60": "bsometext"
       },
       {
-        "i61": 12
+        "s60": "1sometext"
       },
       {
-        "i61": 17
+        "s60": "xsometext"
       },
       {
-        "i61": 107
+        "s60": "Zsometext"
       }
     ]
   },
   {
-    "expr": "-3 <= i62",
+    "expr": "s61 LIKE 'sometext%'",
     "true_list": [
       {
-        "i62": -3
+        "s61": "sometext"
       },
       {
-        "i62": -2
+        "s61": "sometextx"
       },
       {
-        "i62": -1
+        "s61": "sometextyy"
       },
       {
-        "i62": 2
+        "s61": "sometext123"
       },
       {
-        "i62": 7
+        "s61": "sometext___"
       }
     ],
     "false_list": [
       {
-        "i62": -4
+        "s61": "nomatch1"
       },
       {
-        "i62": -5
+        "s61": "nomatch2"
       },
       {
-        "i62": -8
+        "s61": "nomatch3"
       },
       {
-        "i62": -13
+        "s61": "nomatch4"
       },
       {
-        "i62": -103
+        "s61": "nomatch5"
       }
     ]
   },
   {
-    "expr": "i63 <= i64",
+    "expr": "s62 NOT LIKE 'sometext%'",
     "true_list": [
       {
-        "i64": 10,
-        "i63": 5
+        "s62": "nomatch1"
       },
       {
-        "i63": 5,
-        "i64": 5
+        "s62": "nomatch2"
       },
       {
-        "i63": 0,
-        "i64": 0
+        "s62": "nomatch3"
       },
       {
-        "i64": 100,
-        "i63": 50
+        "s62": "nomatch4"
       },
       {
-        "i64": 1,
-        "i63": -1
+        "s62": "nomatch5"
       }
     ],
     "false_list": [
       {
-        "i64": 5,
-        "i63": 10
+        "s62": "sometext"
       },
       {
-        "i63": 5,
-        "i64": 0
+        "s62": "sometextx"
       },
       {
-        "i63": 0,
-        "i64": -5
+        "s62": "sometextyy"
       },
       {
-        "i63": 100,
-        "i64": 50
+        "s62": "sometext123"
       },
       {
-        "i63": 1,
-        "i64": -1
+        "s62": "sometext___"
       }
     ]
   },
   {
-    "expr": "f65 <= 22.4",
+    "expr": "s63 LIKE 'sometext_'",
     "true_list": [
       {
-        "f65": 22.4
+        "s63": "sometexta"
       },
       {
-        "f65": 21.4
+        "s63": "sometextb"
       },
       {
-        "f65": 20.4
+        "s63": "sometext1"
       },
       {
-        "f65": 17.4
+        "s63": "sometextx"
       },
       {
-        "f65": 12.399999999999999
+        "s63": "sometextZ"
       }
     ],
     "false_list": [
       {
-        "f65": 23.4
+        "s63": "nomatch1"
       },
       {
-        "f65": 24.4
+        "s63": "nomatch2"
       },
       {
-        "f65": 27.4
+        "s63": "nomatch3"
       },
       {
-        "f65": 32.4
+        "s63": "nomatch4"
       },
       {
-        "f65": 122.4
+        "s63": "nomatch5"
       }
     ]
   },
   {
-    "expr": "50.1 <= f66",
+    "expr": "s64 NOT LIKE 'sometext_'",
     "true_list": [
       {
-        "f66": 50.1
+        "s64": "nomatch1"
       },
       {
-        "f66": 51.1
+        "s64": "nomatch2"
       },
       {
-        "f66": 52.1
+        "s64": "nomatch3"
       },
       {
-        "f66": 55.1
+        "s64": "nomatch4"
       },
       {
-        "f66": 60.1
+        "s64": "nomatch5"
       }
     ],
     "false_list": [
       {
-        "f66": 49.1
+        "s64": "sometexta"
       },
       {
-        "f66": 48.1
+        "s64": "sometextb"
       },
       {
-        "f66": 45.1
+        "s64": "sometext1"
       },
       {
-        "f66": 40.1
+        "s64": "sometextx"
       },
       {
-        "f66": -49.9
+        "s64": "sometextZ"
       }
     ]
   },
   {
-    "expr": "f67 <= f68",
+    "expr": "s65 LIKE 'some%text'",
     "true_list": [
       {
-        "f68": 10.0,
-        "f67": 5.0
+        "s65": "sometext"
       },
       {
-        "f67": 5.0,
-        "f68": 5.0
+        "s65": "somextext"
       },
       {
-        "f68": 0.0,
-        "f67": 0.0
+        "s65": "someyytext"
       },
       {
-        "f67": 50.0,
-        "f68": 100.0
+        "s65": "some123text"
       },
       {
-        "f67": -1.1,
-        "f68": 1.1
+        "s65": "some___text"
       }
     ],
     "false_list": [
       {
-        "f68": 5.0,
-        "f67": 10.0
+        "s65": "nomatch1"
       },
       {
-        "f68": 0.0,
-        "f67": 5.5
+        "s65": "nomatch2"
       },
       {
-        "f67": 0.0,
-        "f68": -5.0
+        "s65": "nomatch3"
       },
       {
-        "f67": 100.0,
-        "f68": 50.0
+        "s65": "nomatch4"
       },
       {
-        "f68": -1.1,
-        "f67": 1.1
+        "s65": "nomatch5"
       }
     ]
   },
   {
-    "expr": "s69 <= 'banana'",
+    "expr": "s66 NOT LIKE 'some%text'",
     "true_list": [
       {
-        "s69": "banana"
+        "s66": "nomatch1"
       },
       {
-        "s69": "banan"
+        "s66": "nomatch2"
       },
       {
-        "s69": "bana"
+        "s66": "nomatch3"
       },
       {
-        "s69": "a"
+        "s66": "nomatch4"
       },
       {
-        "s69": "aa"
+        "s66": "nomatch5"
       }
     ],
     "false_list": [
       {
-        "s69": "bananaz"
+        "s66": "sometext"
       },
       {
-        "s69": "bananazz"
+        "s66": "somextext"
       },
       {
-        "s69": "bananb"
+        "s66": "someyytext"
       },
       {
-        "s69": "zzzzz"
+        "s66": "some123text"
       },
       {
-        "s69": "~~~~~"
+        "s66": "some___text"
       }
     ]
   },
   {
-    "expr": "'united' <= s70",
+    "expr": "s67 LIKE 'some_text'",
     "true_list": [
       {
-        "s70": "united"
+        "s67": "someAtext"
       },
       {
-        "s70": "unitedz"
+        "s67": "someBtext"
       },
       {
-        "s70": "unitedzz"
+        "s67": "some1text"
       },
       {
-        "s70": "unitee"
+        "s67": "somextext"
       },
       {
-        "s70": "zzzzz"
+        "s67": "someZtext"
       }
     ],
     "false_list": [
       {
-        "s70": "unitec"
+        "s67": "nomatch1"
       },
       {
-        "s70": "unite"
+        "s67": "nomatch2"
       },
       {
-        "s70": "unit"
+        "s67": "nomatch3"
       },
       {
-        "s70": "a"
+        "s67": "nomatch4"
       },
       {
-        "s70": "aa"
+        "s67": "nomatch5"
       }
     ]
   },
   {
-    "expr": "s71 <= s72",
+    "expr": "s68 NOT LIKE 'some_text'",
     "true_list": [
       {
-        "s72": "banana",
-        "s71": "apple"
+        "s68": "nomatch1"
       },
       {
-        "s72": "dog",
-        "s71": "cat"
+        "s68": "nomatch2"
       },
       {
-        "s72": "dog",
-        "s71": "dog"
+        "s68": "nomatch3"
       },
       {
-        "s72": "honey",
-        "s71": "grape"
+        "s68": "nomatch4"
       },
       {
-        "s72": "juice",
-        "s71": "ice"
+        "s68": "nomatch5"
       }
     ],
     "false_list": [
       {
-        "s71": "banana",
-        "s72": "apple"
+        "s68": "someAtext"
       },
       {
-        "s71": "dog",
-        "s72": "cat"
+        "s68": "someBtext"
       },
       {
-        "s72": "egg",
-        "s71": "fox"
+        "s68": "some1text"
       },
       {
-        "s71": "honey",
-        "s72": "grape"
+        "s68": "somextext"
       },
       {
-        "s71": "juice",
-        "s72": "ice"
+        "s68": "someZtext"
       }
     ]
   },
   {
-    "expr": "s73 LIKE '%sometext'",
+    "expr": "s69 LIKE 'some_text%'",
     "true_list": [
       {
-        "s73": "sometext"
+        "s69": "someAtextx"
       },
       {
-        "s73": "xsometext"
+        "s69": "someBtext"
       },
       {
-        "s73": "yysometext"
+        "s69": "some1text___"
       },
       {
-        "s73": "123sometext"
+        "s69": "somextextabc"
       },
       {
-        "s73": "___sometext"
+        "s69": "someZtext123"
       }
     ],
     "false_list": [
       {
-        "s73": "nomatch1"
+        "s69": "nomatch1"
       },
       {
-        "s73": "nomatch2"
+        "s69": "nomatch2"
       },
       {
-        "s73": "nomatch3"
+        "s69": "nomatch3"
       },
       {
-        "s73": "nomatch4"
+        "s69": "nomatch4"
       },
       {
-        "s73": "nomatch5"
+        "s69": "nomatch5"
       }
     ]
   },
   {
-    "expr": "s74 NOT LIKE '%sometext'",
+    "expr": "s70 NOT LIKE 'some_text%'",
     "true_list": [
       {
-        "s74": "nomatch1"
+        "s70": "nomatch1"
       },
       {
-        "s74": "nomatch2"
+        "s70": "nomatch2"
       },
       {
-        "s74": "nomatch3"
+        "s70": "nomatch3"
       },
       {
-        "s74": "nomatch4"
+        "s70": "nomatch4"
       },
       {
-        "s74": "nomatch5"
+        "s70": "nomatch5"
       }
     ],
     "false_list": [
       {
-        "s74": "sometext"
+        "s70": "someAtextx"
       },
       {
-        "s74": "xsometext"
+        "s70": "someBtext"
       },
       {
-        "s74": "yysometext"
+        "s70": "some1text___"
       },
       {
-        "s74": "123sometext"
+        "s70": "somextextabc"
       },
       {
-        "s74": "___sometext"
+        "s70": "someZtext123"
       }
     ]
   },
   {
-    "expr": "s75 LIKE '_sometext'",
+    "expr": "s71 LIKE 'some%text_'",
     "true_list": [
       {
-        "s75": "asometext"
+        "s71": "sometexta"
       },
       {
-        "s75": "bsometext"
+        "s71": "someXtextb"
       },
       {
-        "s75": "1sometext"
+        "s71": "some123text1"
       },
       {
-        "s75": "xsometext"
+        "s71": "someyytextx"
       },
       {
-        "s75": "Zsometext"
+        "s71": "some__textZ"
       }
     ],
     "false_list": [
       {
-        "s75": "nomatch1"
+        "s71": "nomatch1"
       },
       {
-        "s75": "nomatch2"
+        "s71": "nomatch2"
       },
       {
-        "s75": "nomatch3"
+        "s71": "nomatch3"
       },
       {
-        "s75": "nomatch4"
+        "s71": "nomatch4"
       },
       {
-        "s75": "nomatch5"
+        "s71": "nomatch5"
       }
     ]
   },
   {
-    "expr": "s76 NOT LIKE '_sometext'",
+    "expr": "s72 NOT LIKE 'some%text_'",
     "true_list": [
       {
-        "s76": "nomatch1"
+        "s72": "nomatch1"
       },
       {
-        "s76": "nomatch2"
+        "s72": "nomatch2"
       },
       {
-        "s76": "nomatch3"
+        "s72": "nomatch3"
       },
       {
-        "s76": "nomatch4"
+        "s72": "nomatch4"
       },
       {
-        "s76": "nomatch5"
+        "s72": "nomatch5"
       }
     ],
     "false_list": [
       {
-        "s76": "asometext"
+        "s72": "sometexta"
       },
       {
-        "s76": "bsometext"
+        "s72": "someXtextb"
       },
       {
-        "s76": "1sometext"
+        "s72": "some123text1"
       },
       {
-        "s76": "xsometext"
+        "s72": "someyytextx"
       },
       {
-        "s76": "Zsometext"
+        "s72": "some__textZ"
       }
     ]
   },
   {
-    "expr": "s77 LIKE 'sometext%'",
+    "expr": "i73 BETWEEN 1 AND 10",
     "true_list": [
       {
-        "s77": "sometext"
+        "i73": 1
       },
       {
-        "s77": "sometextx"
+        "i73": 10
       },
       {
-        "s77": "sometextyy"
+        "i73": 5
       },
       {
-        "s77": "sometext123"
+        "i73": 2
       },
       {
-        "s77": "sometext___"
+        "i73": 9
       }
     ],
     "false_list": [
       {
-        "s77": "nomatch1"
+        "i73": 0
       },
       {
-        "s77": "nomatch2"
+        "i73": -9
       },
       {
-        "s77": "nomatch3"
+        "i73": 11
       },
       {
-        "s77": "nomatch4"
+        "i73": 20
       },
       {
-        "s77": "nomatch5"
+        "i73": -99
       }
     ]
   },
   {
-    "expr": "s78 NOT LIKE 'sometext%'",
+    "expr": "i74 NOT BETWEEN 20 AND 30",
     "true_list": [
       {
-        "s78": "nomatch1"
+        "i74": 19
       },
       {
-        "s78": "nomatch2"
+        "i74": 10
       },
       {
-        "s78": "nomatch3"
+        "i74": 31
       },
       {
-        "s78": "nomatch4"
+        "i74": 40
       },
       {
-        "s78": "nomatch5"
+        "i74": -80
       }
     ],
     "false_list": [
       {
-        "s78": "sometext"
+        "i74": 20
       },
       {
-        "s78": "sometextx"
+        "i74": 30
       },
       {
-        "s78": "sometextyy"
+        "i74": 25
       },
       {
-        "s78": "sometext123"
+        "i74": 21
       },
       {
-        "s78": "sometext___"
+        "i74": 29
       }
     ]
   },
   {
-    "expr": "s79 LIKE 'sometext_'",
+    "expr": "f75 BETWEEN 1 AND 10",
     "true_list": [
       {
-        "s79": "sometexta"
+        "f75": 1.0
       },
       {
-        "s79": "sometextb"
+        "f75": 10.0
       },
       {
-        "s79": "sometext1"
+        "f75": 5.5
       },
       {
-        "s79": "sometextx"
+        "f75": 2.0
       },
       {
-        "s79": "sometextZ"
+        "f75": 9.0
       }
     ],
     "false_list": [
       {
-        "s79": "nomatch1"
+        "f75": 0.0
       },
       {
-        "s79": "nomatch2"
+        "f75": -9.0
       },
       {
-        "s79": "nomatch3"
+        "f75": 11.0
       },
       {
-        "s79": "nomatch4"
+        "f75": 20.0
       },
       {
-        "s79": "nomatch5"
+        "f75": -99.0
       }
     ]
   },
   {
-    "expr": "s80 NOT LIKE 'sometext_'",
+    "expr": "f76 NOT BETWEEN 20 AND 30",
     "true_list": [
       {
-        "s80": "nomatch1"
+        "f76": 19.0
       },
       {
-        "s80": "nomatch2"
+        "f76": 10.0
       },
       {
-        "s80": "nomatch3"
+        "f76": 31.0
       },
       {
-        "s80": "nomatch4"
+        "f76": 40.0
       },
       {
-        "s80": "nomatch5"
+        "f76": -80.0
       }
     ],
     "false_list": [
       {
-        "s80": "sometexta"
+        "f76": 20.0
       },
       {
-        "s80": "sometextb"
+        "f76": 30.0
       },
       {
-        "s80": "sometext1"
+        "f76": 25.0
       },
       {
-        "s80": "sometextx"
+        "f76": 21.0
       },
       {
-        "s80": "sometextZ"
+        "f76": 29.0
       }
     ]
   },
   {
-    "expr": "s81 LIKE 'some%text'",
+    "expr": "s77 IN ('apple', 'banana', 'cherry')",
     "true_list": [
       {
-        "s81": "sometext"
+        "s77": "apple"
       },
       {
-        "s81": "somextext"
+        "s77": "banana"
       },
       {
-        "s81": "someyytext"
-      },
-      {
-        "s81": "some123text"
-      },
-      {
-        "s81": "some___text"
+        "s77": "cherry"
       }
     ],
     "false_list": [
       {
-        "s81": "nomatch1"
+        "s77": "notinlist1"
       },
       {
-        "s81": "nomatch2"
+        "s77": "notinlist2"
       },
       {
-        "s81": "nomatch3"
+        "s77": "xxx"
       },
       {
-        "s81": "nomatch4"
+        "s77": "yyy"
       },
       {
-        "s81": "nomatch5"
+        "s77": "zzz"
       }
     ]
   },
   {
-    "expr": "s82 NOT LIKE 'some%text'",
+    "expr": "s78 NOT IN ('dog', 'elephant', 'fox')",
     "true_list": [
       {
-        "s82": "nomatch1"
+        "s78": "notinlist1"
       },
       {
-        "s82": "nomatch2"
+        "s78": "notinlist2"
       },
       {
-        "s82": "nomatch3"
+        "s78": "xxx"
       },
       {
-        "s82": "nomatch4"
+        "s78": "yyy"
       },
       {
-        "s82": "nomatch5"
+        "s78": "zzz"
       }
     ],
     "false_list": [
       {
-        "s82": "sometext"
+        "s78": "dog"
       },
       {
-        "s82": "somextext"
+        "s78": "elephant"
       },
       {
-        "s82": "someyytext"
-      },
-      {
-        "s82": "some123text"
-      },
-      {
-        "s82": "some___text"
+        "s78": "fox"
       }
     ]
   },
   {
-    "expr": "s83 LIKE 'some_text'",
+    "expr": "i79 IS NULL",
     "true_list": [
       {
-        "s83": "someAtext"
-      },
-      {
-        "s83": "someBtext"
-      },
-      {
-        "s83": "some1text"
-      },
-      {
-        "s83": "somextext"
-      },
-      {
-        "s83": "someZtext"
+        "i79": null
       }
     ],
     "false_list": [
       {
-        "s83": "nomatch1"
+        "i79": 0
       },
       {
-        "s83": "nomatch2"
+        "i79": 1
       },
       {
-        "s83": "nomatch3"
+        "i79": -1
       },
       {
-        "s83": "nomatch4"
+        "i79": 100
       },
       {
-        "s83": "nomatch5"
+        "i79": -100
       }
     ]
   },
   {
-    "expr": "s84 NOT LIKE 'some_text'",
+    "expr": "i80 IS NOT NULL",
     "true_list": [
       {
-        "s84": "nomatch1"
+        "i80": 0
       },
       {
-        "s84": "nomatch2"
+        "i80": 1
       },
       {
-        "s84": "nomatch3"
+        "i80": -1
       },
       {
-        "s84": "nomatch4"
+        "i80": 100
       },
       {
-        "s84": "nomatch5"
+        "i80": -100
       }
     ],
     "false_list": [
       {
-        "s84": "someAtext"
-      },
-      {
-        "s84": "someBtext"
-      },
-      {
-        "s84": "some1text"
-      },
-      {
-        "s84": "somextext"
-      },
-      {
-        "s84": "someZtext"
+        "i80": null
       }
     ]
   },
   {
-    "expr": "s85 LIKE 'some_text%'",
+    "expr": "f81 IS NULL",
     "true_list": [
       {
-        "s85": "someAtextx"
-      },
-      {
-        "s85": "someBtext"
-      },
-      {
-        "s85": "some1text___"
-      },
-      {
-        "s85": "somextextabc"
-      },
-      {
-        "s85": "someZtext123"
+        "f81": null
       }
     ],
     "false_list": [
       {
-        "s85": "nomatch1"
+        "f81": 0.0
       },
       {
-        "s85": "nomatch2"
+        "f81": 1.0
       },
       {
-        "s85": "nomatch3"
+        "f81": -1.0
       },
       {
-        "s85": "nomatch4"
+        "f81": 100.5
       },
       {
-        "s85": "nomatch5"
+        "f81": -100.5
       }
     ]
   },
   {
-    "expr": "s86 NOT LIKE 'some_text%'",
+    "expr": "f82 IS NOT NULL",
     "true_list": [
       {
-        "s86": "nomatch1"
+        "f82": 0.0
       },
       {
-        "s86": "nomatch2"
+        "f82": 1.0
       },
       {
-        "s86": "nomatch3"
+        "f82": -1.0
       },
       {
-        "s86": "nomatch4"
+        "f82": 100.5
       },
       {
-        "s86": "nomatch5"
+        "f82": -100.5
       }
     ],
     "false_list": [
       {
-        "s86": "someAtextx"
-      },
-      {
-        "s86": "someBtext"
-      },
-      {
-        "s86": "some1text___"
-      },
-      {
-        "s86": "somextextabc"
-      },
-      {
-        "s86": "someZtext123"
+        "f82": null
       }
     ]
   },
   {
-    "expr": "s87 LIKE 'some%text_'",
+    "expr": "s83 IS NULL",
     "true_list": [
       {
-        "s87": "sometexta"
-      },
-      {
-        "s87": "someXtextb"
-      },
-      {
-        "s87": "some123text1"
-      },
-      {
-        "s87": "someyytextx"
-      },
-      {
-        "s87": "some__textZ"
+        "s83": null
       }
     ],
     "false_list": [
       {
-        "s87": "nomatch1"
+        "s83": ""
       },
       {
-        "s87": "nomatch2"
+        "s83": "a"
       },
       {
-        "s87": "nomatch3"
+        "s83": "test"
       },
       {
-        "s87": "nomatch4"
+        "s83": "hello"
       },
       {
-        "s87": "nomatch5"
+        "s83": "world"
       }
     ]
   },
   {
-    "expr": "s88 NOT LIKE 'some%text_'",
+    "expr": "s84 IS NOT NULL",
     "true_list": [
       {
-        "s88": "nomatch1"
+        "s84": ""
       },
       {
-        "s88": "nomatch2"
+        "s84": "a"
       },
       {
-        "s88": "nomatch3"
+        "s84": "test"
       },
       {
-        "s88": "nomatch4"
+        "s84": "hello"
       },
       {
-        "s88": "nomatch5"
+        "s84": "world"
       }
     ],
     "false_list": [
       {
-        "s88": "sometexta"
-      },
-      {
-        "s88": "someXtextb"
-      },
-      {
-        "s88": "some123text1"
-      },
-      {
-        "s88": "someyytextx"
-      },
-      {
-        "s88": "some__textZ"
+        "s84": null
       }
     ]
   },
   {
-    "expr": "i89 BETWEEN 1 AND 10",
+    "expr": "b85",
     "true_list": [
       {
-        "i89": 1
-      },
-      {
-        "i89": 10
-      },
-      {
-        "i89": 5
-      },
-      {
-        "i89": 2
-      },
-      {
-        "i89": 9
+        "b85": true
       }
     ],
     "false_list": [
       {
-        "i89": 0
-      },
-      {
-        "i89": -9
-      },
-      {
-        "i89": 11
-      },
-      {
-        "i89": 20
-      },
-      {
-        "i89": -99
+        "b85": false
       }
     ]
   },
   {
-    "expr": "i90 NOT BETWEEN 20 AND 30",
+    "expr": "NOT b86",
     "true_list": [
       {
-        "i90": 19
-      },
-      {
-        "i90": 10
-      },
-      {
-        "i90": 31
-      },
-      {
-        "i90": 40
-      },
-      {
-        "i90": -80
+        "b86": false
       }
     ],
     "false_list": [
       {
-        "i90": 20
+        "b86": true
+      }
+    ]
+  },
+  {
+    "expr": "i87 + 10 = 20",
+    "true_list": [
+      {
+        "i87": 10
+      }
+    ],
+    "false_list": [
+      {
+        "i87": 9
       },
       {
-        "i90": 30
+        "i87": 11
+      },
+      {
+        "i87": 5
+      },
+      {
+        "i87": 15
+      },
+      {
+        "i87": 20
+      }
+    ]
+  },
+  {
+    "expr": "i88 + 5 != 15",
+    "true_list": [
+      {
+        "i88": 9
+      },
+      {
+        "i88": 11
+      },
+      {
+        "i88": 5
+      },
+      {
+        "i88": 15
+      },
+      {
+        "i88": 0
+      }
+    ],
+    "false_list": [
+      {
+        "i88": 10
+      }
+    ]
+  },
+  {
+    "expr": "i89 - 7 > 10",
+    "true_list": [
+      {
+        "i89": 18
+      },
+      {
+        "i89": 19
+      },
+      {
+        "i89": 22
+      },
+      {
+        "i89": 27
+      },
+      {
+        "i89": 37
+      }
+    ],
+    "false_list": [
+      {
+        "i89": 17
+      },
+      {
+        "i89": 16
+      },
+      {
+        "i89": 15
+      },
+      {
+        "i89": 12
+      },
+      {
+        "i89": 7
+      }
+    ]
+  },
+  {
+    "expr": "i90 - 3 >= 20",
+    "true_list": [
+      {
+        "i90": 23
+      },
+      {
+        "i90": 24
       },
       {
         "i90": 25
       },
       {
+        "i90": 28
+      },
+      {
+        "i90": 33
+      }
+    ],
+    "false_list": [
+      {
+        "i90": 22
+      },
+      {
         "i90": 21
       },
       {
-        "i90": 29
+        "i90": 18
+      },
+      {
+        "i90": 13
+      },
+      {
+        "i90": 3
       }
     ]
   },
   {
-    "expr": "f91 BETWEEN 1 AND 10",
+    "expr": "i91 * 2 < 100",
     "true_list": [
       {
-        "f91": 1.0
+        "i91": 49
       },
       {
-        "f91": 10.0
+        "i91": 48
       },
       {
-        "f91": 5.5
+        "i91": 47
       },
       {
-        "f91": 2.0
+        "i91": 45
       },
       {
-        "f91": 9.0
+        "i91": 40
       }
     ],
     "false_list": [
       {
-        "f91": 0.0
+        "i91": 50
       },
       {
-        "f91": -9.0
+        "i91": 51
       },
       {
-        "f91": 11.0
+        "i91": 52
       },
       {
-        "f91": 20.0
+        "i91": 53
       },
       {
-        "f91": -99.0
+        "i91": 55
       }
     ]
   },
   {
-    "expr": "f92 NOT BETWEEN 20 AND 30",
+    "expr": "i92 * 3 <= 50",
     "true_list": [
       {
-        "f92": 19.0
+        "i92": 16
       },
       {
-        "f92": 10.0
+        "i92": 15
       },
       {
-        "f92": 31.0
+        "i92": 14
       },
       {
-        "f92": 40.0
+        "i92": 13
       },
       {
-        "f92": -80.0
+        "i92": 11
       }
     ],
     "false_list": [
       {
-        "f92": 20.0
+        "i92": 17
       },
       {
-        "f92": 30.0
+        "i92": 18
       },
       {
-        "f92": 25.0
+        "i92": 19
       },
       {
-        "f92": 21.0
+        "i92": 21
       },
       {
-        "f92": 29.0
+        "i92": 26
       }
     ]
   },
   {
-    "expr": "s93 BETWEEN 'aa' AND 'bb'",
+    "expr": "f93 + 5 = 15",
     "true_list": [
       {
-        "s93": "aa"
-      },
-      {
-        "s93": "bb"
+        "f93": 10.0
       }
     ],
     "false_list": [
       {
-        "s93": ""
+        "f93": 9.0
       },
       {
-        "s93": "a"
+        "f93": 11.0
       },
       {
-        "s93": "bbz"
+        "f93": 5.0
       },
       {
-        "s93": "bbzz"
+        "f93": 15.0
       },
       {
-        "s93": "bc"
+        "f93": 20.0
       }
     ]
   },
   {
-    "expr": "s94 NOT BETWEEN 'mm' AND 'zz'",
+    "expr": "f94 + 2.5 > 10",
     "true_list": [
       {
-        "s94": "a"
+        "f94": 8.5
       },
       {
-        "s94": "m"
+        "f94": 9.5
       },
       {
-        "s94": "ml"
+        "f94": 12.5
       },
       {
-        "s94": "zzz"
+        "f94": 17.5
       },
       {
-        "s94": "zzzz"
+        "f94": 27.5
       }
     ],
     "false_list": [
       {
-        "s94": "mm"
+        "f94": 7.5
       },
       {
-        "s94": "na"
+        "f94": 6.5
       },
       {
-        "s94": "oa"
+        "f94": 5.5
       },
       {
-        "s94": "pa"
+        "f94": 2.5
       },
       {
-        "s94": "zz"
+        "f94": -2.5
       }
     ]
   },
   {
-    "expr": "i95 IN (1, 2, 3)",
+    "expr": "f95 + 1 < 20",
     "true_list": [
       {
-        "i95": 1
+        "f95": 18.0
       },
       {
-        "i95": 2
+        "f95": 17.0
       },
       {
-        "i95": 3
+        "f95": 14.0
+      },
+      {
+        "f95": 9.0
+      },
+      {
+        "f95": -1.0
       }
     ],
     "false_list": [
       {
-        "i95": 999
+        "f95": 19.0
       },
       {
-        "i95": -999
+        "f95": 20.0
       },
       {
-        "i95": 0
+        "f95": 21.0
       },
       {
-        "i95": 500
+        "f95": 24.0
       },
       {
-        "i95": -500
+        "f95": 29.0
       }
     ]
   },
   {
-    "expr": "i96 NOT IN (10, 20, 30)",
+    "expr": "f96 - 3 != 7",
     "true_list": [
       {
-        "i96": 999
+        "f96": 9.0
       },
       {
-        "i96": -999
+        "f96": 11.0
       },
       {
-        "i96": 0
+        "f96": 5.0
       },
       {
-        "i96": 500
+        "f96": 15.0
       },
       {
-        "i96": -500
+        "f96": 0.0
       }
     ],
     "false_list": [
       {
-        "i96": 10
-      },
-      {
-        "i96": 20
-      },
-      {
-        "i96": 30
+        "f96": 10.0
       }
     ]
   },
   {
-    "expr": "f97 IN (1, 2, 3)",
+    "expr": "f97 - 2 >= 5",
     "true_list": [
       {
-        "f97": 1.0
+        "f97": 7.0
+      },
+      {
+        "f97": 8.0
+      },
+      {
+        "f97": 9.0
+      },
+      {
+        "f97": 12.0
+      },
+      {
+        "f97": 17.0
+      }
+    ],
+    "false_list": [
+      {
+        "f97": 6.0
+      },
+      {
+        "f97": 5.0
       },
       {
         "f97": 2.0
       },
       {
-        "f97": 3.0
-      }
-    ],
-    "false_list": [
-      {
-        "f97": 999.9
+        "f97": -3.0
       },
       {
-        "f97": -999.9
-      },
-      {
-        "f97": 0.5
-      },
-      {
-        "f97": 500.5
-      },
-      {
-        "f97": -500.5
+        "f97": -13.0
       }
     ]
   },
   {
-    "expr": "f98 NOT IN (10, 20, 30)",
+    "expr": "f98 - 1.5 <= 10",
     "true_list": [
       {
-        "f98": 999.9
+        "f98": 11.5
       },
       {
-        "f98": -999.9
+        "f98": 10.5
       },
       {
-        "f98": 0.5
+        "f98": 9.5
       },
       {
-        "f98": 500.5
+        "f98": 6.5
       },
       {
-        "f98": -500.5
+        "f98": 1.5
       }
     ],
     "false_list": [
       {
-        "f98": 10.0
+        "f98": 12.5
       },
       {
-        "f98": 20.0
+        "f98": 13.5
       },
       {
-        "f98": 30.0
-      }
-    ]
-  },
-  {
-    "expr": "s99 IN ('apple', 'banana', 'cherry')",
-    "true_list": [
-      {
-        "s99": "apple"
+        "f98": 16.5
       },
       {
-        "s99": "banana"
+        "f98": 21.5
       },
       {
-        "s99": "cherry"
-      }
-    ],
-    "false_list": [
-      {
-        "s99": "notinlist1"
-      },
-      {
-        "s99": "notinlist2"
-      },
-      {
-        "s99": "xxx"
-      },
-      {
-        "s99": "yyy"
-      },
-      {
-        "s99": "zzz"
-      }
-    ]
-  },
-  {
-    "expr": "s100 NOT IN ('dog', 'elephant', 'fox')",
-    "true_list": [
-      {
-        "s100": "notinlist1"
-      },
-      {
-        "s100": "notinlist2"
-      },
-      {
-        "s100": "xxx"
-      },
-      {
-        "s100": "yyy"
-      },
-      {
-        "s100": "zzz"
-      }
-    ],
-    "false_list": [
-      {
-        "s100": "dog"
-      },
-      {
-        "s100": "elephant"
-      },
-      {
-        "s100": "fox"
-      }
-    ]
-  },
-  {
-    "expr": "i101 IS NULL",
-    "true_list": [
-      {
-        "i101": null
-      }
-    ],
-    "false_list": [
-      {
-        "i101": 0
-      },
-      {
-        "i101": 1
-      },
-      {
-        "i101": -1
-      },
-      {
-        "i101": 100
-      },
-      {
-        "i101": -100
-      }
-    ]
-  },
-  {
-    "expr": "i102 IS NOT NULL",
-    "true_list": [
-      {
-        "i102": 0
-      },
-      {
-        "i102": 1
-      },
-      {
-        "i102": -1
-      },
-      {
-        "i102": 100
-      },
-      {
-        "i102": -100
-      }
-    ],
-    "false_list": [
-      {
-        "i102": null
-      }
-    ]
-  },
-  {
-    "expr": "f103 IS NULL",
-    "true_list": [
-      {
-        "f103": null
-      }
-    ],
-    "false_list": [
-      {
-        "f103": 0.0
-      },
-      {
-        "f103": 1.0
-      },
-      {
-        "f103": -1.0
-      },
-      {
-        "f103": 100.5
-      },
-      {
-        "f103": -100.5
-      }
-    ]
-  },
-  {
-    "expr": "f104 IS NOT NULL",
-    "true_list": [
-      {
-        "f104": 0.0
-      },
-      {
-        "f104": 1.0
-      },
-      {
-        "f104": -1.0
-      },
-      {
-        "f104": 100.5
-      },
-      {
-        "f104": -100.5
-      }
-    ],
-    "false_list": [
-      {
-        "f104": null
-      }
-    ]
-  },
-  {
-    "expr": "s105 IS NULL",
-    "true_list": [
-      {
-        "s105": null
-      }
-    ],
-    "false_list": [
-      {
-        "s105": ""
-      },
-      {
-        "s105": "a"
-      },
-      {
-        "s105": "test"
-      },
-      {
-        "s105": "hello"
-      },
-      {
-        "s105": "world"
-      }
-    ]
-  },
-  {
-    "expr": "s106 IS NOT NULL",
-    "true_list": [
-      {
-        "s106": ""
-      },
-      {
-        "s106": "a"
-      },
-      {
-        "s106": "test"
-      },
-      {
-        "s106": "hello"
-      },
-      {
-        "s106": "world"
-      }
-    ],
-    "false_list": [
-      {
-        "s106": null
-      }
-    ]
-  },
-  {
-    "expr": "b107",
-    "true_list": [
-      {
-        "b107": true
-      }
-    ],
-    "false_list": [
-      {
-        "b107": false
-      }
-    ]
-  },
-  {
-    "expr": "NOT b108",
-    "true_list": [
-      {
-        "b108": false
-      }
-    ],
-    "false_list": [
-      {
-        "b108": true
+        "f98": 31.5
       }
     ]
   }

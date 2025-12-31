@@ -1,5 +1,7 @@
 # Load and Performance Testing SqlExpr-Rust
 
+**THIS FILE SUPERSCEDES WAS USED FOR RELEASE 1.0.0 AND IS SUPERSCEDED BY command_prompts2.md FOR LATER RELEASES.  IGNORE THIS FILE FOR MULTIPLE LANGUAGE SUPPORT**
+
 The ultimae goal of this project is to generate 10,000 evaluation tests for the sqlexpr-rust project.  The tests will be used to compare the performance of different implementations of the parser/evaluator  that accept the same expression language.  We build the test data in phases so that we can validate results step by step. 
 
 ## Load Background Information
@@ -22,7 +24,7 @@ We start with definitions that apply to the sqlexpr-rust language and implementa
 
 The names of variables in expressions follow these rules:
 
-1. All variable names start with a single lowercase character followed by an integer.  The first character must reflect the variable's type as follows:
+1. All variable names st**THIS FILE SUPERSCEDES command_prompts.md, WHICH WAS USED FOR RELEASE 1.0.0**art with a single lowercase character followed by an integer.  The first character must reflect the variable's type as follows:
     1. *i* indicates integer values
     2. *f* indicates float values
     3. *s* indicates string values
@@ -34,13 +36,13 @@ The goal of this phase is to plan for the generation of simple, single operator 
 
 1. Create a comprehensive list of the prototypical expressions for each operand type to which the operator can be applied.  For example, for the GreaterThan (>), the following simple expression could be generated:
 
-    1. u1 > 7
-    2. -3 > u2
+    1. i1 > 7
+    2. -3 > i2
     3. f1 > 22.4
     4. 50.1 > f2
     5. s1 > 'banana'
     6. 'united' > s2
-    7. u3 > u4
+    7. i3 > i4
     8. f3 > f4
     9. s3 > s4
 
@@ -55,15 +57,15 @@ The goal of this phase is to plan for the generation of simple, single operator 
     7. s3 LIKE 'some_text%'
     8. s4 LIKE 'some%text_'
 4. Here are the prototypical expressions for the *BETWEEN* operator:
-    1. u1 BETWEEN 1 AND 10
+    1. i1 BETWEEN 1 AND 10
     1. f1 BETWEEN 1.0 AND 10.0
     1. s1 BETWEEN 'aa' AND 'bb'
 5. Here are the prototypical expressions for the *IN* operator:
-    1. u1 IN (1, 2. 3)
+    1. i1 IN (1, 2. 3)
     2. f1 IN (1.0, 2.0, 3.0)
     3. s1 IN ('apple', 'banana', 'cherry')
 6. Here are the prototypical expressions for the *IS* operator:
-    1. u1 IS NULL
+    1. i1 IS NULL
     2. f1 IS NULL
     3. s1 IS NULL
 7. For each expression with Like, Between, In or Is operators, create another expression with *NOT* properly inserted. 
@@ -159,3 +161,4 @@ Create a README.md file that:
 Update CLAUDE.MD with the latest design and features descriptions.
 
 Create a RELEASE_NOTES.md file that provides basic information on release 1.0.0.
+

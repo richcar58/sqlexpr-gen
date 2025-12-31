@@ -1,4 +1,4 @@
-use crate::common::output::TestExpression;
+use crate::common::{output::TestExpression, Language};
 use crate::phase2::types::ExpressionNode;
 use std::fs;
 use std::path::Path;
@@ -13,9 +13,10 @@ pub struct SimpleExpressionLoader {
 }
 
 impl SimpleExpressionLoader {
-    /// Load simple expressions from resources/simple_expressions.json
-    pub fn load() -> Result<Self, Box<dyn std::error::Error>> {
-        let path = Path::new("resources/simple_expressions.json");
+    /// Load simple expressions from language-specific resource file
+    pub fn load(lang: &Language) -> Result<Self, Box<dyn std::error::Error>> {
+        let path_string = lang.simple_expressions_path();
+        let path = Path::new(&path_string);
         let json = fs::read_to_string(path)?;
         let expressions: Vec<TestExpression> = serde_json::from_str(&json)?;
 
